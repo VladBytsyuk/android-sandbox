@@ -1,2 +1,4 @@
+include ':app:core'
+include ':app:glide'
 include ':app'
 rootProject.name = "android-sandbox"
