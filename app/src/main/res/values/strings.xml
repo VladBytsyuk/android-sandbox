@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidTech: Sandbox</string>
+    <string name="am_title_libraries">Libraries</string>
+    <string name="am_btn_glide">Glide</string>
 </resources>

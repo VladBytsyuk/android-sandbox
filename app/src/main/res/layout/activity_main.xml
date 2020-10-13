@@ -6,13 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/amTvLibraries"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:text="@string/am_title_libraries"
+        android:textSize="32sp"
+        android:textStyle="bold"
         android:layout_margin="32dp"
-        android:text="Glide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/amBtnGlide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/am_btn_glide"
+        app:layout_constraintStart_toStartOf="@+id/amTvLibraries"
+        app:layout_constraintTop_toBottomOf="@+id/amTvLibraries" />
 </androidx.constraintlayout.widget.ConstraintLayout>
