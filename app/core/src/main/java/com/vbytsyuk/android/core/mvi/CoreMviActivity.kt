@@ -1,21 +1,15 @@
 package com.vbytsyuk.android.core.mvi
 
-import android.os.Bundle
 import androidx.annotation.LayoutRes
+import androidx.annotation.StringRes
 import com.vbytsyuk.android.core.activity.CoreActivity
 
 
 abstract class CoreMviActivity<State, Interactor : CoreMviInteractor<State>>(
-    @LayoutRes layoutId: Int
-) : CoreActivity(layoutId) {
+    @LayoutRes layoutId: Int,
+    @StringRes titleId: Int? = null
+) : CoreActivity(layoutId, titleId) {
     abstract val interactor: Interactor
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setClickListeners()
-    }
-
-    abstract fun setClickListeners()
 
     override fun onResume() {
         super.onResume()

@@ -34,7 +34,7 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':app:glide')
+    implementation project(path: ':app:pictures')
     implementation project(path: ':app:core')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

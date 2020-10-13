@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="apm_btn_clear">Clear image</string>
+    <string name="apm_btn_vector">Vector</string>
+    <string name="apm_btn_raster">Raster</string>
+    <string name="apm_btn_remote">Remote</string>
+    <string name="apm_rb_glide">Glide</string>
+    <string name="apm_rb_picasso">Picasso</string>
+    <string name="isa_title">Picture Loader Library</string>
+</resources>
