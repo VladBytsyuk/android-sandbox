@@ -27,6 +27,7 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
     private val buttonVector: Button by lazyFindViewById(R.id.apmBtnVector)
     private val buttonRaster: Button by lazyFindViewById(R.id.apmBtnRaster)
     private val buttonRemote: Button by lazyFindViewById(R.id.apmBtnRemote)
+    private val buttonGif: Button by lazyFindViewById(R.id.apmBtnGif)
 
     override fun render(state: PictureScreenState): Any? = when (state) {
         PictureScreenState.Empty ->
@@ -44,6 +45,7 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
         buttonVector.setOnClickListener { interactor.tapOnLoadVector() }
         buttonRaster.setOnClickListener { interactor.tapOnLoadRaster() }
         buttonRemote.setOnClickListener { interactor.tapOnLoadRemote() }
+        buttonGif.setOnClickListener { interactor.tapOnLoadGif() }
         radioButtonGlide.setOnClickListener { selectLoader(Loader.GLIDE) }
         radioButtonPicasso.setOnClickListener { selectLoader(Loader.PICASSO) }
     }

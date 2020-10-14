@@ -60,8 +60,8 @@
         android:layout_height="wrap_content"
         android:text="@string/apm_btn_raster"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/apmBtnRemote"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/apmBtnVector"
         app:layout_constraintTop_toTopOf="@+id/apmBtnVector"
         app:layout_constraintBottom_toBottomOf="@+id/apmBtnVector"/>
@@ -70,19 +70,26 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/apm_btn_remote"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/apmBtnRaster"
-        app:layout_constraintTop_toTopOf="@+id/apmBtnVector"
-        app:layout_constraintBottom_toBottomOf="@+id/apmBtnVector"/>
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/apmBtnVector"
+        app:layout_constraintStart_toStartOf="@+id/apmBtnVector"
+        app:layout_constraintTop_toBottomOf="@+id/apmBtnVector"/>
+
+    <Button android:id="@+id/apmBtnGif"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/apm_btn_gif"
+        app:layout_constraintEnd_toEndOf="@+id/apmBtnRaster"
+        app:layout_constraintStart_toStartOf="@+id/apmBtnRaster"
+        app:layout_constraintTop_toTopOf="@+id/apmBtnRemote"
+        app:layout_constraintBottom_toBottomOf="@+id/apmBtnRemote"/>
 
     <Button android:id="@+id/apmBtnClear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/apm_btn_clear"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/apmBtnVector"
-        app:layout_constraintTop_toBottomOf="@+id/apmBtnVector"
-        app:layout_constraintEnd_toEndOf="@+id/apmBtnRemote"/>
+        app:layout_constraintStart_toStartOf="@+id/apmBtnRemote"
+        app:layout_constraintTop_toBottomOf="@+id/apmBtnRemote"
+        app:layout_constraintEnd_toEndOf="@+id/apmBtnGif"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

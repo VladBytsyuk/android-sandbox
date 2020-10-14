@@ -7,4 +7,5 @@
     <string name="apm_rb_glide">Glide</string>
     <string name="apm_rb_picasso">Picasso</string>
     <string name="isa_title">Picture Loader Library</string>
+    <string name="apm_btn_gif">Gif</string>
 </resources>
