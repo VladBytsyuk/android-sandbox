@@ -9,7 +9,7 @@ abstract class CoreMviInteractor<State> : ViewModel() {
     val stateObservable: CoreObservable<State>
             by lazy(mode = LazyThreadSafetyMode.NONE) { CoreObservable.create(initialState) }
 
-    fun updateState(mapper: State.() -> State) {
+    fun updateState(mapper: State.() -> State = { this }) {
         val oldState = stateObservable.get()
         val newState = oldState.mapper()
         stateObservable.set(newState)

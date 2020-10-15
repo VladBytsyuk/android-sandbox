@@ -14,6 +14,7 @@ abstract class CoreMviActivity<State, Interactor : CoreMviInteractor<State>>(
     override fun onResume() {
         super.onResume()
         interactor.stateObservable.subscribe(subscriber = this) { render(it) }
+        interactor.updateState()
     }
 
     override fun onPause() {
