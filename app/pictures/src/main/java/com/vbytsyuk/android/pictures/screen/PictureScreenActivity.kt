@@ -1,11 +1,15 @@
 package com.vbytsyuk.android.pictures.screen
 
+import android.content.res.Resources
+import android.util.TypedValue
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RadioButton
 import androidx.activity.viewModels
+import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
+import com.vbytsyuk.android.core.activity.color
 import com.vbytsyuk.android.core.activity.lazyFindViewById
 import com.vbytsyuk.android.core.mvi.CoreMviActivity
 import com.vbytsyuk.android.core.pictures.PicturesLoader
@@ -15,7 +19,8 @@ import com.vbytsyuk.android.pictures.R
 
 class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenInteractor>(
     layoutId = R.layout.activity_pictures_main,
-    titleId = R.string.isa_title
+    titleId = R.string.isa_title,
+    toolbarId = R.id.apmToolbar
 ) {
     override val interactor: PictureScreenInteractor by viewModels()
     private val picturesLoaderChooser = PicturesLoaderChooser(context = this)
@@ -65,8 +70,8 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
 
     private fun renderSelectedButtons(selectedButton: SelectedButton) {
         listOf(buttonClear, buttonVector, buttonRaster, buttonRemote, buttonGif)
-            .forEach { it.setBackgroundColor(ContextCompat.getColor(this, R.color.purple_200)) }
-        getButtonView(selectedButton)?.setBackgroundColor(ContextCompat.getColor(this, R.color.teal_200))
+            .forEach { it.setBackgroundColor(ContextCompat.getColor(this, theme.color(R.attr.colorPrimary))) }
+        getButtonView(selectedButton)?.setBackgroundColor(ContextCompat.getColor(this, theme.color(R.attr.colorSecondary)))
     }
 
     private fun getButtonView(selectedButton: SelectedButton): Button? = when (selectedButton) {

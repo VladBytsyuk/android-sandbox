@@ -1,6 +1,7 @@
 package com.vbytsyuk.android.core.mvi
 
 import android.view.View
+import androidx.annotation.IdRes
 import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
 import com.vbytsyuk.android.core.activity.CoreActivity
@@ -8,8 +9,9 @@ import com.vbytsyuk.android.core.activity.CoreActivity
 
 abstract class CoreMviActivity<State, Interactor : CoreMviInteractor<State>>(
     @LayoutRes layoutId: Int,
-    @StringRes titleId: Int? = null
-) : CoreActivity(layoutId, titleId) {
+    @StringRes titleId: Int? = null,
+    @IdRes toolbarId: Int? = null
+) : CoreActivity(layoutId, titleId, toolbarId) {
     abstract val interactor: Interactor
 
     override fun onResume() {

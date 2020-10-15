@@ -6,10 +6,9 @@
 
     <application
         android:allowBackup="true"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Sandbox">
+        android:supportsRtl="true">
 
-        <activity android:name="com.vbytsyuk.android.pictures.screen.PictureScreenActivity"/>
+        <activity android:name="com.vbytsyuk.android.pictures.screen.PictureScreenActivity" />
 
     </application>
 

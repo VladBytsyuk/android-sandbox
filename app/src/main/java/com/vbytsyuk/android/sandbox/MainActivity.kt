@@ -7,7 +7,11 @@ import com.vbytsyuk.android.core.activity.navigateTo
 import com.vbytsyuk.android.pictures.screen.PictureScreenActivity
 
 
-class MainActivity : CoreActivity(layoutId = R.layout.activity_main, titleId = R.string.app_name) {
+class MainActivity : CoreActivity(
+    layoutId = R.layout.activity_main,
+    titleId = R.string.app_name,
+    toolbarId = R.id.amToolbar
+) {
     private val buttonImageLoaders: Button by lazyFindViewById(R.id.amBtnPictureLoaders)
 
     override fun setClickListeners() {
