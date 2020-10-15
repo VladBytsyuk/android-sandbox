@@ -8,7 +8,6 @@ import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import com.vbytsyuk.android.core.activity.lazyFindViewById
 import com.vbytsyuk.android.core.mvi.CoreMviActivity
-import com.vbytsyuk.android.core.nonThreadSafeLazy
 import com.vbytsyuk.android.core.pictures.PicturesLoader
 import com.vbytsyuk.android.pictures.loaders.PicturesLoaderChooser
 import com.vbytsyuk.android.pictures.R
@@ -32,17 +31,15 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
     private val buttonGif: Button by lazyFindViewById(R.id.apmBtnGif)
 
 
-    override val viewToInteractorActions: Map<View, PictureScreenInteractor.() -> Unit> by nonThreadSafeLazy {
-        mapOf(
-            buttonClear to { tapOnClear() },
-            buttonVector to { tapOnLoadVector() },
-            buttonRaster to { tapOnLoadRaster() },
-            buttonRemote to { tapOnLoadRemote() },
-            buttonGif to { tapOnLoadGif() },
-            radioButtonGlide to { tapOnGlide() },
-            radioButtonPicasso to { tapOnPicasso() }
-        )
-    }
+    override fun registerViewToInteractorActions(): Map<View, PictureScreenInteractor.() -> Unit> = mapOf(
+        buttonClear to { tapOnClear() },
+        buttonVector to { tapOnLoadVector() },
+        buttonRaster to { tapOnLoadRaster() },
+        buttonRemote to { tapOnLoadRemote() },
+        buttonGif to { tapOnLoadGif() },
+        radioButtonGlide to { tapOnGlide() },
+        radioButtonPicasso to { tapOnPicasso() }
+    )
 
 
     override fun render(state: PictureScreenState) {
