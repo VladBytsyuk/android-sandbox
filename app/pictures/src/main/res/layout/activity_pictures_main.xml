@@ -10,6 +10,7 @@
     <ImageView android:id="@+id/apmImageView"
         android:layout_width="320dp"
         android:layout_height="180dp"
+        android:contentDescription="@string/apm_iv_content_description"
         android:layout_margin="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

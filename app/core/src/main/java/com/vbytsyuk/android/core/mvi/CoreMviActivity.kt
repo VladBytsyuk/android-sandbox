@@ -1,5 +1,6 @@
 package com.vbytsyuk.android.core.mvi
 
+import android.view.View
 import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
 import com.vbytsyuk.android.core.activity.CoreActivity
@@ -23,4 +24,13 @@ abstract class CoreMviActivity<State, Interactor : CoreMviInteractor<State>>(
     }
 
     open fun render(state: State): Any? = Unit
+
+
+    abstract val viewToInteractorActions: Map<View, Interactor.() -> Unit>
+
+    override fun setClickListeners() {
+        viewToInteractorActions.forEach { (view, action) ->
+            view.setOnClickListener { interactor.action() }
+        }
+    }
 }

@@ -1,10 +1,8 @@
 package com.vbytsyuk.android.pictures.loaders
 
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import androidx.annotation.DrawableRes
-import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.vbytsyuk.android.core.pictures.PicturesLoader
 import com.vbytsyuk.android.pictures.R

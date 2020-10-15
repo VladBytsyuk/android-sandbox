@@ -1,5 +1,6 @@
 package com.vbytsyuk.android.pictures.screen
 
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RadioButton
@@ -30,15 +31,15 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
     private val buttonGif: Button by lazyFindViewById(R.id.apmBtnGif)
 
 
-    override fun setClickListeners() {
-        buttonClear.setOnClickListener { interactor.tapOnClear() }
-        buttonVector.setOnClickListener { interactor.tapOnLoadVector() }
-        buttonRaster.setOnClickListener { interactor.tapOnLoadRaster() }
-        buttonRemote.setOnClickListener { interactor.tapOnLoadRemote() }
-        buttonGif.setOnClickListener { interactor.tapOnLoadGif() }
-        radioButtonGlide.setOnClickListener { interactor.tapOnGlide() }
-        radioButtonPicasso.setOnClickListener { interactor.tapOnPicasso() }
-    }
+    override val viewToInteractorActions: Map<View, PictureScreenInteractor.() -> Unit> = mapOf(
+        buttonClear to { tapOnClear() },
+        buttonVector to { tapOnLoadVector() },
+        buttonRaster to { tapOnLoadRaster() },
+        buttonRemote to { tapOnLoadRemote() },
+        buttonGif to { tapOnLoadGif() },
+        radioButtonGlide to { tapOnGlide() },
+        radioButtonPicasso to { tapOnPicasso() }
+    )
 
 
     override fun render(state: PictureScreenState) {
@@ -49,10 +50,11 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
 
     private fun renderLibrary(library: SelectedLibrary) {
         picturesLoaderChooser.loader = library
-        when (library) {
-            SelectedLibrary.GLIDE -> radioButtonGlide.isChecked = true
-            SelectedLibrary.PICASSO -> radioButtonPicasso.isChecked = true
+        val radioButton = when (library) {
+            SelectedLibrary.GLIDE -> radioButtonGlide
+            SelectedLibrary.PICASSO -> radioButtonPicasso
         }
+        radioButton.isChecked = true
     }
 
     private fun renderImage(action: PictureLoadAction) = when (action) {
@@ -67,7 +69,7 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
         getButtonView(selectedButton)?.setBackgroundColor(ContextCompat.getColor(this, R.color.teal_200))
     }
 
-    private fun getButtonView(selectedButton: SelectedButton): Button? =  when (selectedButton) {
+    private fun getButtonView(selectedButton: SelectedButton): Button? = when (selectedButton) {
         SelectedButton.VECTOR -> buttonVector
         SelectedButton.RASTER -> buttonRaster
         SelectedButton.REMOTE -> buttonRemote
