@@ -1,21 +1,18 @@
-package com.vbytsyuk.android.pictures
+package com.vbytsyuk.android.pictures.loaders
 
 import android.content.Context
 import com.vbytsyuk.android.core.pictures.PicturesLoader
-import com.vbytsyuk.android.pictures.loaders.GlidePicturesLoader
-import com.vbytsyuk.android.pictures.loaders.PicassoPicturesLoader
+import com.vbytsyuk.android.pictures.screen.SelectedLibrary
 
 
 class PicturesLoaderChooser(context: Context) {
-    enum class Loader { GLIDE, PICASSO }
-
     private val glidePicturesLoader = GlidePicturesLoader(context)
     private val picassoPicturesLoader = PicassoPicturesLoader()
 
-    var loader: Loader = Loader.GLIDE
+    var loader: SelectedLibrary = SelectedLibrary.GLIDE
 
     val picturesLoader: PicturesLoader get() = when (loader) {
-        Loader.GLIDE -> glidePicturesLoader
-        Loader.PICASSO -> picassoPicturesLoader
+        SelectedLibrary.GLIDE -> glidePicturesLoader
+        SelectedLibrary.PICASSO -> picassoPicturesLoader
     }
 }

@@ -2,14 +2,44 @@ package com.vbytsyuk.android.pictures.screen
 
 import com.vbytsyuk.android.core.mvi.CoreMviInteractor
 import com.vbytsyuk.android.pictures.R
+import com.vbytsyuk.android.pictures.screen.PictureLoadAction.*
+import com.vbytsyuk.android.pictures.screen.SelectedButton.*
+import com.vbytsyuk.android.pictures.screen.SelectedLibrary.*
 
 
 class PictureScreenInteractor : CoreMviInteractor<PictureScreenState>() {
-    fun tapOnClear() = stateObservable.set(PictureScreenState.Empty)
-    fun tapOnLoadVector() = stateObservable.set(PictureScreenState.LocalDrawable(R.drawable.ic_android))
-    fun tapOnLoadRaster() = stateObservable.set(PictureScreenState.LocalDrawable(R.drawable.ic_android_raster))
-    fun tapOnLoadRemote() = stateObservable.set(PictureScreenState.RemotePicture(REMOTE_PICTURE_URL))
-    fun tapOnLoadGif() = stateObservable.set(PictureScreenState.RemotePicture(REMOTE_GIF_URL))
+    override val initialState = PictureScreenState(library = GLIDE, selectedButton = NONE, action = Clear)
+
+
+    fun tapOnGlide() = updateState {
+        copy(library = GLIDE, selectedButton = NONE, action = Clear)
+    }
+
+    fun tapOnPicasso() = updateState {
+        copy(library = PICASSO, selectedButton = NONE, action = Clear)
+    }
+
+
+    fun tapOnClear() = updateState {
+        copy(selectedButton = NONE, action = Clear)
+    }
+
+    fun tapOnLoadVector() = updateState {
+        copy(selectedButton = VECTOR, action = LocalDrawable(R.drawable.ic_android))
+    }
+
+    fun tapOnLoadRaster() = updateState {
+        copy(selectedButton = RASTER, action = LocalDrawable(R.drawable.ic_android_raster))
+    }
+
+    fun tapOnLoadRemote() = updateState {
+        copy(selectedButton = REMOTE, action = RemotePicture(REMOTE_PICTURE_URL))
+    }
+
+    fun tapOnLoadGif() = updateState {
+        copy(selectedButton = GIF, action = RemotePicture(REMOTE_GIF_URL))
+    }
+
 
     companion object {
         const val REMOTE_PICTURE_URL = "https://sm.pcmag.com/pcmag_ap/news/a/a-wallpape/a-wallpaper-can-crash-some-android-10-phones_1mhp.jpg"
