@@ -1,26 +1,22 @@
 package com.vbytsyuk.android.pictures.screen
 
-import android.content.res.Resources
-import android.util.TypedValue
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RadioButton
 import androidx.activity.viewModels
-import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContextCompat
-import com.vbytsyuk.android.core.activity.color
+import com.vbytsyuk.android.core.appbar.AppBarConfigurator
+import com.vbytsyuk.android.core.appbar.ToolBarConfigurator
 import com.vbytsyuk.android.core.activity.lazyFindViewById
 import com.vbytsyuk.android.core.mvi.CoreMviActivity
 import com.vbytsyuk.android.core.pictures.PicturesLoader
+import com.vbytsyuk.android.core.themeColor
 import com.vbytsyuk.android.pictures.loaders.PicturesLoaderChooser
 import com.vbytsyuk.android.pictures.R
 
 
 class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenInteractor>(
-    layoutId = R.layout.activity_pictures_main,
-    titleId = R.string.isa_title,
-    toolbarId = R.id.apmToolbar
+    layoutId = R.layout.activity_pictures_main
 ) {
     override val interactor: PictureScreenInteractor by viewModels()
     private val picturesLoaderChooser = PicturesLoaderChooser(context = this)
@@ -34,6 +30,29 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
     private val buttonRaster: Button by lazyFindViewById(R.id.apmBtnRaster)
     private val buttonRemote: Button by lazyFindViewById(R.id.apmBtnRemote)
     private val buttonGif: Button by lazyFindViewById(R.id.apmBtnGif)
+
+
+    override val appBarConfigurator = ToolBarConfigurator(
+        toolbarId = R.id.apmToolbar,
+        titleId = R.string.isa_title,
+        leftButton = AppBarConfigurator.LeftButton(R.drawable.ic_arrow_back) { finish() },
+        buttonsMenu = AppBarConfigurator.ButtonsMenu(
+            menuId = R.menu.menu_appbar_default,
+            map = listOf(
+                AppBarConfigurator.Button.Toggl(
+                    menuItemId = R.id.abmiTheme,
+                    isChecked = false,
+                    normalIconId = R.drawable.ic_day,
+                    checkedIconId = R.drawable.ic_night,
+                    clickListener = { configureTheme(isDark = true) }
+                )
+            )
+        )
+    )
+
+    private fun configureTheme(isDark: Boolean) {
+        
+    }
 
 
     override fun registerViewToInteractorActions(): Map<View, PictureScreenInteractor.() -> Unit> = mapOf(
@@ -70,8 +89,8 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
 
     private fun renderSelectedButtons(selectedButton: SelectedButton) {
         listOf(buttonClear, buttonVector, buttonRaster, buttonRemote, buttonGif)
-            .forEach { it.setBackgroundColor(ContextCompat.getColor(this, theme.color(R.attr.colorPrimary))) }
-        getButtonView(selectedButton)?.setBackgroundColor(ContextCompat.getColor(this, theme.color(R.attr.colorSecondary)))
+            .forEach { it.setBackgroundColor(themeColor(R.attr.colorPrimary)) }
+        getButtonView(selectedButton)?.setBackgroundColor(themeColor(R.attr.colorSecondary))
     }
 
     private fun getButtonView(selectedButton: SelectedButton): Button? = when (selectedButton) {

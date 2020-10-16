@@ -9,7 +9,5 @@
         android:supportsRtl="true">
 
         <activity android:name="com.vbytsyuk.android.pictures.screen.PictureScreenActivity" />
-
     </application>
-
 </manifest>

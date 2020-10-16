@@ -1,17 +1,14 @@
 package com.vbytsyuk.android.core.mvi
 
 import android.view.View
-import androidx.annotation.IdRes
 import androidx.annotation.LayoutRes
-import androidx.annotation.StringRes
+import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 import com.vbytsyuk.android.core.activity.CoreActivity
 
 
 abstract class CoreMviActivity<State, Interactor : CoreMviInteractor<State>>(
-    @LayoutRes layoutId: Int,
-    @StringRes titleId: Int? = null,
-    @IdRes toolbarId: Int? = null
-) : CoreActivity(layoutId, titleId, toolbarId) {
+    @LayoutRes layoutId: Int
+) : CoreActivity(layoutId) {
     abstract val interactor: Interactor
 
     override fun onResume() {
