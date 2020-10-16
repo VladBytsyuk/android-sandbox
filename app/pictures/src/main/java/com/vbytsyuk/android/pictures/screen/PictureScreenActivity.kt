@@ -4,6 +4,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RadioButton
+import android.widget.Toast
 import androidx.activity.viewModels
 import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 import com.vbytsyuk.android.core.appbar.ToolBarConfigurator
@@ -44,14 +45,14 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
                     isChecked = false,
                     normalIconId = R.drawable.ic_day,
                     checkedIconId = R.drawable.ic_night,
-                    clickListener = { configureTheme(isDark = true) }
+                    clickListener = { configureTheme(isDark = it) }
                 )
             )
         )
     )
 
     private fun configureTheme(isDark: Boolean) {
-        
+        Toast.makeText(this, "Dark mode: ${if (isDark) "ON" else "OFF"}", Toast.LENGTH_SHORT).show()
     }
 
 
