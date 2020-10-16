@@ -7,13 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".screen.PictureScreenActivity">
 
+    <androidx.appcompat.widget.Toolbar android:id="@+id/apmToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <ImageView android:id="@+id/apmImageView"
         android:layout_width="320dp"
         android:layout_height="180dp"
         android:contentDescription="@string/apm_iv_content_description"
         android:layout_margin="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apmToolbar"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <RadioGroup android:id="@+id/apmRgType"
@@ -23,7 +34,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintStart_toEndOf="@+id/apmImageView"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apmToolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/apmBtnVector"
         app:layout_constraintVertical_chainStyle="packed">
