@@ -5,22 +5,26 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.Toast
-import androidx.activity.viewModels
+import com.vbytsyuk.android.core.Theme
 import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 import com.vbytsyuk.android.core.appbar.ToolBarConfigurator
 import com.vbytsyuk.android.core.activity.lazyFindViewById
+import com.vbytsyuk.android.core.controllers.ThemeController
 import com.vbytsyuk.android.core.mvi.CoreMviActivity
 import com.vbytsyuk.android.core.pictures.PicturesLoader
 import com.vbytsyuk.android.core.themeColor
-import com.vbytsyuk.android.pictures.loaders.PicturesLoaderChooser
 import com.vbytsyuk.android.pictures.R
+import com.vbytsyuk.android.pictures.loaders.PicturesLoaderChooser
+import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenInteractor>(
     layoutId = R.layout.activity_pictures_main
 ) {
-    override val interactor: PictureScreenInteractor by viewModels()
-    private val picturesLoaderChooser = PicturesLoaderChooser(context = this)
+    override val interactor: PictureScreenInteractor by viewModel()
+    private val themeController: ThemeController by inject()
+    private val picturesLoaderChooser: PicturesLoaderChooser by inject()
     private val picturesLoader: PicturesLoader get() = picturesLoaderChooser.picturesLoader
 
     private val imageView: ImageView by lazyFindViewById(R.id.apmImageView)
@@ -42,7 +46,7 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
             map = listOf(
                 AppBarConfigurator.Button.Toggl(
                     menuItemId = R.id.abmiTheme,
-                    isChecked = false,
+                    isChecked = themeController.currentTheme == Theme.DARK,
                     normalIconId = R.drawable.ic_day,
                     checkedIconId = R.drawable.ic_night,
                     clickListener = { configureTheme(isDark = it) }
@@ -52,6 +56,7 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
     )
 
     private fun configureTheme(isDark: Boolean) {
+        themeController.setTheme(if (isDark) Theme.DARK else Theme.LIGHT)
         Toast.makeText(this, "Dark mode: ${if (isDark) "ON" else "OFF"}", Toast.LENGTH_SHORT).show()
     }
 

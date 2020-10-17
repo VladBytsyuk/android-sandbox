@@ -35,6 +35,23 @@ object Deps {
     }
 
     object Libs {
+        object Koin {
+            const val Version = "2.1.6"
+            const val Core = "org.koin:koin-core:$Version"
+            const val Ext = "org.koin:koin-core-ext:$Version"
+            const val Test = "org.koin:koin-test:$Version"
+            object Android {
+                const val Android = "org.koin:koin-android:$Version"
+                const val Scope = "org.koin:koin-android-scope:$Version"
+                const val ViewModel = "org.koin:koin-android-viewmodel:$Version"
+            }
+            object AndroidX {
+                const val Scope = "org.koin:koin-androidx-scope:$Version"
+                const val ViewModel = "org.koin:koin-androidx-viewmodel:$Version"
+                const val Fragment = "org.koin:koin-androidx-fragment:$Version"
+            }
+        }
+
         object Glide {
             private const val Version = "4.11.0"
             const val Core = "com.github.bumptech.glide:glide:$Version"

@@ -8,7 +8,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sandbox.NoActionBar"
-        android:allowBackup="false">
+        android:allowBackup="false"
+        android:name=".SandboxApplication">
 
         <activity android:name=".MainActivity">
             <intent-filter>

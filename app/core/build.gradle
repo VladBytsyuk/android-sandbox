@@ -35,6 +35,8 @@ android {
 }
 
 dependencies {
+    implementation project(path: ':app:core:storage')
+
     implementation Deps.Kotlin.StdLib
     implementation Deps.Android.Material
     implementation Deps.Android.X.AppCompat
@@ -45,4 +47,16 @@ dependencies {
 
     androidTestImplementation Deps.Test.Android.Junit
     androidTestImplementation Deps.Test.Android.Espresso
+
+
+    // Koin
+    implementation Deps.Libs.Koin.Core
+    implementation Deps.Libs.Koin.Ext
+    implementation Deps.Libs.Koin.Android.Android
+    implementation Deps.Libs.Koin.Android.Scope
+    implementation Deps.Libs.Koin.Android.ViewModel
+    implementation Deps.Libs.Koin.AndroidX.Scope
+    implementation Deps.Libs.Koin.AndroidX.ViewModel
+    implementation Deps.Libs.Koin.AndroidX.Fragment
+    testImplementation Deps.Libs.Koin.Test
 }
