@@ -1,3 +1,5 @@
+import com.vbytsyuk.build.Deps
+
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
@@ -33,18 +35,21 @@ android {
     }
 }
 
+
 dependencies {
     implementation project(path: ':app:pictures')
     implementation project(path: ':app:core')
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation "androidx.activity:activity-ktx:1.1.0"
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
-    testImplementation 'junit:junit:4.13.1'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.android.support:multidex:1.0.3'
+    implementation Deps.Kotlin.StdLib
+    implementation Deps.Android.Material
+    implementation Deps.Android.Support.MultiDex
+    implementation Deps.Android.X.AppCompat
+    implementation Deps.Android.X.ConstraintLayout
+    implementation Deps.Android.X.KTX.Core
+    implementation Deps.Android.X.KTX.Activity
+
+    testImplementation Deps.Test.Junit
+
+    androidTestImplementation Deps.Test.Android.Junit
+    androidTestImplementation Deps.Test.Android.Espresso
 }

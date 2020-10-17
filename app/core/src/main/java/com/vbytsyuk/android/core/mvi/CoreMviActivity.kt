@@ -25,11 +25,11 @@ abstract class CoreMviActivity<State, Interactor : CoreMviInteractor<State>>(
     open fun render(state: State): Any? = Unit
 
 
-    abstract fun registerViewToInteractorActions(): Map<View, Interactor.() -> Unit>
+    abstract fun registerViewToInteractorActions(): Map<View, () -> Unit>
 
     override fun setClickListeners() {
         registerViewToInteractorActions().forEach { (view, action) ->
-            view.setOnClickListener { interactor.action() }
+            view.setOnClickListener { action() }
         }
     }
 }

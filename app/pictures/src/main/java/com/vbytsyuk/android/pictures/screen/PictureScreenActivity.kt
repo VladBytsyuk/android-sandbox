@@ -56,14 +56,14 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
     }
 
 
-    override fun registerViewToInteractorActions(): Map<View, PictureScreenInteractor.() -> Unit> = mapOf(
-        buttonClear to { tapOnClear() },
-        buttonVector to { tapOnLoadVector() },
-        buttonRaster to { tapOnLoadRaster() },
-        buttonRemote to { tapOnLoadRemote() },
-        buttonGif to { tapOnLoadGif() },
-        radioButtonGlide to { tapOnGlide() },
-        radioButtonPicasso to { tapOnPicasso() }
+    override fun registerViewToInteractorActions(): Map<View, () -> Unit> = mapOf(
+        buttonClear to { interactor.tapOnClear() },
+        buttonVector to { interactor.tapOnLoadVector() },
+        buttonRaster to { interactor.tapOnLoadRaster() },
+        buttonRemote to { interactor.tapOnLoadRemote() },
+        buttonGif to { interactor.tapOnLoadGif() },
+        radioButtonGlide to { interactor.tapOnGlide() },
+        radioButtonPicasso to { interactor.tapOnPicasso() }
     )
 
 

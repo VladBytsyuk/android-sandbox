@@ -7,4 +7,4 @@ import com.vbytsyuk.android.core.nonThreadSafeLazy
 
 
 inline fun <reified T : View> Activity.lazyFindViewById(@IdRes id: Int): Lazy<T> =
-    nonThreadSafeLazy { findViewById(id) }
+    nonThreadSafeLazy { findViewById<T>(id) }
