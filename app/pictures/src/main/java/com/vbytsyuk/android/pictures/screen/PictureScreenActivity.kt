@@ -8,7 +8,6 @@ import com.vbytsyuk.android.core.Theme
 import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 import com.vbytsyuk.android.core.appbar.ToolBarConfigurator
 import com.vbytsyuk.android.core.activity.lazyFindViewById
-import com.vbytsyuk.android.core.controllers.ThemeController
 import com.vbytsyuk.android.core.mvi.CoreMviActivity
 import com.vbytsyuk.android.core.pictures.PicturesLoader
 import com.vbytsyuk.android.core.themeColor
