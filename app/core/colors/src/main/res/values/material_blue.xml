@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_50_light">#ffffff</color>
+    <color name="blue_50">#e3f2fd</color>
+    <color name="blue_50_dark">#b1bfca</color>
+
+    <color name="blue_100_light">#eeffff</color>
+    <color name="blue_100">#bbdefb</color>
+    <color name="blue_100_dark">#8aacc8</color>
+
+    <color name="blue_200_light">#c3fdff</color>
+    <color name="blue_200">#90caf9</color>
+    <color name="blue_200_dark">#5d99c6</color>
+
+    <color name="blue_300_light">#9be7ff</color>
+    <color name="blue_300">#64b5f6</color>
+    <color name="blue_300_dark">#2286c3</color>
+
+    <color name="blue_400_light">#80d6ff</color>
+    <color name="blue_400">#42a5f5</color>
+    <color name="blue_400_dark">#0077c2</color>
+
+    <color name="blue_500_light">#6ec6ff</color>
+    <color name="blue_500">#2196f3</color>
+    <color name="blue_500_dark">#0069c0</color>
+
+    <color name="blue_600_light">#6ab7ff</color>
+    <color name="blue_600">#1e88e5</color>
+    <color name="blue_600_dark">#005cb2</color>
+
+    <color name="blue_700_light">#63a4ff</color>
+    <color name="blue_700">#1976d2</color>
+    <color name="blue_700_dark">#004ba0</color>
+
+    <color name="blue_800_light">#5e92f3</color>
+    <color name="blue_800">#1565c0</color>
+    <color name="blue_800_dark">#003c8f</color>
+
+    <color name="blue_900_light">#5472d3</color>
+    <color name="blue_900">#0d47a1</color>
+    <color name="blue_900_dark">#002171</color>
+
+
+    <color name="a_blue_100_light">#b6e3ff</color>
+    <color name="a_blue_100">#82b1ff</color>
+    <color name="a_blue_100_dark">#4d82cb</color>
+
+    <color name="a_blue_200_light">#83b9ff</color>
+    <color name="a_blue_200">#448aff</color>
+    <color name="a_blue_200_dark">#005ecb</color>
+
+    <color name="a_blue_400_light">#75a7ff</color>
+    <color name="a_blue_400">#2979ff</color>
+    <color name="a_blue_400_dark">#004ecb</color>
+
+    <color name="a_blue_700_light">#768fff</color>
+    <color name="a_blue_700">#2962ff</color>
+    <color name="a_blue_700_dark">#0039cb</color>
+</resources>
