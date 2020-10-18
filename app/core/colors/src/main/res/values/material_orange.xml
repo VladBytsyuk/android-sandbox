@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="orange_50_light">#ffffff</color>
+    <color name="orange_50">#fff3e0</color>
+    <color name="orange_50_dark">#ccc0ae</color>
+
+    <color name="orange_100_light">#ffffe4</color>
+    <color name="orange_100">#ffe0b2</color>
+    <color name="orange_100_dark">#cbae82</color>
+
+    <color name="orange_200_light">#ffffb0</color>
+    <color name="orange_200">#ffcc80</color>
+    <color name="orange_200_dark">#ca9b52</color>
+
+    <color name="orange_300_light">#ffe97d</color>
+    <color name="orange_300">#ffb74d</color>
+    <color name="orange_300_dark">#c88719</color>
+
+    <color name="orange_400_light">#ffd95b</color>
+    <color name="orange_400">#ffa726</color>
+    <color name="orange_400_dark">#c77800</color>
+
+    <color name="orange_500_light">#ffc947</color>
+    <color name="orange_500">#ff9800</color>
+    <color name="orange_500_dark">#c66900</color>
+
+    <color name="orange_600_light">#ffbd45</color>
+    <color name="orange_600">#fb8c00</color>
+    <color name="orange_600_dark">#c25e00</color>
+
+    <color name="orange_700_light">#ffad42</color>
+    <color name="orange_700">#f57c00</color>
+    <color name="orange_700_dark">#bb4d00</color>
+
+    <color name="orange_800_light">#ff9d3f</color>
+    <color name="orange_800">#ef6c00</color>
+    <color name="orange_800_dark">#b53d00</color>
+
+    <color name="orange_900_light">#ff833a</color>
+    <color name="orange_900">#e65100</color>
+    <color name="orange_900_dark">#ac1900</color>
+
+
+    <color name="a_orange_100_light">#ffffb1</color>
+    <color name="a_orange_100">#ffd180</color>
+    <color name="a_orange_100_dark">#caa052</color>
+
+    <color name="a_orange_200_light">#ffdd71</color>
+    <color name="a_orange_200">#ffab40</color>
+    <color name="a_orange_200_dark">#c77c02</color>
+
+    <color name="a_orange_400_light">#ffc246</color>
+    <color name="a_orange_400">#ff9100</color>
+    <color name="a_orange_400_dark">#c56200</color>
+
+    <color name="a_orange_700_light">#ff9e40</color>
+    <color name="a_orange_700">#ff6d00</color>
+    <color name="a_orange_700_dark">#c43c00</color>
+</resources>
