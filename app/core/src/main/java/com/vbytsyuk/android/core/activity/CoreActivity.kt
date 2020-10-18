@@ -25,33 +25,27 @@ abstract class CoreActivity(
         appBarConfigurator?.inflateMenu(menuInflater, menu) ?: super.onCreateOptionsMenu(menu)
 
     override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
-        val toggleButtons = appBarConfigurator
-            ?.buttons
-            ?.filterIsInstance<AppBarConfigurator.Button.Toggle>()
+        val toggleButtons = appBarConfigurator?.buttons?.filterIsInstance<AppBarConfigurator.Button.Toggle>()
         if (toggleButtons != null && menu != null) {
-            checkToggleButtonsList(menu, toggleButtons.filter { it.isChecked }, true)
-            checkToggleButtonsList(menu, toggleButtons.filterNot { it.isChecked }, false)
+            toggleButtons
+                .mapNotNull { toggleButton -> findMenuItemForButton(menu, toggleButton)?.let { it to toggleButton } }
+                .forEach { (menuItem, button) ->
+                    checkToggleButton(menuItem, button, isChecked = button.isChecked, forceClickListener = false)
+                }
         }
         return super.onPrepareOptionsMenu(menu)
     }
 
-    private fun checkToggleButtonsList(
-        menu: Menu,
-        toggleButtons: List<AppBarConfigurator.Button.Toggle>,
-        isChecked: Boolean
-    ) {
-        toggleButtons.mapNotNull { toggleButton ->
-            val menuItem = menu.children.find { it.itemId == toggleButton.menuItemId }
-            return@mapNotNull if (menuItem != null) menuItem to toggleButton else null
-        }.forEach { (menuItem, button) -> checkToggleButton(menuItem, button, isChecked) }
-    }
+    private fun findMenuItemForButton(menu: Menu, button: AppBarConfigurator.Button): MenuItem? =
+        menu.children.find { it.itemId == button.menuItemId }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val button: AppBarConfigurator.Button = appBarConfigurator?.buttons?.find { it.menuItemId == item.itemId }
             ?: return super.onOptionsItemSelected(item)
         when (button) {
             is AppBarConfigurator.Button.Simple -> button.clickListener()
-            is AppBarConfigurator.Button.Toggle -> checkToggleButton(item, button,!button.isChecked)
+            is AppBarConfigurator.Button.Toggle ->
+                checkToggleButton(item, button, isChecked = !button.isChecked, forceClickListener = true)
         }
         return true
     }
@@ -59,11 +53,12 @@ abstract class CoreActivity(
     private fun checkToggleButton(
         menuItem: MenuItem,
         toggleButton: AppBarConfigurator.Button.Toggle,
-        isChecked: Boolean
+        isChecked: Boolean,
+        forceClickListener: Boolean
     ) {
         menuItem.setIcon(if (isChecked) toggleButton.checkedIconId else toggleButton.normalIconId)
         toggleButton.isChecked = isChecked
-        toggleButton.clickListener(isChecked)
+        if (forceClickListener) toggleButton.clickListener(isChecked)
     }
 
     abstract fun setClickListeners()
