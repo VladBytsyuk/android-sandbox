@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="yellow_50_light">#ffffff</color>
+    <color name="yellow_50">#fffde7</color>
+    <color name="yellow_50_dark">#cccab5</color>
+
+    <color name="yellow_100_light">#fffff7</color>
+    <color name="yellow_100">#fff9c4</color>
+    <color name="yellow_100_dark">#cbc693</color>
+
+    <color name="yellow_200_light">#ffffcf</color>
+    <color name="yellow_200">#fff59d</color>
+    <color name="yellow_200_dark">#cbc26d</color>
+
+    <color name="yellow_300_light">#ffffa8</color>
+    <color name="yellow_300">#fff176</color>
+    <color name="yellow_300_dark">#cabf45</color>
+
+    <color name="yellow_400_light">#ffff8b</color>
+    <color name="yellow_400">#ffee58</color>
+    <color name="yellow_400_dark">#c9bc1f</color>
+
+    <color name="yellow_500_light">#ffff72</color>
+    <color name="yellow_500">#ffeb3b</color>
+    <color name="yellow_500_dark">#c8b900</color>
+
+    <color name="yellow_600_light">#ffff6b</color>
+    <color name="yellow_600">#fdd835</color>
+    <color name="yellow_600_dark">#c6a700</color>
+
+    <color name="yellow_700_light">#fff263</color>
+    <color name="yellow_700">#fbc02d</color>
+    <color name="yellow_700_dark">#c49000</color>
+
+    <color name="yellow_800_light">#ffd95a</color>
+    <color name="yellow_800">#f9a825</color>
+    <color name="yellow_800_dark">#c17900</color>
+
+    <color name="yellow_900_light">#ffb04c</color>
+    <color name="yellow_900">#f57f17</color>
+    <color name="yellow_900_dark">#bc5100</color>
+
+
+    <color name="a_yellow_100_light">#ffffbf</color>
+    <color name="a_yellow_100">#ffff8d</color>
+    <color name="a_yellow_100_dark">#cacc5d</color>
+
+    <color name="a_yellow_200_light">#ffff5a</color>
+    <color name="a_yellow_200">#ffff00</color>
+    <color name="a_yellow_200_dark">#c7cc00</color>
+
+    <color name="a_yellow_400_light">#ffff56</color>
+    <color name="a_yellow_400">#ffea00</color>
+    <color name="a_yellow_400_dark">#c7b800</color>
+
+    <color name="a_yellow_700_light">#ffff52</color>
+    <color name="a_yellow_700">#ffd600</color>
+    <color name="a_yellow_700_dark">#c7a500</color>
+</resources>
