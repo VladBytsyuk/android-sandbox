@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="deep_purple_50_light">#ffffff</color>
+    <color name="deep_purple_50">#ede7f6</color>
+    <color name="deep_purple_50_dark">#bbb5c3</color>
+
+    <color name="deep_purple_100_light">#fff7ff</color>
+    <color name="deep_purple_100">#d1c4e9</color>
+    <color name="deep_purple_100_dark">#a094b7</color>
+
+    <color name="deep_purple_200_light">#e6ceff</color>
+    <color name="deep_purple_200">#b39ddb</color>
+    <color name="deep_purple_200_dark">#836fa9</color>
+
+    <color name="deep_purple_300_light">#c7a4ff</color>
+    <color name="deep_purple_300">#9575cd</color>
+    <color name="deep_purple_300_dark">#65499c</color>
+
+    <color name="deep_purple_400_light">#b085f5</color>
+    <color name="deep_purple_400">#7e57c2</color>
+    <color name="deep_purple_400_dark">#4d2c91</color>
+
+    <color name="deep_purple_500_light">#9a67ea</color>
+    <color name="deep_purple_500">#673ab7</color>
+    <color name="deep_purple_500_dark">#320b86</color>
+
+    <color name="deep_purple_600_light">#9162e4</color>
+    <color name="deep_purple_600">#5e35b1</color>
+    <color name="deep_purple_600_dark">#280680</color>
+
+    <color name="deep_purple_700_light">#8559da</color>
+    <color name="deep_purple_700">#512da8</color>
+    <color name="deep_purple_700_dark">#140078</color>
+
+    <color name="deep_purple_800_light">#7953d2</color>
+    <color name="deep_purple_800">#4527a0</color>
+    <color name="deep_purple_800_dark">#000070</color>
+
+    <color name="deep_purple_900_light">#6746c3</color>
+    <color name="deep_purple_900">#311b92</color>
+    <color name="deep_purple_900_dark">#000063</color>
+
+
+    <color name="a_deep_purple_100_light">#e7b9ff</color>
+    <color name="a_deep_purple_100">#b388ff</color>
+    <color name="a_deep_purple_100_dark">#805acb</color>
+
+    <color name="a_deep_purple_200_light">#b47cff</color>
+    <color name="a_deep_purple_200">#7c4dff</color>
+    <color name="a_deep_purple_200_dark">#3f1dcb</color>
+
+    <color name="a_deep_purple_400_light">#a255ff</color>
+    <color name="a_deep_purple_400">#651fff</color>
+    <color name="a_deep_purple_400_dark">#0100ca</color>
+
+    <color name="a_deep_purple_700_light">#9d46ff</color>
+    <color name="a_deep_purple_700">#6200ea</color>
+    <color name="a_deep_purple_700_dark">#0a00b6</color>
+</resources>
