@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_50_light">#ffffff</color>
+    <color name="green_50">#e8f5e9</color>
+    <color name="green_50_dark">#b6c2b7</color>
+
+    <color name="green_100_light">#fbfffc</color>
+    <color name="green_100">#c8e6c9</color>
+    <color name="green_100_dark">#97b498</color>
+
+    <color name="green_200_light">#d7ffd9</color>
+    <color name="green_200">#a5d6a7</color>
+    <color name="green_200_dark">#75a478</color>
+
+    <color name="green_300_light">#b2fab4</color>
+    <color name="green_300">#81c784</color>
+    <color name="green_300_dark">#519657</color>
+
+    <color name="green_400_light">#98ee99</color>
+    <color name="green_400">#66bb6a</color>
+    <color name="green_400_dark">#338a3e</color>
+
+    <color name="green_500_light">#80e27e</color>
+    <color name="green_500">#4caf50</color>
+    <color name="green_500_dark">#087f23</color>
+
+    <color name="green_600_light">#76d275</color>
+    <color name="green_600">#43a047</color>
+    <color name="green_600_dark">#00701a</color>
+
+    <color name="green_700_light">#6abf69</color>
+    <color name="green_700">#388e3c</color>
+    <color name="green_700_dark">#00600f</color>
+
+    <color name="green_800_light">#60ad5e</color>
+    <color name="green_800">#2e7d32</color>
+    <color name="green_800_dark">#005005</color>
+
+    <color name="green_900_light">#4c8c4a</color>
+    <color name="green_900">#1b5e20</color>
+    <color name="green_900_dark">#003300</color>
+
+
+    <color name="a_green_100_light">#ecfffd</color>
+    <color name="a_green_100">#b9f6ca</color>
+    <color name="a_green_100_dark">#88c399</color>
+
+    <color name="a_green_200_light">#9fffe0</color>
+    <color name="a_green_200">#69f0ae</color>
+    <color name="a_green_200_dark">#2bbd7e</color>
+
+    <color name="a_green_400_light">#66ffa6</color>
+    <color name="a_green_400">#00e676</color>
+    <color name="a_green_400_dark">#00b248</color>
+
+    <color name="a_green_700_light">#5efc82</color>
+    <color name="a_green_700">#00c853</color>
+    <color name="a_green_700_dark">#009624</color>
+</resources>
