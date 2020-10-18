@@ -5,29 +5,33 @@
         <item name="colorPrimaryVariant">@color/purple_800_dark</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/blue_300</item>
-        <item name="colorSecondaryVariant">@color/blue_300</item>
+        <item name="colorSecondary">@color/a_cyan_400_dark</item>
+        <item name="colorSecondaryVariant">@color/a_cyan_700_dark</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="android:textColor">@color/black</item>
-        <item name="android:windowBackground">@color/white</item>
+        <item name="sandboxTextColor">@color/black</item>
+        <item name="android:textColor">?attr/sandboxTextColor</item>
+        <item name="android:windowBackground">@color/blue_grey_50</item>
     </style>
 
     <style name="Theme.Sandbox.Dark.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/deep_purple_400</item>
         <item name="colorPrimaryVariant">@color/deep_purple_400_dark</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/blue_300</item>
-        <item name="colorSecondaryVariant">@color/blue_300</item>
+        <item name="colorSecondary">@color/a_cyan_400</item>
+        <item name="colorSecondaryVariant">@color/a_cyan_400_dark</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="android:textColor">@color/white</item>
-        <item name="android:windowBackground">@color/black</item>
+        <item name="sandboxTextColor">@color/white</item>
+        <item name="android:textColor">?attr/sandboxTextColor</item>
+        <item name="android:windowBackground">@color/blue_grey_800_dark</item>
     </style>
+
+    <attr name="sandboxTextColor" format="reference|color" />
 </resources>

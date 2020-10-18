@@ -43,6 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/apm_rb_glide"
+            android:textColor="?attr/sandboxTextColor"
             android:checked="true"
             android:layout_weight="1"
             />
@@ -50,10 +51,11 @@
         <RadioButton android:id="@+id/apmRbPicasso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:text="@string/apm_rb_picasso"
+            android:textColor="?attr/sandboxTextColor"
             android:checked="false"
             android:layout_weight="1"
+            android:layout_marginStart="8dp"
             />
 
     </RadioGroup>
