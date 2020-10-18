@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_green_50_light">#ffffff</color>
+    <color name="light_green_50">#f1f8e9</color>
+    <color name="light_green_50_dark">#bec5b7</color>
+
+    <color name="light_green_100_light">#fffffb</color>
+    <color name="light_green_100">#dcedc8</color>
+    <color name="light_green_100_dark">#aabb97</color>
+
+    <color name="light_green_200_light">#f8ffd7</color>
+    <color name="light_green_200">#c5e1a5</color>
+    <color name="light_green_200_dark">#94af76</color>
+
+    <color name="light_green_300_light">#e1ffb1</color>
+    <color name="light_green_300">#aed581</color>
+    <color name="light_green_300_dark">#7da453</color>
+
+    <color name="light_green_400_light">#cfff95</color>
+    <color name="light_green_400">#9ccc65</color>
+    <color name="light_green_400_dark">#6b9b37</color>
+
+    <color name="light_green_500_light">#bef67a</color>
+    <color name="light_green_500">#8bc34a</color>
+    <color name="light_green_500_dark">#5a9216</color>
+
+    <color name="light_green_600_light">#aee571</color>
+    <color name="light_green_600">#7cb342</color>
+    <color name="light_green_600_dark">#4b830d</color>
+
+    <color name="light_green_700_light">#99d066</color>
+    <color name="light_green_700">#689f38</color>
+    <color name="light_green_700_dark">#387002</color>
+
+    <color name="light_green_800_light">#85bb5c</color>
+    <color name="light_green_800">#558b2f</color>
+    <color name="light_green_800_dark">#255d00</color>
+
+    <color name="light_green_900_light">#629749</color>
+    <color name="light_green_900">#33691e</color>
+    <color name="light_green_900_dark">#003d00</color>
+
+
+    <color name="a_light_green_100_light">#ffffc2</color>
+    <color name="a_light_green_100">#ccff90</color>
+    <color name="a_light_green_100_dark">#99cc60</color>
+
+    <color name="a_light_green_200_light">#e7ff8c</color>
+    <color name="a_light_green_200">#b2ff59</color>
+    <color name="a_light_green_200_dark">#7ecb20</color>
+
+    <color name="a_light_green_400_light">#b0ff57</color>
+    <color name="a_light_green_400">#76ff03</color>
+    <color name="a_light_green_400_dark">#32cb00</color>
+
+    <color name="a_light_green_700_light">#9cff57</color>
+    <color name="a_light_green_700">#64dd17</color>
+    <color name="a_light_green_700_dark">#1faa00</color>
+</resources>
