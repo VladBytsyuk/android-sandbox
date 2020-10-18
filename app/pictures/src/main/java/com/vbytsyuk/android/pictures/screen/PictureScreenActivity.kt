@@ -53,11 +53,6 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
         )
     )
 
-    private fun configureTheme(isDark: Boolean) {
-        themeController.setTheme(if (isDark) Theme.DARK else Theme.LIGHT)
-        recreate()
-    }
-
 
     override fun registerViewToInteractorActions(): Map<View, () -> Unit> = mapOf(
         buttonClear to { interactor.tapOnClear() },

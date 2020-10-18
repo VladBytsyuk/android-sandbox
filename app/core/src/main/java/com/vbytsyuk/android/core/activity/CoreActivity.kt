@@ -31,6 +31,11 @@ abstract class CoreActivity(
         setClickListeners()
     }
 
+    protected fun configureTheme(isDark: Boolean) {
+        themeController.setTheme(if (isDark) Theme.DARK else Theme.LIGHT)
+        recreate()
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean =
         appBarConfigurator?.inflateMenu(menuInflater, menu) ?: super.onCreateOptionsMenu(menu)
 
