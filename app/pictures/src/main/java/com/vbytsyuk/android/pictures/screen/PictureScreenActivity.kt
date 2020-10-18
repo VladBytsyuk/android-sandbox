@@ -4,7 +4,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RadioButton
-import android.widget.Toast
 import com.vbytsyuk.android.core.Theme
 import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 import com.vbytsyuk.android.core.appbar.ToolBarConfigurator
@@ -23,7 +22,6 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
     layoutId = R.layout.activity_pictures_main
 ) {
     override val interactor: PictureScreenInteractor by viewModel()
-    private val themeController: ThemeController by inject()
     private val picturesLoaderChooser: PicturesLoaderChooser by inject()
     private val picturesLoader: PicturesLoader get() = picturesLoaderChooser.picturesLoader
 
@@ -43,7 +41,7 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
         leftButton = AppBarConfigurator.LeftButton(R.drawable.ic_arrow_back) { finish() },
         buttonsMenu = AppBarConfigurator.ButtonsMenu(
             menuId = R.menu.menu_appbar_default,
-            map = listOf(
+            buttons = listOf(
                 AppBarConfigurator.Button.Toggle(
                     menuItemId = R.id.abmiTheme,
                     isChecked = themeController.currentTheme == Theme.DARK,
@@ -57,7 +55,7 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
 
     private fun configureTheme(isDark: Boolean) {
         themeController.setTheme(if (isDark) Theme.DARK else Theme.LIGHT)
-        Toast.makeText(this, "Dark mode: ${if (isDark) "ON" else "OFF"}", Toast.LENGTH_SHORT).show()
+        recreate()
     }
 
 

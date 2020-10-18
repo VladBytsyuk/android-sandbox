@@ -6,15 +6,25 @@ import android.view.MenuItem
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.children
+import com.vbytsyuk.android.core.R
+import com.vbytsyuk.android.core.Theme
 import com.vbytsyuk.android.core.appbar.AppBarConfigurator
+import com.vbytsyuk.android.core.controllers.ThemeController
+import org.koin.android.ext.android.inject
 
 
 abstract class CoreActivity(
     @LayoutRes private val layoutId: Int
 ) : AppCompatActivity() {
     open val appBarConfigurator: AppBarConfigurator? = null
+    protected val themeController: ThemeController by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val theme = when (themeController.currentTheme) {
+            Theme.LIGHT -> R.style.Theme_Sandbox_Light_NoActionBar
+            Theme.DARK -> R.style.Theme_Sandbox_Dark_NoActionBar
+        }
+        setTheme(theme)
         super.onCreate(savedInstanceState)
         setContentView(layoutId)
         appBarConfigurator?.configure(this)

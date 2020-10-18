@@ -2,7 +2,6 @@ package com.vbytsyuk.android.core.appbar
 
 import android.view.Menu
 import android.view.MenuInflater
-import android.view.MenuItem
 import androidx.annotation.IdRes
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
@@ -32,5 +31,5 @@ class ToolBarConfigurator(
         return true
     }
 
-    override val buttons: List<Button>? get() = buttonsMenu?.map
+    override val buttons: List<Button>? get() = buttonsMenu?.buttons
 }

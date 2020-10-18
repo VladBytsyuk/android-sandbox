@@ -14,7 +14,7 @@ interface AppBarConfigurator {
 
 
     data class LeftButton(@DrawableRes val iconId: Int, val clickListener: () -> Unit)
-    data class ButtonsMenu(@MenuRes val menuId: Int, val map: List<Button>)
+    data class ButtonsMenu(@MenuRes val menuId: Int, val buttons: List<Button>)
 
     sealed class Button(open val menuItemId: Int) {
         data class Simple(

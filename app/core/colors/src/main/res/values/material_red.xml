@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red_50_light">#ffffff</color>
+    <color name="red_50">#ffebee</color>
+    <color name="red_50_dark">#ccb9bc</color>
+
+    <color name="red_100_light">#ffffff</color>
+    <color name="red_100">#ffcdd2</color>
+    <color name="red_100_dark">#cb9ca1</color>
+
+    <color name="red_200_light">#ffcccb</color>
+    <color name="red_200">#ef9a9a</color>
+    <color name="red_200_dark">#ba6b6c</color>
+
+    <color name="red_300_light">#ffa4a2</color>
+    <color name="red_300">#e57373</color>
+    <color name="red_300_dark">#af4448</color>
+
+    <color name="red_400_light">#ff867c</color>
+    <color name="red_400">#ef5350</color>
+    <color name="red_400_dark">#b61827</color>
+
+    <color name="red_500_light">#ff7961</color>
+    <color name="red_500">#f44336</color>
+    <color name="red_500_dark">#ba000d</color>
+
+    <color name="red_600_light">#ff6f60</color>
+    <color name="red_600">#e53935</color>
+    <color name="red_600_dark">#ab000d</color>
+
+    <color name="red_700_light">#ff6659</color>
+    <color name="red_700">#d32f2f</color>
+    <color name="red_700_dark">#9a0007</color>
+
+    <color name="red_800_light">#ff5f52</color>
+    <color name="red_800">#c62828</color>
+    <color name="red_800_dark">#8e0000</color>
+
+    <color name="red_900_light">#f05545</color>
+    <color name="red_900">#b71c1c</color>
+    <color name="red_900_dark">#7f0000</color>
+
+
+    <color name="a_red_100_light">#ffbcaf</color>
+    <color name="a_red_100">#ff8a80</color>
+    <color name="a_red_100_dark">#c85a54</color>
+
+    <color name="a_red_200_light">#ff867f</color>
+    <color name="a_red_200">#ff5252</color>
+    <color name="a_red_200_dark">#c50e29</color>
+
+    <color name="a_red_400_light">#ff616f</color>
+    <color name="a_red_400">#ff1744</color>
+    <color name="a_red_400_dark">#c4001d</color>
+
+    <color name="a_red_700_light">#ff5131</color>
+    <color name="a_red_700">#d50000</color>
+    <color name="a_red_700_dark">#9b0000</color>
+</resources>
