@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_grey_50_light">#ffffff</color>
+    <color name="blue_grey_50">#eceff1</color>
+    <color name="blue_grey_50_dark">#babdbe</color>
+
+    <color name="blue_grey_100_light">#ffffff</color>
+    <color name="blue_grey_100">#cfd8dc</color>
+    <color name="blue_grey_100_dark">#9ea7aa</color>
+
+    <color name="blue_grey_200_light">#e2f1f8</color>
+    <color name="blue_grey_200">#b0bec5</color>
+    <color name="blue_grey_200_dark">#808e95</color>
+
+    <color name="blue_grey_300_light">#c1d5e0</color>
+    <color name="blue_grey_300">#90a4ae</color>
+    <color name="blue_grey_300_dark">#62757f</color>
+
+    <color name="blue_grey_400_light">#a7c0cd</color>
+    <color name="blue_grey_400">#78909c</color>
+    <color name="blue_grey_400_dark">#4b636e</color>
+
+    <color name="blue_grey_500_light">#8eacbb</color>
+    <color name="blue_grey_500">#607d8b</color>
+    <color name="blue_grey_500_dark">#34515e</color>
+
+    <color name="blue_grey_600_light">#819ca9</color>
+    <color name="blue_grey_600">#546e7a</color>
+    <color name="blue_grey_600_dark">#29434e</color>
+
+    <color name="blue_grey_700_light">#718792</color>
+    <color name="blue_grey_700">#455a64</color>
+    <color name="blue_grey_700_dark">#1c313a</color>
+
+    <color name="blue_grey_800_light">#62727b</color>
+    <color name="blue_grey_800">#37474f</color>
+    <color name="blue_grey_800_dark">#102027</color>
+
+    <color name="blue_grey_900_light">#4f5b62</color>
+    <color name="blue_grey_900">#263238</color>
+    <color name="blue_grey_900_dark">#000a12</color>
+</resources>
