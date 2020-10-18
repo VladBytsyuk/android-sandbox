@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 interface AppBarConfigurator {
     fun configure(activity: AppCompatActivity)
     fun inflateMenu(inflater: MenuInflater, menu: Menu?): Boolean
-    val menuMap: List<Button>?
+    val buttons: List<Button>?
 
 
     data class LeftButton(@DrawableRes val iconId: Int, val clickListener: () -> Unit)
@@ -23,7 +23,7 @@ interface AppBarConfigurator {
             val clickListener: () -> Unit
         ) : Button(menuItemId)
 
-        data class Toggl(
+        data class Toggle(
             override val menuItemId: Int,
             var isChecked: Boolean = false,
             @DrawableRes val normalIconId: Int,

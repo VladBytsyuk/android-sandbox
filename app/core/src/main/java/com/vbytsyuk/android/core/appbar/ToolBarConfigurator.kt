@@ -32,5 +32,5 @@ class ToolBarConfigurator(
         return true
     }
 
-    override val menuMap: List<Button>? get() = buttonsMenu?.map
+    override val buttons: List<Button>? get() = buttonsMenu?.map
 }

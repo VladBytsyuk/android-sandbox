@@ -44,7 +44,7 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
         buttonsMenu = AppBarConfigurator.ButtonsMenu(
             menuId = R.menu.menu_appbar_default,
             map = listOf(
-                AppBarConfigurator.Button.Toggl(
+                AppBarConfigurator.Button.Toggle(
                     menuItemId = R.id.abmiTheme,
                     isChecked = themeController.currentTheme == Theme.DARK,
                     normalIconId = R.drawable.ic_day,
