@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cyan_50_light">#ffffff</color>
+    <color name="cyan_50">#e0f7fa</color>
+    <color name="cyan_50_dark">#aec4c7</color>
+
+    <color name="cyan_100_light">#e5ffff</color>
+    <color name="cyan_100">#b2ebf2</color>
+    <color name="cyan_100_dark">#81b9bf</color>
+
+    <color name="cyan_200_light">#b4ffff</color>
+    <color name="cyan_200">#80deea</color>
+    <color name="cyan_200_dark">#4bacb8</color>
+
+    <color name="cyan_300_light">#88ffff</color>
+    <color name="cyan_300">#4dd0e1</color>
+    <color name="cyan_300_dark">#009faf</color>
+
+    <color name="cyan_400_light">#6ff9ff</color>
+    <color name="cyan_400">#26c6da</color>
+    <color name="cyan_400_dark">#0095a8</color>
+
+    <color name="cyan_500_light">#62efff</color>
+    <color name="cyan_500">#00bcd4</color>
+    <color name="cyan_500_dark">#008ba3</color>
+
+    <color name="cyan_600_light">#5ddef4</color>
+    <color name="cyan_600">#00acc1</color>
+    <color name="cyan_600_dark">#007c91</color>
+
+    <color name="cyan_700_light">#56c8d8</color>
+    <color name="cyan_700">#0097a7</color>
+    <color name="cyan_700_dark">#006978</color>
+
+    <color name="cyan_800_light">#4fb3bf</color>
+    <color name="cyan_800">#00838f</color>
+    <color name="cyan_800_dark">#005662</color>
+
+    <color name="cyan_900_light">#428e92</color>
+    <color name="cyan_900">#006064</color>
+    <color name="cyan_900_dark">#00363a</color>
+
+
+    <color name="a_cyan_100_light">#baffff</color>
+    <color name="a_cyan_100">#84ffff</color>
+    <color name="a_cyan_100_dark">#4bcbcc</color>
+
+    <color name="a_cyan_200_light">#76ffff</color>
+    <color name="a_cyan_200">#18ffff</color>
+    <color name="a_cyan_200_dark">#00cbcc</color>
+
+    <color name="a_cyan_400_light">#6effff</color>
+    <color name="a_cyan_400">#00e5ff</color>
+    <color name="a_cyan_400_dark">#00b2cc</color>
+
+    <color name="a_cyan_700_light">#62ebff</color>
+    <color name="a_cyan_700">#00b8d4</color>
+    <color name="a_cyan_700_dark">#0088a3</color>
+</resources>
