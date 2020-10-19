@@ -10,7 +10,7 @@ data class PictureScreenState(
 )
 
 
-enum class SelectedLibrary { GLIDE, PICASSO }
+enum class SelectedLibrary { GLIDE, PICASSO, FRESCO, COIL }
 
 enum class SelectedButton { VECTOR, RASTER, REMOTE, GIF, NONE }
 

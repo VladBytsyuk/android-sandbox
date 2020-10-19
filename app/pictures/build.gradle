@@ -71,4 +71,14 @@ dependencies {
 
     // Picasso
     implementation Deps.Libs.Picasso
+
+    // Coil
+    implementation Deps.Libs.Coil.Core
+    implementation Deps.Libs.Coil.Gif
+
+    // Fresco
+    implementation Deps.Libs.Fresco.Core
+    implementation Deps.Libs.Fresco.Gif
+    implementation Deps.Libs.Fresco.WebP.Core
+    implementation Deps.Libs.Fresco.WebP.Animations
 }

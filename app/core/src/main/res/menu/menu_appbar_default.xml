@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/abmiTheme"
-        android:title="asads"
+        android:title="@string/mi_theme"
         android:iconTint="?attr/colorPrimary"
         app:showAsAction="always"
         android:icon="@drawable/ic_theme_selector" />

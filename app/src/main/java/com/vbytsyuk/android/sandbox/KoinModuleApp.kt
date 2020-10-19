@@ -1,9 +1,7 @@
 package com.vbytsyuk.android.sandbox
 
 import com.vbytsyuk.android.core.controllers.ThemeController
-import com.vbytsyuk.android.pictures.loaders.GlidePicturesLoader
-import com.vbytsyuk.android.pictures.loaders.PicassoPicturesLoader
-import com.vbytsyuk.android.pictures.loaders.PicturesLoaderChooser
+import com.vbytsyuk.android.pictures.loaders.*
 import com.vbytsyuk.android.pictures.screen.PictureScreenInteractor
 import com.vbytsyuk.android.storage.SharedPreferenceThemeStorage
 import com.vbytsyuk.android.storage.ThemeStorage
@@ -25,7 +23,16 @@ object KoinModulesProvider {
         viewModel { PictureScreenInteractor() }
         factory { GlidePicturesLoader(context = get()) }
         factory { PicassoPicturesLoader() }
-        factory { PicturesLoaderChooser(glidePicturesLoader = get(), picassoPicturesLoader = get()) }
+        factory { FrescoPicturesLoader() }
+        factory { CoilPicturesLoader(context = get()) }
+        factory {
+            PicturesLoaderChooser(
+                glidePicturesLoader = get(),
+                picassoPicturesLoader = get(),
+                frescoPicturesLoader = get(),
+                coilPicturesLoader = get()
+            )
+        }
     }
 
     private val core = module {

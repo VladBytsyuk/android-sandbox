@@ -59,5 +59,21 @@ object Deps {
         }
 
         const val Picasso = "com.squareup.picasso:picasso:2.8"
+
+        object Coil {
+            private const val Version = "1.0.0-rc3"
+            const val Core = "io.coil-kt:coil:$Version"
+            const val Gif = "io.coil-kt:coil-gif:$Version"
+        }
+        object Fresco {
+            private const val Version = "2.3.0"
+            const val Core = "com.facebook.fresco:fresco:$Version"
+            const val Gif =  "com.facebook.fresco:animated-gif:$Version"
+
+            object WebP {
+                const val Core = "com.facebook.fresco:webpsupport:$Version"
+                const val Animations = "com.facebook.fresco:animated-webp:$Version"
+            }
+        }
     }
 }

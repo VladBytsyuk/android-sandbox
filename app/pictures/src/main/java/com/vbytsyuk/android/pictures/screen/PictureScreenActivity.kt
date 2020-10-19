@@ -4,6 +4,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RadioButton
+import com.facebook.drawee.view.DraweeView
+import com.facebook.drawee.view.SimpleDraweeView
 import com.vbytsyuk.android.core.Theme
 import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 import com.vbytsyuk.android.core.appbar.ToolBarConfigurator
@@ -25,8 +27,11 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
     private val picturesLoader: PicturesLoader get() = picturesLoaderChooser.picturesLoader
 
     private val imageView: ImageView by lazyFindViewById(R.id.apmImageView)
+    private val draweeView: SimpleDraweeView by lazyFindViewById(R.id.apmDraweeView)
     private val radioButtonGlide: RadioButton by lazyFindViewById(R.id.apmRbGlide)
     private val radioButtonPicasso: RadioButton by lazyFindViewById(R.id.apmRbPicasso)
+    private val radioButtonFresco: RadioButton by lazyFindViewById(R.id.apmRbFresco)
+    private val radioButtonCoil: RadioButton by lazyFindViewById(R.id.apmRbCoil)
     private val buttonClear: Button by lazyFindViewById(R.id.apmBtnClear)
     private val buttonVector: Button by lazyFindViewById(R.id.apmBtnVector)
     private val buttonRaster: Button by lazyFindViewById(R.id.apmBtnRaster)
@@ -60,13 +65,15 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
         buttonRemote to { interactor.tapOnLoadRemote() },
         buttonGif to { interactor.tapOnLoadGif() },
         radioButtonGlide to { interactor.tapOnGlide() },
-        radioButtonPicasso to { interactor.tapOnPicasso() }
+        radioButtonPicasso to { interactor.tapOnPicasso() },
+        radioButtonFresco to { interactor.tapOnFresco() },
+        radioButtonCoil to { interactor.tapOnCoil() }
     )
 
 
     override fun render(state: PictureScreenState) {
         renderLibrary(state.library)
-        renderImage(state.action)
+        renderImage(state.library, state.action)
         renderSelectedButtons(state.selectedButton)
     }
 
@@ -75,14 +82,25 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
         val radioButton = when (library) {
             SelectedLibrary.GLIDE -> radioButtonGlide
             SelectedLibrary.PICASSO -> radioButtonPicasso
+            SelectedLibrary.FRESCO -> radioButtonFresco
+            SelectedLibrary.COIL -> radioButtonCoil
         }
         radioButton.isChecked = true
+
+        imageView.visibility = View.GONE
+        draweeView.visibility = View.GONE
+        getImageView(library).visibility = View.VISIBLE
     }
 
-    private fun renderImage(action: PictureLoadAction) = when (action) {
-        PictureLoadAction.Clear -> picturesLoader.clear(view = imageView)
-        is PictureLoadAction.LocalDrawable -> picturesLoader.load(drawableId = action.drawableId, intoView = imageView)
-        is PictureLoadAction.RemotePicture -> picturesLoader.load(imageUrl = action.url, intoView = imageView)
+    private fun getImageView(library: SelectedLibrary) = when (library) {
+        SelectedLibrary.GLIDE, SelectedLibrary.PICASSO, SelectedLibrary.COIL -> imageView
+        SelectedLibrary.FRESCO -> draweeView
+    }
+
+    private fun renderImage(library: SelectedLibrary, action: PictureLoadAction) = when (action) {
+        PictureLoadAction.Clear -> picturesLoader.clear(view = getImageView(library))
+        is PictureLoadAction.LocalDrawable -> picturesLoader.load(drawableId = action.drawableId, intoView = getImageView(library))
+        is PictureLoadAction.RemotePicture -> picturesLoader.load(imageUrl = action.url, intoView = getImageView(library))
     }
 
     private fun renderSelectedButtons(selectedButton: SelectedButton) {

@@ -19,6 +19,14 @@ class PictureScreenInteractor : CoreMviInteractor<PictureScreenState>() {
         copy(library = PICASSO, selectedButton = NONE, action = Clear)
     }
 
+    fun tapOnFresco() = updateState {
+        copy(library = FRESCO, selectedButton = NONE, action = Clear)
+    }
+
+    fun tapOnCoil() = updateState {
+        copy(library = COIL, selectedButton = NONE, action = Clear)
+    }
+
 
     fun tapOnClear() = updateState {
         copy(selectedButton = NONE, action = Clear)

@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screen.PictureScreenActivity">
@@ -22,10 +23,22 @@
         android:layout_width="320dp"
         android:layout_height="180dp"
         android:contentDescription="@string/apm_iv_content_description"
+        android:visibility="gone"
         android:layout_margin="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/apmToolbar"
         app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@+id/apmDraweeView"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:contentDescription="@string/apm_iv_content_description"
+        android:visibility="gone"
+        fresco:failureImage="@drawable/ic_error"
+        android:layout_margin="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apmToolbar"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <RadioGroup android:id="@+id/apmRgType"
         android:layout_width="0dp"
@@ -55,7 +68,24 @@
             android:textColor="?attr/sandboxTextColor"
             android:checked="false"
             android:layout_weight="1"
-            android:layout_marginStart="8dp"
+            />
+
+        <RadioButton android:id="@+id/apmRbFresco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/apm_rb_fresco"
+            android:textColor="?attr/sandboxTextColor"
+            android:checked="true"
+            android:layout_weight="1"
+            />
+
+        <RadioButton android:id="@+id/apmRbCoil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/apm_rb_coil"
+            android:textColor="?attr/sandboxTextColor"
+            android:checked="false"
+            android:layout_weight="1"
             />
 
     </RadioGroup>
