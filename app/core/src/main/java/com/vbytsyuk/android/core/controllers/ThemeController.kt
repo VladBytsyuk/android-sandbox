@@ -5,7 +5,7 @@ import com.vbytsyuk.android.storage.ThemeStorage
 
 
 class ThemeController(private val themeStorage: ThemeStorage) {
-    val currentTheme: Theme = Theme.fromCode(themeStorage.themeCode)
+    val currentTheme: Theme get() = Theme.fromCode(themeStorage.themeCode)
 
     fun setTheme(newTheme: Theme) {
         themeStorage.themeCode = newTheme.code

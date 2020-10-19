@@ -31,6 +31,17 @@ abstract class CoreActivity(
         setClickListeners()
     }
 
+    override fun onResume() {
+        super.onResume()
+        if (currentTheme != themeController.currentTheme) recreate()
+    }
+
+    private var currentTheme: Theme = themeController.currentTheme
+    override fun onPause() {
+        currentTheme = themeController.currentTheme
+        super.onPause()
+    }
+
     protected fun configureTheme(isDark: Boolean) {
         themeController.setTheme(if (isDark) Theme.DARK else Theme.LIGHT)
         recreate()
