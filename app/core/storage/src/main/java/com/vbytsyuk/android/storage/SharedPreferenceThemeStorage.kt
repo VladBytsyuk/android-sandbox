@@ -10,7 +10,7 @@ class SharedPreferenceThemeStorage(private val context: Context) : ThemeStorage 
         get() = context.getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
 
     override var themeCode: Int
-        get() = storage.getInt(THEME_KEY, 0)
+        get() = storage.getInt(THEME_KEY, -1)
         set(newThemeCode) = storage.edit { putInt(THEME_KEY, newThemeCode) }
 
     companion object {

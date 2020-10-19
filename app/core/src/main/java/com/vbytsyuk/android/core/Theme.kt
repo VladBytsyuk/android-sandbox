@@ -2,7 +2,7 @@ package com.vbytsyuk.android.core
 
 
 enum class Theme(val code: Int) {
-    LIGHT(0), DARK(1);
+    BY_SYSTEM(-1), LIGHT(0), DARK(1);
 
     companion object {
         fun fromCode(code: Int): Theme = values().find { it.code == code } ?: throwIllegalCode(code)
