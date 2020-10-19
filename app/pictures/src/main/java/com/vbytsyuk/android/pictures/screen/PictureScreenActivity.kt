@@ -46,7 +46,7 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
                     isChecked = themeController.currentTheme == Theme.DARK,
                     normalIconId = R.drawable.ic_day,
                     checkedIconId = R.drawable.ic_night,
-                    clickListener = { configureTheme(isDark = it) }
+                    clickListener = { configureTheme(if (it) Theme.DARK else Theme.LIGHT) }
                 )
             )
         )
