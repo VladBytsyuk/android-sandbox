@@ -18,7 +18,11 @@ class FrescoPicturesLoader : PicturesLoader {
     }
 
     override fun load(imageUrl: String, intoView: ImageView) {
-        if (intoView is SimpleDraweeView) intoView.setImageURI(imageUrl)
+        if (intoView is SimpleDraweeView) {
+            intoView.setImageURI(imageUrl)
+            intoView.controller =
+                Fresco.newDraweeControllerBuilder().setUri(imageUrl).setAutoPlayAnimations(true).build()
+        }
     }
 
     override fun load(@DrawableRes drawableId: Int, intoView: ImageView) {
