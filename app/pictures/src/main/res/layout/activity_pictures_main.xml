@@ -90,53 +90,70 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
-    <Button android:id="@+id/apmBtnVector"
+    <ScrollView
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/apm_btn_vector"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/apmRgType"
-        app:layout_constraintEnd_toStartOf="@+id/apmBtnRaster"
-        app:layout_constraintHorizontal_chainStyle="packed"/>
-
-    <Button android:id="@+id/apmBtnRaster"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/apm_btn_raster"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/apmBtnVector"
-        app:layout_constraintTop_toTopOf="@+id/apmBtnVector"
-        app:layout_constraintBottom_toBottomOf="@+id/apmBtnVector"/>
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <Button android:id="@+id/apmBtnRemote"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/apm_btn_remote"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/apmBtnVector"
-        app:layout_constraintStart_toStartOf="@+id/apmBtnVector"
-        app:layout_constraintTop_toBottomOf="@+id/apmBtnVector"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <Button android:id="@+id/apmBtnGif"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/apm_btn_gif"
-        app:layout_constraintEnd_toEndOf="@+id/apmBtnRaster"
-        app:layout_constraintStart_toStartOf="@+id/apmBtnRaster"
-        app:layout_constraintTop_toTopOf="@+id/apmBtnRemote"
-        app:layout_constraintBottom_toBottomOf="@+id/apmBtnRemote"/>
+            <Button android:id="@+id/apmBtnVector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/apm_btn_vector"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/apmBtnRaster"
+                app:layout_constraintHorizontal_chainStyle="packed"/>
 
-    <Button android:id="@+id/apmBtnClear"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/apm_btn_clear"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/apmBtnRemote"
-        app:layout_constraintTop_toBottomOf="@+id/apmBtnRemote"
-        app:layout_constraintEnd_toEndOf="@+id/apmBtnGif"/>
+            <Button android:id="@+id/apmBtnRaster"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/apm_btn_raster"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/apmBtnVector"
+                app:layout_constraintTop_toTopOf="@+id/apmBtnVector"
+                app:layout_constraintBottom_toBottomOf="@+id/apmBtnVector"/>
+
+            <Button android:id="@+id/apmBtnRemote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/apm_btn_remote"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/apmBtnVector"
+                app:layout_constraintStart_toStartOf="@+id/apmBtnVector"
+                app:layout_constraintTop_toBottomOf="@+id/apmBtnVector"/>
+
+            <Button android:id="@+id/apmBtnGif"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/apm_btn_gif"
+                app:layout_constraintEnd_toEndOf="@+id/apmBtnRaster"
+                app:layout_constraintStart_toStartOf="@+id/apmBtnRaster"
+                app:layout_constraintTop_toTopOf="@+id/apmBtnRemote"
+                app:layout_constraintBottom_toBottomOf="@+id/apmBtnRemote"/>
+
+            <Button android:id="@+id/apmBtnClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/apm_btn_clear"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/apmBtnRemote"
+                app:layout_constraintTop_toBottomOf="@+id/apmBtnRemote"
+                app:layout_constraintEnd_toEndOf="@+id/apmBtnGif"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
