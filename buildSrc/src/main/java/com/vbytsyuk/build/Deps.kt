@@ -5,6 +5,7 @@ object Deps {
     object Kotlin {
         const val Version = "1.4.10"
         const val StdLib = "org.jetbrains.kotlin:kotlin-stdlib:$Version"
+        const val Test = "org.jetbrains.kotlin:kotlin-test:1.1.51"
     }
 
     object Android {

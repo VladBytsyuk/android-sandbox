@@ -50,6 +50,7 @@ dependencies {
     implementation Deps.Android.X.KTX.Activity
 
     testImplementation Deps.Test.Junit
+    testImplementation Deps.Kotlin.Test
 
     androidTestImplementation Deps.Test.Android.Junit
     androidTestImplementation Deps.Test.Android.Espresso
