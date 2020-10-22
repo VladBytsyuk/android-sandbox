@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="acl_simple_activity">Simple activity</string>
+    <string name="acl_title">Choose Android lifecycle</string>
+</resources>

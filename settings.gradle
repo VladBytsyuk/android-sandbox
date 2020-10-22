@@ -1,3 +1,4 @@
+include ':app:lifecycle'
 include ':app:core:colors'
 include ':app:core:storage'
 include ':app:core'
