@@ -117,6 +117,21 @@ class PicturesScreenInteractorTest {
         )
     )
 
+    @Test
+    fun `Select Raster after Raster on Picasso`() = test(
+        oldState = PictureScreenState(
+            library = PICASSO,
+            selectedButton = RASTER,
+            action = LocalDrawable(RASTER_ID)
+        ),
+        action = { tapOnLoadRaster() },
+        newState = PictureScreenState(
+            library = PICASSO,
+            selectedButton = RASTER,
+            action = LocalDrawable(RASTER_ID)
+        )
+    )
+
 
 
     private fun test(
