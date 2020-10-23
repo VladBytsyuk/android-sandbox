@@ -2,4 +2,6 @@
 <resources>
     <string name="acl_simple_activity">Simple activity</string>
     <string name="acl_title">Choose Android lifecycle</string>
+    <string name="as_hint">See Android Logcat for lifecycle info</string>
+    <string name="as_title">Simple Activity lifecycle</string>
 </resources>

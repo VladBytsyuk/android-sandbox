@@ -3,6 +3,7 @@ package com.vbytsyuk.android.lifecycle
 import android.widget.Button
 import com.vbytsyuk.android.core.activity.CoreActivity
 import com.vbytsyuk.android.core.activity.lazyFindViewById
+import com.vbytsyuk.android.core.activity.navigateTo
 import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 import com.vbytsyuk.android.core.appbar.ToolBarConfigurator
 
@@ -17,6 +18,6 @@ class ChooseLifecycleActivity : CoreActivity(layoutId = R.layout.activity_choose
     )
 
     override fun setClickListeners() {
-        buttonSimpleActivity.setOnClickListener {  }
+        buttonSimpleActivity.setOnClickListener { navigateTo<SimpleActivity>() }
     }
 }

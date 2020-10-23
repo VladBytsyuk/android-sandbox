@@ -4,5 +4,6 @@
 
     <application android:supportsRtl="true">
         <activity android:name="com.vbytsyuk.android.lifecycle.ChooseLifecycleActivity" />
+        <activity android:name="com.vbytsyuk.android.lifecycle.SimpleActivity" />
     </application>
 </manifest>
