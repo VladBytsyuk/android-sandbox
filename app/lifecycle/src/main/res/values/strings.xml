@@ -4,4 +4,6 @@
     <string name="acl_title">Choose Android lifecycle</string>
     <string name="as_hint">See Android Logcat for lifecycle info</string>
     <string name="as_title">Simple Activity lifecycle</string>
+    <string name="acl_jetpack_activity">Jetpack Activity</string>
+    <string name="aj_title">Jetpack Activity lifecycle</string>
 </resources>

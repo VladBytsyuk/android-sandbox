@@ -1,6 +1,5 @@
 package com.vbytsyuk.android.lifecycle
 
-import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
@@ -8,7 +7,8 @@ import com.vbytsyuk.android.core.activity.CoreActivity
 import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 import com.vbytsyuk.android.core.appbar.ToolBarConfigurator
 
-class SimpleActivity : CoreActivity(layoutId = R.layout.activity_simple) {
+
+class SimpleActivity : CoreActivity(layoutId = R.layout.activity) {
     override val appBarConfigurator = ToolBarConfigurator(
         toolbarId = R.id.asToolbar,
         titleId = R.string.as_title,
@@ -61,10 +61,12 @@ class SimpleActivity : CoreActivity(layoutId = R.layout.activity_simple) {
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
+        logLC("onRestoreInstanceState")
     }
 
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
         super.onSaveInstanceState(outState, outPersistentState)
+        logLC("onSaveInstanceState")
     }
 
 }

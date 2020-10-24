@@ -25,4 +25,13 @@
         app:layout_constraintTop_toBottomOf="@+id/aclToolbar"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button android:id="@+id/aclBtnJetpackActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/acl_jetpack_activity"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aclBtnSimpleActivity"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

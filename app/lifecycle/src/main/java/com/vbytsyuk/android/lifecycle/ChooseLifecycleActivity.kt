@@ -10,6 +10,7 @@ import com.vbytsyuk.android.core.appbar.ToolBarConfigurator
 
 class ChooseLifecycleActivity : CoreActivity(layoutId = R.layout.activity_choose_lifecycle) {
     private val buttonSimpleActivity: Button by lazyFindViewById(R.id.aclBtnSimpleActivity)
+    private val buttonJetpackActivity: Button by lazyFindViewById(R.id.aclBtnJetpackActivity)
 
     override val appBarConfigurator = ToolBarConfigurator(
         toolbarId = R.id.aclToolbar,
@@ -19,5 +20,6 @@ class ChooseLifecycleActivity : CoreActivity(layoutId = R.layout.activity_choose
 
     override fun setClickListeners() {
         buttonSimpleActivity.setOnClickListener { navigateTo<SimpleActivity>() }
+        buttonJetpackActivity.setOnClickListener { navigateTo<JetpackActivity>() }
     }
 }
