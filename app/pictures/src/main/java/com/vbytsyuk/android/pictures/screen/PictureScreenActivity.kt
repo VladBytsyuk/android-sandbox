@@ -42,19 +42,7 @@ class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenI
     override val appBarConfigurator = ToolBarConfigurator(
         toolbarId = R.id.apmToolbar,
         titleId = R.string.isa_title,
-        leftButton = AppBarConfigurator.LeftButton(R.drawable.ic_arrow_back) { finish() },
-        buttonsMenu = AppBarConfigurator.ButtonsMenu(
-            menuId = R.menu.menu_appbar_default,
-            buttons = listOf(
-                AppBarConfigurator.Button.Toggle(
-                    menuItemId = R.id.abmiTheme,
-                    isChecked = themeController.currentTheme == Theme.DARK,
-                    normalIconId = R.drawable.ic_day,
-                    checkedIconId = R.drawable.ic_night,
-                    clickListener = { configureTheme(if (it) Theme.DARK else Theme.LIGHT) }
-                )
-            )
-        )
+        leftButton = AppBarConfigurator.LeftButton(R.drawable.ic_arrow_back) { finish() }
     )
 
 

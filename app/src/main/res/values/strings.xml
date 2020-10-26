@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">AndroidTech: Sandbox</string>
+    <string name="mi_theme">Change Theme</string>
     <string name="am_title_libraries">Libraries</string>
     <string name="am_btn_picture_loaders">Picture Loaders</string>
     <string name="am_title_android">Android</string>
