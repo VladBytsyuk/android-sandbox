@@ -35,7 +35,7 @@ abstract class ThemedActivity : AppCompatActivity() {
     }
 
     private fun getConcreteThemeRes(theme: Theme): Int = when (theme) {
-        Theme.BY_SYSTEM -> throw IllegalArgumentException("This method can not return ${Theme.BY_SYSTEM}")
+        Theme.BY_SYSTEM -> throw IllegalArgumentException("This method can not accept theme == ${Theme.BY_SYSTEM}")
         Theme.LIGHT -> R.style.Theme_Sandbox_Light_NoActionBar
         Theme.DARK -> R.style.Theme_Sandbox_Dark_NoActionBar
     }
