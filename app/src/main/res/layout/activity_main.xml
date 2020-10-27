@@ -55,4 +55,13 @@
         android:text="@string/am_btn_lifecycle"
         app:layout_constraintStart_toStartOf="@+id/amTvAndroid"
         app:layout_constraintTop_toBottomOf="@+id/amTvAndroid" />
+
+    <Button android:id="@+id/amBtnLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/am_btn_layout"
+        app:layout_constraintStart_toStartOf="@+id/amTvAndroid"
+        app:layout_constraintTop_toBottomOf="@+id/amBtnLifeCycle" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

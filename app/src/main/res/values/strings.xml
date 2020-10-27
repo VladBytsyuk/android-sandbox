@@ -5,4 +5,5 @@
     <string name="am_btn_picture_loaders">Picture Loaders</string>
     <string name="am_title_android">Android</string>
     <string name="am_btn_lifecycle">Lifecycle</string>
+    <string name="am_btn_layout">Layout</string>
 </resources>
