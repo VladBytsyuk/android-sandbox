@@ -24,4 +24,14 @@
         app:layout_constraintTop_toBottomOf="@+id/aclBtnClassicLayout"
         app:layout_constraintEnd_toEndOf="parent"
         />
+
+    <Button android:id="@+id/aclBtnComposeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/acl_compose_layout"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aclBtnConstraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,4 +2,5 @@
 <resources>
     <string name="acl_classic_layout">Classic layout</string>
     <string name="acl_constraint_layout">Constraint layout</string>
+    <string name="acl_compose_layout">Compose layout</string>
 </resources>
