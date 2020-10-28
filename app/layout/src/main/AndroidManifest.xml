@@ -4,5 +4,6 @@
 
     <application android:supportsRtl="true">
         <activity android:name="com.vbytsyuk.android.layout.ChooseLayoutActivity" />
+        <activity android:name="com.vbytsyuk.android.layout.ClassicLayoutActivity" />
     </application>
 </manifest>
