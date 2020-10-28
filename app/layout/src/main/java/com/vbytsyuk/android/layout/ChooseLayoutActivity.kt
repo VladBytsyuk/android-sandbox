@@ -10,10 +10,12 @@ class ChooseLayoutActivity : CoreActivity(layoutId = R.layout.activity_choose_la
     private val buttonClassicLayout: Button by lazyFindViewById(R.id.aclBtnClassicLayout)
     private val buttonConstraintLayout: Button by lazyFindViewById(R.id.aclBtnConstraintLayout)
     private val buttonComposeLayout: Button by lazyFindViewById(R.id.aclBtnComposeLayout)
+    private val buttonLithoLayout: Button by lazyFindViewById(R.id.aclBtnLithoLayout)
 
     override fun setClickListeners() {
         buttonClassicLayout.setOnClickListener { navigateTo<ClassicLayoutActivity>() }
         buttonConstraintLayout.setOnClickListener { navigateTo<ConstraintLayoutActivity>() }
         buttonComposeLayout.setOnClickListener { navigateTo<ComposeLayoutActivity>() }
+        buttonLithoLayout.setOnClickListener { navigateTo<LithoLayoutActivity>() }
     }
 }

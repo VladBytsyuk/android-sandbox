@@ -7,5 +7,6 @@
         <activity android:name="com.vbytsyuk.android.layout.ClassicLayoutActivity" />
         <activity android:name="com.vbytsyuk.android.layout.ConstraintLayoutActivity" />
         <activity android:name="com.vbytsyuk.android.layout.ComposeLayoutActivity" />
+        <activity android:name="com.vbytsyuk.android.layout.LithoLayoutActivity" />
     </application>
 </manifest>
