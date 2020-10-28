@@ -5,5 +5,6 @@
     <application android:supportsRtl="true">
         <activity android:name="com.vbytsyuk.android.layout.ChooseLayoutActivity" />
         <activity android:name="com.vbytsyuk.android.layout.ClassicLayoutActivity" />
+        <activity android:name="com.vbytsyuk.android.layout.ConstraintLayoutActivity" />
     </application>
 </manifest>
