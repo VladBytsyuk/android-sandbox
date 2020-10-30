@@ -1,5 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
-</FrameLayout>
+    <FrameLayout android:id="@+id/clHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView android:id="@+id/clHeaderBkg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/demo_bkg_header"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            />
+
+        <LinearLayout android:id="@+id/clHeaderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+            <LinearLayout android:id="@+id/clToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:elevation="4dp"
+                >
+
+                <ImageView android:id="@+id/clToolbarHamburger"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_hamburger"
+                    android:tint="@color/grey_600"
+                    />
+
+                <TextView android:id="@+id/clToolbarName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight="100"
+                    android:gravity="center"
+                    android:text="@string/toolbar_name"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:alpha="0.87"
+                    />
+
+                <ImageView android:id="@+id/clToolbarLogout"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_logout"
+                    android:tint="@color/grey_600"
+                    />
+            </LinearLayout>
+
+
+            <ImageView android:id="@+id/clHeaderAvatar"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:src="@drawable/demo_avater_header"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="32dp"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

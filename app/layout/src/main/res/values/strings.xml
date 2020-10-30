@@ -4,4 +4,5 @@
     <string name="acl_constraint_layout">Constraint layout</string>
     <string name="acl_compose_layout">Compose layout</string>
     <string name="acl_litho_layout">Litho layout</string>
+    <string name="toolbar_name">Jessica Shultz</string>
 </resources>
