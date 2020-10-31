@@ -5,4 +5,10 @@
     <string name="acl_compose_layout">Compose layout</string>
     <string name="acl_litho_layout">Litho layout</string>
     <string name="toolbar_name">Jessica Shultz</string>
+    <string name="header_info_title_orders">Orders</string>
+    <string name="header_info_value_orders">132</string>
+    <string name="header_info_title_rating">Rating</string>
+    <string name="header_info_value_rating">4.98</string>
+    <string name="header_info_title_purchases">Purchases</string>
+    <string name="header_info_value_purchases">894</string>
 </resources>

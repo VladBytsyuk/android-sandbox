@@ -14,7 +14,7 @@
 
         <ImageView android:id="@+id/clHeaderBkg"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="256dp"
             android:src="@drawable/demo_bkg_header"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
@@ -76,6 +76,110 @@
                 android:scaleType="centerCrop"
                 android:layout_marginTop="32dp"
                 />
+
+            <LinearLayout android:id="@+id/clHeaderInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                >
+
+                <LinearLayout android:id="@+id/clHeaderInfoOrders"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp"
+                    >
+
+                    <TextView android:id="@+id/clHeaderInfoOrdersTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/header_info_title_orders"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black"
+                        android:alpha="0.54"
+                        />
+                    <TextView android:id="@+id/clHeaderInfoOrdersValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/header_info_value_orders"
+                        android:textSize="24sp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black"
+                        android:alpha="0.87"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/clHeaderInfoRating"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    >
+
+                    <TextView android:id="@+id/clHeaderInfoOrdersRatingTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/header_info_title_rating"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black"
+                        android:alpha="0.54"
+                        />
+                    <TextView android:id="@+id/clHeaderInfoOrdersRatingValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/header_info_value_rating"
+                        android:textSize="24sp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black"
+                        android:alpha="0.87"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/clHeaderInfoPurchases"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"
+                    >
+
+                    <TextView android:id="@+id/clHeaderInfoOrdersPurchasesTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/header_info_title_purchases"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black"
+                        android:alpha="0.54"
+                        />
+                    <TextView android:id="@+id/clHeaderInfoOrdersPurchasesValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/header_info_value_purchases"
+                        android:textSize="24sp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black"
+                        android:alpha="0.87"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
