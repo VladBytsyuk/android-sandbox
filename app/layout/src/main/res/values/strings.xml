@@ -4,22 +4,28 @@
     <string name="acl_constraint_layout">Constraint layout</string>
     <string name="acl_compose_layout">Compose layout</string>
     <string name="acl_litho_layout">Litho layout</string>
+
     <string name="toolbar_name">Jessica Shultz</string>
-    <string name="header_info_title_orders">Orders</string>
-    <string name="header_info_value_orders">132</string>
-    <string name="header_info_title_rating">Rating</string>
-    <string name="header_info_value_rating">4.98</string>
-    <string name="header_info_title_purchases">Purchases</string>
-    <string name="header_info_value_purchases">894</string>
+
+    <string name="header_orders_title">Orders</string>
+    <string name="header_orders_value">132</string>
+    <string name="header_rating_title">Rating</string>
+    <string name="header_rating_value">4.98</string>
+    <string name="header_purchases_title">Purchases</string>
+    <string name="header_purchases_value">894</string>
+
     <string name="tab_account">Account</string>
     <string name="tab_address">Address</string>
-    <string name="tab_orders_history">Orders History</string>
-    <string name="tab_orders_picker_newest">Newest first</string>
-    <string name="clear">Clear</string>
-    <string name="order_number">Your order 34567</string>
-    <string name="delivery_successful">Delivered successful!</string>
-    <string name="order_discount">Claimed Super Discount</string>
-    <string name="order_return">Order returned</string>
-    <string name="delivery_unsuccess">Unsuccessful delivery</string>
-    <string name="bar_tab_account">Account</string>
+    <string name="tab_orders">Orders History</string>
+
+    <string name="tab_orders_header_picker">Newest first</string>
+    <string name="tab_orders_header_clear">Clear</string>
+
+    <string name="order_title_regular">Your order 34567</string>
+    <string name="order_status_successful">Delivered successful!</string>
+    <string name="order_status_unsuccessful">Unsuccessful delivery</string>
+    <string name="order_title_discount">Claimed Super Discount</string>
+    <string name="order_title_return">Order returned</string>
+
+    <string name="bottombar_tab_title_account">Account</string>
 </resources>
