@@ -210,7 +210,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="Account"
+                    android:text="@string/tab_account"
                     android:textAllCaps="true"
                     android:textSize="14sp"
                     android:textColor="@color/black"
@@ -231,7 +231,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="Orders History"
+                    android:text="@string/tab_orders_history"
                     android:textAllCaps="true"
                     android:textSize="14sp"
                     android:textColor="@color/black"
@@ -270,7 +270,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="Address"
+                    android:text="@string/tab_address"
                     android:textAllCaps="true"
                     android:textSize="14sp"
                     android:textColor="@color/black"
@@ -281,6 +281,95 @@
 
         </LinearLayout>
 
+        <LinearLayout android:id="@+id/clTabContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/clBottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:elevation="4dp"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/ic_shopping"
+                android:tint="@color/grey_600"
+                />
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/ic_catalog"
+                android:tint="@color/grey_600"
+                />
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/ic_cart"
+                android:tint="@color/grey_600"
+                />
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/ic_likes"
+                android:tint="@color/grey_600"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_account"
+                    android:tint="@color/black"
+                    />
+
+                <TextView android:id="@+id/clContentPageAddressTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tab_account"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:alpha="0.87"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>

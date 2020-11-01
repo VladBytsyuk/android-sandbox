@@ -11,4 +11,7 @@
     <string name="header_info_value_rating">4.98</string>
     <string name="header_info_title_purchases">Purchases</string>
     <string name="header_info_value_purchases">894</string>
+    <string name="tab_account">Account</string>
+    <string name="tab_address">Address</string>
+    <string name="tab_orders_history">Orders History</string>
 </resources>
