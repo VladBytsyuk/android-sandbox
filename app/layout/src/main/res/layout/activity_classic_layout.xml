@@ -16,7 +16,7 @@
         <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clHeaderBkg"
             android:layout_width="match_parent"
             android:layout_height="256dp"
-            app:srcCompat="@drawable/demo_bkg_header"
+            app:srcCompat="@drawable/img_header_bkg"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             />
@@ -42,7 +42,7 @@
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:layout_margin="8dp"
-                    app:srcCompat="@drawable/ic_hamburger"
+                    app:srcCompat="@drawable/ic_toolbar_hamburger"
                     android:tint="@color/grey_600"
                     />
 
@@ -65,7 +65,7 @@
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:layout_margin="8dp"
-                    app:srcCompat="@drawable/ic_logout"
+                    app:srcCompat="@drawable/ic_toolbar_logout"
                     android:tint="@color/grey_600"
                     />
 
@@ -75,7 +75,7 @@
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginTop="32dp"
-                app:srcCompat="@drawable/demo_avatar_header"
+                app:srcCompat="@drawable/img_header_avatar"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 />
@@ -330,7 +330,7 @@
                     <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentPicker"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        app:srcCompat="@drawable/ic_arrow"
+                        app:srcCompat="@drawable/ic_collapse_arrow"
                         android:tint="@color/grey_600"
                         />
 
@@ -384,7 +384,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="8dp"
-                            app:srcCompat="@drawable/ic_list_cart"
+                            app:srcCompat="@drawable/ic_list_item_cart"
                             />
 
                         <LinearLayout android:id="@+id/clTabContentOrdersTop1Texts"
@@ -423,7 +423,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
                             android:layout_marginBottom="8dp"
-                            app:srcCompat="@drawable/ic_arrow_expand"
+                            app:srcCompat="@drawable/ic_details_arrow"
                             />
 
                     </LinearLayout>
@@ -447,7 +447,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="8dp"
-                            app:srcCompat="@drawable/ic_list_cart"
+                            app:srcCompat="@drawable/ic_list_item_cart"
                             />
 
                         <LinearLayout android:id="@+id/clTabContentOrdersTop2Texts"
@@ -486,7 +486,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
                             android:layout_marginBottom="8dp"
-                            app:srcCompat="@drawable/ic_arrow_expand"
+                            app:srcCompat="@drawable/ic_details_arrow"
                             />
 
                     </LinearLayout>
@@ -510,7 +510,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="8dp"
-                            app:srcCompat="@drawable/ic_discount"
+                            app:srcCompat="@drawable/ic_list_item_discount"
                             />
 
                         <LinearLayout android:id="@+id/clTabContentOrdersTop3Texts"
@@ -549,7 +549,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
                             android:layout_marginBottom="8dp"
-                            app:srcCompat="@drawable/ic_arrow_expand"
+                            app:srcCompat="@drawable/ic_details_arrow"
                             />
 
                     </LinearLayout>
@@ -573,7 +573,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="8dp"
-                            app:srcCompat="@drawable/ic_order_return"
+                            app:srcCompat="@drawable/ic_list_item_return"
                             />
 
                         <LinearLayout android:id="@+id/clTabContentOrdersTop4Texts"
@@ -612,7 +612,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
                             android:layout_marginBottom="8dp"
-                            app:srcCompat="@drawable/ic_arrow_expand"
+                            app:srcCompat="@drawable/ic_details_arrow"
                             />
 
                     </LinearLayout>
@@ -644,7 +644,7 @@
             android:layout_weight="1"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            app:srcCompat="@drawable/ic_shopping"
+            app:srcCompat="@drawable/ic_bottombar_shopping"
             android:tint="@color/grey_600"
             />
 
@@ -654,7 +654,7 @@
             android:layout_weight="1"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            app:srcCompat="@drawable/ic_catalog"
+            app:srcCompat="@drawable/ic_bottombar_catalog"
             android:tint="@color/grey_600"
             />
 
@@ -665,7 +665,7 @@
             android:layout_weight="1"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            app:srcCompat="@drawable/ic_cart"
+            app:srcCompat="@drawable/ic_bottombar_cart"
             android:tint="@color/grey_600"
             />
 
@@ -675,7 +675,7 @@
             android:layout_weight="1"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            app:srcCompat="@drawable/ic_likes"
+            app:srcCompat="@drawable/ic_bottombar_likes"
             android:tint="@color/grey_600"
             />
 
@@ -690,7 +690,7 @@
             <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarAccountIcon"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                app:srcCompat="@drawable/ic_account"
+                app:srcCompat="@drawable/ic_bottombar_account"
                 android:tint="@color/black"
                 />
 
