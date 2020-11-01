@@ -14,4 +14,12 @@
     <string name="tab_account">Account</string>
     <string name="tab_address">Address</string>
     <string name="tab_orders_history">Orders History</string>
+    <string name="tab_orders_picker_newest">Newest first</string>
+    <string name="clear">Clear</string>
+    <string name="order_number">Your order 34567</string>
+    <string name="delivery_successful">Delivered successful!</string>
+    <string name="order_discount">Claimed Super Discount</string>
+    <string name="order_return">Order returned</string>
+    <string name="delivery_unsuccess">Unsuccessful delivery</string>
+    <string name="bar_tab_account">Account</string>
 </resources>

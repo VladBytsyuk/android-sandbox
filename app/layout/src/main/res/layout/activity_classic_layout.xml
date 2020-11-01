@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/clRoot"
+<LinearLayout android:id="@+id/clRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/blue_grey_50"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
     <FrameLayout android:id="@+id/clHeader"
@@ -13,10 +13,10 @@
         android:layout_height="wrap_content"
         >
 
-        <ImageView android:id="@+id/clHeaderBkg"
+        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clHeaderBkg"
             android:layout_width="match_parent"
             android:layout_height="256dp"
-            android:src="@drawable/demo_bkg_header"
+            app:srcCompat="@drawable/demo_bkg_header"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             />
@@ -36,20 +36,21 @@
                 android:elevation="4dp"
                 >
 
-                <ImageView android:id="@+id/clToolbarHamburger"
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/clToolbarHamburger"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:layout_margin="8dp"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_hamburger"
+                    android:layout_margin="8dp"
+                    app:srcCompat="@drawable/ic_hamburger"
                     android:tint="@color/grey_600"
                     />
 
-                <TextView android:id="@+id/clToolbarName"
+                <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clToolbarName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
                     android:layout_weight="100"
+                    android:layout_margin="16dp"
                     android:gravity="center"
                     android:text="@string/toolbar_name"
                     android:fontFamily="sans-serif-medium"
@@ -59,43 +60,43 @@
                     android:alpha="0.87"
                     />
 
-                <ImageView android:id="@+id/clToolbarLogout"
+                <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clToolbarLogout"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:layout_margin="8dp"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_logout"
+                    android:layout_margin="8dp"
+                    app:srcCompat="@drawable/ic_logout"
                     android:tint="@color/grey_600"
                     />
+
             </LinearLayout>
 
-
-            <ImageView android:id="@+id/clHeaderAvatar"
+            <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clHeaderAvatar"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
-                android:src="@drawable/demo_avater_header"
+                android:layout_marginTop="32dp"
+                app:srcCompat="@drawable/demo_avatar_header"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                android:layout_marginTop="32dp"
                 />
 
             <LinearLayout android:id="@+id/clHeaderInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="24dp"
                 android:gravity="center"
+                android:orientation="horizontal"
                 >
 
                 <LinearLayout android:id="@+id/clHeaderInfoOrders"
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
                     android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
                     >
 
-                    <TextView android:id="@+id/clHeaderInfoOrdersTitle"
+                    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clHeaderInfoOrdersTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -105,7 +106,8 @@
                         android:textColor="@color/black"
                         android:alpha="0.54"
                         />
-                    <TextView android:id="@+id/clHeaderInfoOrdersValue"
+
+                    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clHeaderInfoOrdersValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -121,13 +123,13 @@
                 <LinearLayout android:id="@+id/clHeaderInfoRating"
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
                     >
 
-                    <TextView android:id="@+id/clHeaderInfoOrdersRatingTitle"
+                    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clHeaderInfoOrdersRatingTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -137,7 +139,8 @@
                         android:textColor="@color/black"
                         android:alpha="0.54"
                         />
-                    <TextView android:id="@+id/clHeaderInfoOrdersRatingValue"
+
+                    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clHeaderInfoOrdersRatingValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -153,12 +156,12 @@
                 <LinearLayout android:id="@+id/clHeaderInfoPurchases"
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
                     android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
                     >
 
-                    <TextView android:id="@+id/clHeaderInfoOrdersPurchasesTitle"
+                    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clHeaderInfoOrdersPurchasesTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -168,7 +171,8 @@
                         android:textColor="@color/black"
                         android:alpha="0.54"
                         />
-                    <TextView android:id="@+id/clHeaderInfoOrdersPurchasesValue"
+
+                    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clHeaderInfoOrdersPurchasesValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -189,7 +193,8 @@
 
     <LinearLayout android:id="@+id/clContent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="vertical"
         >
 
@@ -197,16 +202,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:baselineAligned="false"
             >
 
-            <FrameLayout
+            <FrameLayout android:id="@+id/clTabAccount"
                 android:layout_width="108dp"
                 android:layout_height="48dp"
                 android:alpha="0.54"
                 android:background="@color/white"
                 >
 
-                <TextView android:id="@+id/clContentPageAccountTitle"
+                <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabAccountTitle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -217,9 +223,10 @@
                     android:alpha="0.87"
                     android:fontFamily="sans-serif-medium"
                     />
+
             </FrameLayout>
 
-            <FrameLayout android:id="@+id/clContentPageOrders"
+            <FrameLayout android:id="@+id/clTabOrders"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -227,7 +234,7 @@
                 android:elevation="2dp"
                 >
 
-                <TextView android:id="@+id/clContentPageOrdersTitle"
+                <androidx.appcompat.widget.AppCompatTextView android:id="@+id/cTabOrdersTitle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -239,34 +246,35 @@
                     android:fontFamily="sans-serif-medium"
                     />
 
-                <LinearLayout
+                <LinearLayout android:id="@+id/clTabOrdersLineContainer"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     >
 
-                    <Space
+                    <Space android:id="@+id/clTabOrdersLineSpace"
                         android:layout_width="match_parent"
                         android:layout_height="44dp"
                         />
 
-                    <View
+                    <View android:id="@+id/clTabOrdersLine"
                         android:layout_width="match_parent"
                         android:layout_height="4dp"
                         android:background="@color/a_green_400"
                         />
 
                 </LinearLayout>
+
             </FrameLayout>
 
-            <FrameLayout
+            <FrameLayout android:id="@+id/clTabAddress"
                 android:layout_width="108dp"
                 android:layout_height="48dp"
                 android:alpha="0.54"
                 android:background="@color/white"
                 >
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabAddressTitle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -277,65 +285,63 @@
                     android:alpha="0.87"
                     android:fontFamily="sans-serif-medium"
                     />
+
             </FrameLayout>
 
         </LinearLayout>
 
         <LinearLayout android:id="@+id/clTabContent"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             >
 
-            <Space
+            <Space android:id="@+id/clTabContentHeaderSpace"
                 android:layout_width="match_parent"
                 android:layout_height="16dp"
                 />
 
-            <LinearLayout
+            <LinearLayout android:id="@+id/clTabContentHeader"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 >
 
-
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabContentPickerText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="16dp"
-                    android:text="Newest first"
+                    android:text="@string/tab_orders_picker_newest"
                     android:textSize="14sp"
                     android:textColor="@color/black"
                     android:alpha="0.54"
                     />
 
-                <LinearLayout
+                <LinearLayout android:id="@+id/clTabContentPickerIconContainer"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="100"
-                    android:orientation="horizontal"
                     android:gravity="center_vertical"
+                    android:orientation="horizontal"
                     >
 
-                    <ImageView
+                    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentPicker"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/ic_arrow"
+                        app:srcCompat="@drawable/ic_arrow"
                         android:tint="@color/grey_600"
                         />
 
                 </LinearLayout>
 
-
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabContentPickerClear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginEnd="16dp"
-                    android:text="Clear"
+                    android:text="@string/clear"
                     android:fontFamily="sans-serif-medium"
                     android:textAllCaps="true"
                     android:textSize="14sp"
@@ -345,7 +351,7 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <LinearLayout android:id="@+id/clTabContentOrders"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -353,23 +359,24 @@
                 android:background="@color/white"
                 >
 
-                <Space
+                <Space android:id="@+id/clTabContentOrdersHeaderSpace"
                     android:layout_width="match_parent"
                     android:layout_height="16dp"
                     />
 
-                <LinearLayout
+                <LinearLayout android:id="@+id/clTabContentOrdersCore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    >
 
-                    <LinearLayout
+                    <LinearLayout android:id="@+id/clTabContentOrdersTop1"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
                         android:orientation="horizontal"
                         >
 
-                        <ImageView
+                        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentOrdersTop1Icon"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
@@ -377,40 +384,38 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="8dp"
-                            android:src="@drawable/ic_list_cart"
+                            app:srcCompat="@drawable/ic_list_cart"
                             />
 
-                        <LinearLayout
+                        <LinearLayout android:id="@+id/clTabContentOrdersTop1Texts"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="100"
-                            android:orientation="vertical"
                             android:gravity="center_vertical"
+                            android:orientation="vertical"
                             >
 
-                            <TextView
+                            <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabContentOrdersTop1OrderName"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Your order 34567"
+                                android:text="@string/order_number"
                                 android:textSize="16sp"
                                 android:textColor="@color/black"
                                 android:alpha="0.87"
                                 />
 
-                            <TextView
+                            <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabContentOrdersTop1OrderStatus"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Delivered successful!"
+                                android:text="@string/delivery_successful"
                                 android:textSize="14sp"
                                 android:textColor="@color/green_700"
                                 android:alpha="0.87"
                                 />
 
-
-
                         </LinearLayout>
 
-                        <ImageView
+                        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentOrdersTop1Details"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
@@ -418,24 +423,23 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
                             android:layout_marginBottom="8dp"
-                            android:src="@drawable/ic_arrow_expand"
+                            app:srcCompat="@drawable/ic_arrow_expand"
                             />
-
 
                     </LinearLayout>
 
-                    <Space
+                    <Space android:id="@+id/clTabContentOrdersSpace1"
                         android:layout_width="match_parent"
                         android:layout_height="8dp"
                         />
 
-                    <LinearLayout
+                    <LinearLayout android:id="@+id/clTabContentOrdersTop2"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
                         android:orientation="horizontal"
                         >
 
-                        <ImageView
+                        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentOrdersTop2Icon"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
@@ -443,40 +447,38 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="8dp"
-                            android:src="@drawable/ic_list_cart"
+                            app:srcCompat="@drawable/ic_list_cart"
                             />
 
-                        <LinearLayout
+                        <LinearLayout android:id="@+id/clTabContentOrdersTop2Texts"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="100"
-                            android:orientation="vertical"
                             android:gravity="center_vertical"
+                            android:orientation="vertical"
                             >
 
-                            <TextView
+                            <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabContentOrdersTop2OrderName"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Your order 34567"
+                                android:text="@string/order_number"
                                 android:textSize="16sp"
                                 android:textColor="@color/black"
                                 android:alpha="0.87"
                                 />
 
-                            <TextView
+                            <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabContentOrdersTop2OrderStatus"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Delivered successful!"
+                                android:text="@string/delivery_successful"
                                 android:textSize="14sp"
                                 android:textColor="@color/green_700"
                                 android:alpha="0.87"
                                 />
 
-
-
                         </LinearLayout>
 
-                        <ImageView
+                        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentOrdersTop2Deatils"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
@@ -484,24 +486,23 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
                             android:layout_marginBottom="8dp"
-                            android:src="@drawable/ic_arrow_expand"
+                            app:srcCompat="@drawable/ic_arrow_expand"
                             />
-
 
                     </LinearLayout>
 
-                    <Space
+                    <Space android:id="@+id/clTabContentOrdersSpace2"
                         android:layout_width="match_parent"
                         android:layout_height="8dp"
                         />
 
-                    <LinearLayout
+                    <LinearLayout android:id="@+id/clTabContentOrdersTop3"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
                         android:orientation="horizontal"
                         >
 
-                        <ImageView
+                        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentOrdersTop3Icon"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
@@ -509,10 +510,10 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="8dp"
-                            android:src="@drawable/ic_discount"
+                            app:srcCompat="@drawable/ic_discount"
                             />
 
-                        <LinearLayout
+                        <LinearLayout android:id="@+id/clTabContentOrdersTop3Texts"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="100"
@@ -520,29 +521,27 @@
                             android:gravity="center_vertical"
                             >
 
-                            <TextView
+                            <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabContentOrdersTop3OrderName"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Claimed Super Discount"
+                                android:text="@string/order_discount"
                                 android:textSize="16sp"
                                 android:textColor="@color/black"
                                 android:alpha="0.87"
                                 />
 
-                            <TextView
+                            <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabContentOrdersTop3OrderStatus"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Delivered successful!"
+                                android:text="@string/delivery_successful"
                                 android:textSize="14sp"
                                 android:textColor="@color/black"
                                 android:alpha="0.54"
                                 />
 
-
-
                         </LinearLayout>
 
-                        <ImageView
+                        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentOrdersTop3Details"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
@@ -550,24 +549,23 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
                             android:layout_marginBottom="8dp"
-                            android:src="@drawable/ic_arrow_expand"
+                            app:srcCompat="@drawable/ic_arrow_expand"
                             />
-
 
                     </LinearLayout>
 
-                    <Space
+                    <Space android:id="@+id/clTabContentOrdersSpace3"
                         android:layout_width="match_parent"
                         android:layout_height="8dp"
                         />
 
-                    <LinearLayout
+                    <LinearLayout android:id="@+id/clTabContentOrdersTop4"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
                         android:orientation="horizontal"
                         >
 
-                        <ImageView
+                        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentOrdersTop4Icon"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
@@ -575,40 +573,38 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="8dp"
-                            android:src="@drawable/ic_order_return"
+                            app:srcCompat="@drawable/ic_order_return"
                             />
 
-                        <LinearLayout
+                        <LinearLayout android:id="@+id/clTabContentOrdersTop4Texts"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="100"
-                            android:orientation="vertical"
                             android:gravity="center_vertical"
+                            android:orientation="vertical"
                             >
 
-                            <TextView
+                            <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabContentOrdersTop4OrderName"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Order returned"
+                                android:text="@string/order_return"
                                 android:textSize="16sp"
                                 android:textColor="@color/a_red_400"
                                 android:alpha="0.87"
                                 />
 
-                            <TextView
+                            <TextView android:id="@+id/clTabContentOrdersTop4OrderStatus"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Unsuccessful delivery"
+                                android:text="@string/delivery_unsuccess"
                                 android:textSize="14sp"
                                 android:textColor="@color/black"
                                 android:alpha="0.54"
                                 />
 
-
-
                         </LinearLayout>
 
-                        <ImageView
+                        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentOrdersTop4Details"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_weight="1"
@@ -616,103 +612,100 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
                             android:layout_marginBottom="8dp"
-                            android:src="@drawable/ic_arrow_expand"
+                            app:srcCompat="@drawable/ic_arrow_expand"
                             />
-
 
                     </LinearLayout>
 
                 </LinearLayout>
 
-
-                <Space
+                <Space android:id="@+id/clTabContentOrdersFooterSpace"
                     android:layout_width="match_parent"
                     android:layout_height="16dp"
                     />
+
             </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout android:id="@+id/clBottomBar"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:orientation="horizontal"
-            android:background="@color/white"
-            android:elevation="4dp"
-            >
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_weight="1"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:src="@drawable/ic_shopping"
-                android:tint="@color/grey_600"
-                />
-
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_weight="1"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:src="@drawable/ic_catalog"
-                android:tint="@color/grey_600"
-                />
-
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_weight="1"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:src="@drawable/ic_cart"
-                android:tint="@color/grey_600"
-                />
-
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_weight="1"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:src="@drawable/ic_likes"
-                android:tint="@color/grey_600"
-                />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                >
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_account"
-                    android:tint="@color/black"
-                    />
-
-                <TextView android:id="@+id/clContentPageAddressTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/tab_account"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:alpha="0.87"
-                    />
-            </LinearLayout>
-
 
         </LinearLayout>
 
     </LinearLayout>
+
+    <LinearLayout android:id="@+id/clBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:elevation="4dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarShopping"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/ic_shopping"
+            android:tint="@color/grey_600"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarCatalog"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/ic_catalog"
+            android:tint="@color/grey_600"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarCart"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/ic_cart"
+            android:tint="@color/grey_600"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarLikes"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/ic_likes"
+            android:tint="@color/grey_600"
+            />
+
+        <LinearLayout android:id="@+id/clBottomBarAccount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarAccountIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/ic_account"
+                android:tint="@color/black"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clBottomBarAccountTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/bar_tab_account"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:alpha="0.87"
+                />
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
 </LinearLayout>
