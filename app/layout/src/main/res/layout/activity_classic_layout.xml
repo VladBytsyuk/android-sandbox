@@ -526,16 +526,14 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/order_title_return"
-                                style="@style/Text_Orders_Name_Issue"
+                                style="@style/Text_Orders_Name_Failure"
                                 />
 
                             <TextView android:id="@+id/clTabContentOrdersTop4OrderStatus"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/order_status_unsuccessful"
-                                android:textSize="14sp"
-                                android:textColor="@color/black"
-                                android:alpha="0.54"
+                                style="@style/Text_Orders_Status"
                                 />
 
                         </LinearLayout>

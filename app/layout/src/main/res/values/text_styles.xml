@@ -55,7 +55,7 @@
         <item name="android:alpha">0.87</item>
     </style>
 
-    <style name="Text_Orders_Name_Issue" parent="Text_Orders_Name">
+    <style name="Text_Orders_Name_Failure" parent="Text_Orders_Name">
         <item name="android:textColor">@color/a_red_400</item>
     </style>
 
