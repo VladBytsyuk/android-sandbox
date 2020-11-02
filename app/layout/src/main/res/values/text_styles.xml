@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Text_AppBar_Title">
+        <item name="android:gravity">center</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
@@ -9,10 +10,19 @@
     </style>
 
     <style name="Text_Header_Item_Title">
+        <item name="android:gravity">center</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:alpha">0.54</item>
+    </style>
+
+    <style name="Text_Header_Item_Value">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:alpha">0.87</item>
     </style>
 
 </resources>
