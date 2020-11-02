@@ -296,11 +296,7 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="16dp"
                     android:text="@string/tab_orders_header_clear"
-                    android:fontFamily="sans-serif-medium"
-                    android:textAllCaps="true"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:alpha="0.54"
+                    style="@style/Text_Orders_Filter_Clear"
                     />
 
             </LinearLayout>
