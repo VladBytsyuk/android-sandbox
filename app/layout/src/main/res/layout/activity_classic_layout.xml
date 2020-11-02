@@ -631,11 +631,8 @@
             <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clBottomBarAccountTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:text="@string/bottombar_tab_title_account"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:alpha="0.87"
+                style="@style/Text_BottomBar_Item_Selected_Title"
                 />
 
         </LinearLayout>
