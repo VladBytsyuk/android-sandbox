@@ -186,13 +186,8 @@
                 <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabAccountTitle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:text="@string/tab_account"
-                    android:textAllCaps="true"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:alpha="0.87"
-                    android:fontFamily="sans-serif-medium"
+                    style="@style/Text_Tab"
                     />
 
             </FrameLayout>
@@ -208,13 +203,8 @@
                 <androidx.appcompat.widget.AppCompatTextView android:id="@+id/cTabOrdersTitle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:text="@string/tab_orders"
-                    android:textAllCaps="true"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:alpha="0.87"
-                    android:fontFamily="sans-serif-medium"
+                    style="@style/Text_Tab"
                     />
 
                 <LinearLayout android:id="@+id/clTabOrdersLineContainer"
@@ -248,13 +238,8 @@
                 <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabAddressTitle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:text="@string/tab_address"
-                    android:textAllCaps="true"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:alpha="0.87"
-                    android:fontFamily="sans-serif-medium"
+                    style="@style/Text_Tab"
                     />
 
             </FrameLayout>
