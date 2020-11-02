@@ -532,9 +532,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/order_title_return"
-                                android:textSize="16sp"
-                                android:textColor="@color/a_red_400"
-                                android:alpha="0.87"
+                                style="@style/Text_Orders_Name_Issue"
                                 />
 
                             <TextView android:id="@+id/clTabContentOrdersTop4OrderStatus"
