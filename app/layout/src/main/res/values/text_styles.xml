@@ -58,5 +58,11 @@
     <style name="Text_Orders_Name_Issue" parent="Text_Orders_Name">
         <item name="android:textColor">@color/a_red_400</item>
     </style>
+    
+    <style name="Text_Orders_Status">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:alpha">0.54</item>
+    </style>
 
 </resources>
