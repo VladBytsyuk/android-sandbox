@@ -356,9 +356,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/order_status_successful"
-                                android:textSize="14sp"
-                                android:textColor="@color/green_700"
-                                android:alpha="0.87"
+                                style="@style/Text_Orders_Status_Success"
                                 />
 
                         </LinearLayout>
@@ -417,9 +415,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/order_status_successful"
-                                android:textSize="14sp"
-                                android:textColor="@color/green_700"
-                                android:alpha="0.87"
+                                style="@style/Text_Orders_Status_Success"
                                 />
 
                         </LinearLayout>
