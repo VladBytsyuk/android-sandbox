@@ -53,11 +53,7 @@
                     android:layout_margin="16dp"
                     android:gravity="center"
                     android:text="@string/toolbar_name"
-                    android:fontFamily="sans-serif-medium"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:alpha="0.87"
+                    style="@style/Text_AppBar_Title"
                     />
 
                 <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clToolbarLogout"
