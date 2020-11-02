@@ -27,5 +27,5 @@
     <string name="order_title_discount">Claimed Super Discount</string>
     <string name="order_title_return">Order returned</string>
 
-    <string name="bottombar_tab_title_account">Account</string>
+    <string name="bottom_bar_tab_title_account">Account</string>
 </resources>
