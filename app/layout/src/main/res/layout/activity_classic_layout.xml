@@ -97,10 +97,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/header_orders_title"
-                        android:textSize="12sp"
-                        android:textStyle="normal"
-                        android:textColor="@color/black"
-                        android:alpha="0.54"
+                        style="@style/Text_Header_Item_Title"
                         />
 
                     <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clHeaderInfoOrdersValue"
@@ -130,10 +127,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/header_rating_title"
-                        android:textSize="12sp"
-                        android:textStyle="normal"
-                        android:textColor="@color/black"
-                        android:alpha="0.54"
+                        style="@style/Text_Header_Item_Title"
                         />
 
                     <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clHeaderInfoOrdersRatingValue"
@@ -162,10 +156,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/header_purchases_title"
-                        android:textSize="12sp"
-                        android:textStyle="normal"
-                        android:textColor="@color/black"
-                        android:alpha="0.54"
+                        style="@style/Text_Header_Item_Title"
                         />
 
                     <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clHeaderInfoOrdersPurchasesValue"
