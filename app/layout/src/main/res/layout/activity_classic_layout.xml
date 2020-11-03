@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:orientation="horizontal"
-                android:background="@color/white"
+                android:background="?attr/appbarBackground"
                 android:elevation="4dp"
                 >
 
@@ -44,7 +44,7 @@
                     android:layout_weight="1"
                     android:layout_margin="8dp"
                     app:srcCompat="@drawable/ic_toolbar_hamburger"
-                    android:tint="@color/grey_600"
+                    android:tint="?attr/iconTint"
                     />
 
                 <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clToolbarName"
@@ -62,7 +62,7 @@
                     android:layout_weight="1"
                     android:layout_margin="8dp"
                     app:srcCompat="@drawable/ic_toolbar_logout"
-                    android:tint="@color/grey_600"
+                    android:tint="?attr/iconTint"
                     />
 
             </LinearLayout>
@@ -286,7 +286,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         app:srcCompat="@drawable/ic_collapse_arrow"
-                        android:tint="@color/grey_600"
+                        android:tint="?attr/iconTint"
                         />
 
                 </LinearLayout>
@@ -580,7 +580,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             app:srcCompat="@drawable/ic_bottombar_shopping"
-            android:tint="@color/grey_600"
+            android:tint="?attr/bottomBarIconTintDisabled"
             />
 
         <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarCatalog"
@@ -590,7 +590,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             app:srcCompat="@drawable/ic_bottombar_catalog"
-            android:tint="@color/grey_600"
+            android:tint="?attr/bottomBarIconTintDisabled"
             />
 
 
@@ -601,7 +601,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             app:srcCompat="@drawable/ic_bottombar_cart"
-            android:tint="@color/grey_600"
+            android:tint="?attr/bottomBarIconTintDisabled"
             />
 
         <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarLikes"
@@ -611,7 +611,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             app:srcCompat="@drawable/ic_bottombar_likes"
-            android:tint="@color/grey_600"
+            android:tint="?attr/bottomBarIconTintDisabled"
             />
 
         <LinearLayout android:id="@+id/clBottomBarAccount"
