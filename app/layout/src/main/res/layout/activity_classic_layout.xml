@@ -179,9 +179,7 @@
 
             <FrameLayout android:id="@+id/clTabAccount"
                 android:layout_width="108dp"
-                android:layout_height="48dp"
-                android:alpha="0.54"
-                android:background="@color/white"
+                style="@style/View_Tab_Inactive"
                 >
 
                 <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabAccountTitle"
@@ -195,10 +193,7 @@
 
             <FrameLayout android:id="@+id/clTabOrders"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:elevation="2dp"
+                style="@style/View_Tab_Active"
                 >
 
                 <androidx.appcompat.widget.AppCompatTextView android:id="@+id/cTabOrdersTitle"
@@ -231,9 +226,7 @@
 
             <FrameLayout android:id="@+id/clTabAddress"
                 android:layout_width="108dp"
-                android:layout_height="48dp"
-                android:alpha="0.54"
-                android:background="@color/white"
+                style="@style/View_Tab_Inactive"
                 >
 
                 <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clTabAddressTitle"
