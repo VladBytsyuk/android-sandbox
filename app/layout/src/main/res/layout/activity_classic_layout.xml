@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:orientation="horizontal"
-                android:background="?attr/appbarBackground"
+                android:background="?attr/appBarBackground"
                 android:elevation="4dp"
                 >
 
@@ -562,7 +562,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:orientation="horizontal"
-        android:background="@color/white"
+        android:background="?attr/bottomBarBackground"
         android:elevation="4dp"
         >
 

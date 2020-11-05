@@ -3,7 +3,8 @@
     <style name="Theme.Layout.Light.NoActionBar" parent="Theme.MaterialComponents.NoActionBar">
         <item name="screenBackground">@color/blue_grey_50</item>
 
-        <item name="appbarBackground">@color/white</item>
+        <item name="appBarBackground">@color/white</item>
+        <item name="bottomBarBackground">@color/white</item>
         <item name="bottomBarIconTintDisabled">@color/grey_600</item>
 
         <item name="iconTint">@color/grey_600</item>
@@ -14,7 +15,8 @@
     </style>
 
     <attr name="screenBackground" format="reference|color" />
-    <attr name="appbarBackground" format="reference|color" />
+    <attr name="appBarBackground" format="reference|color" />
+    <attr name="bottomBarBackground" format="reference|color" />
     <attr name="bottomBarIconTintDisabled" format="reference|color" />
     <attr name="iconTint" format="reference|color" />
     <attr name="textColorBase" format="reference|color" />
