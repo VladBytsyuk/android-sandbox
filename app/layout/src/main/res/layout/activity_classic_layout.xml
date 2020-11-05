@@ -217,7 +217,7 @@
                     <View android:id="@+id/clTabOrdersLine"
                         android:layout_width="match_parent"
                         android:layout_height="4dp"
-                        android:background="@color/a_green_400"
+                        android:background="?attr/activeTabLineColor"
                         />
 
                 </LinearLayout>

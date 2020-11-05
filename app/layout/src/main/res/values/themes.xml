@@ -12,6 +12,7 @@
 
     <attr name="tabContentBackground" format="reference|color" />
     <attr name="iconTint" format="reference|color" />
+    <attr name="activeTabLineColor" format="reference|color" />
 
     <attr name="textColorBase" format="reference|color" />
     <attr name="textColorSuccess" format="reference|color" />
@@ -31,6 +32,7 @@
 
         <item name="tabContentBackground">?attr/enabledBackground</item>
         <item name="iconTint">@color/grey_600</item>
+        <item name="activeTabLineColor">@color/a_green_400</item>
 
         <item name="textColorBase">@color/black</item>
         <item name="textColorSuccess">@color/green_700</item>
