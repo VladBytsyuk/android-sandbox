@@ -36,8 +36,8 @@
 
         <item name="bottomBarIconTintDisabled">@color/grey_600</item>
         <item name="bottomBarIconTintEnabled">@color/black</item>
-
         <item name="activeTabLineColor">@color/a_green_400</item>
+
         <item name="iconTint">@color/grey_600</item>
 
         <item name="textColorBase">@color/black</item>
@@ -47,17 +47,17 @@
 
 
     <style name="Theme.Layout.NoActionBar.Dark" parent="Theme.Layout.NoActionBar">
-        <item name="disabledBackground">@color/blue_grey_900_dark</item>
-        <item name="enabledBackground">@color/black</item>
+        <item name="disabledBackground">@color/black</item>
+        <item name="enabledBackground">@color/blue_grey_900_dark</item>
 
         <item name="bottomBarIconTintDisabled">@color/grey_400</item>
         <item name="bottomBarIconTintEnabled">@color/white</item>
+        <item name="activeTabLineColor">@color/a_green_400_dark</item>
 
         <item name="iconTint">@color/grey_400</item>
-        <item name="activeTabLineColor">@color/a_green_400</item>
 
         <item name="textColorBase">@color/white</item>
-        <item name="textColorSuccess">@color/green_700</item>
-        <item name="textColorFailure">@color/a_red_400</item>
+        <item name="textColorSuccess">@color/green_700_light</item>
+        <item name="textColorFailure">@color/a_red_400_light</item>
     </style>
 </resources>
