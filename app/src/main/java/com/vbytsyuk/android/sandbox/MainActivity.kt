@@ -12,7 +12,11 @@ import com.vbytsyuk.android.lifecycle.ChooseLifecycleActivity
 import com.vbytsyuk.android.pictures.screen.PictureScreenActivity
 
 
-class MainActivity : CoreActivity(layoutId = R.layout.activity_main) {
+class MainActivity : CoreActivity(
+    layoutId = R.layout.activity_main,
+    themeLight = R.style.Theme_Sandbox_Light_NoActionBar,
+    themeDark = R.style.Theme_Sandbox_Dark_NoActionBar
+) {
     private val buttonImageLoaders: Button by lazyFindViewById(R.id.amBtnPictureLoaders)
     private val buttonLifecycle: Button by lazyFindViewById(R.id.amBtnLifeCycle)
     private val buttonLayout: Button by lazyFindViewById(R.id.amBtnLayout)

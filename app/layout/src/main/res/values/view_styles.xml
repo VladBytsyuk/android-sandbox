@@ -2,17 +2,17 @@
 <resources>
     <style name="View_Tab">
         <item name="android:layout_height">48dp</item>
-        <item name="android:background">?attr/tabBackground</item>
+        <item name="android:background">?attr/tabElementBackground</item>
     </style>
     <style name="View_Tab_Active" parent="View_Tab">
         <item name="android:layout_weight">1</item>
         <item name="android:elevation">2dp</item>
         <item name="android:alpha">1</item>
-        <item name="android:background">?attr/tabBackground</item>
+        <item name="android:background">?attr/tabElementBackground</item>
     </style>
     <style name="View_Tab_Inactive" parent="View_Tab">
         <item name="android:elevation">0dp</item>
         <item name="android:alpha">0.54</item>
-        <item name="android:background">?attr/tabBackground</item>
+        <item name="android:background">?attr/tabElementBackground</item>
     </style>
 </resources>

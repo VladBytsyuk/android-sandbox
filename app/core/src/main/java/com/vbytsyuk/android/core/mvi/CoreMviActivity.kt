@@ -2,13 +2,16 @@ package com.vbytsyuk.android.core.mvi
 
 import android.view.View
 import androidx.annotation.LayoutRes
+import androidx.annotation.StyleRes
 import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 import com.vbytsyuk.android.core.activity.CoreActivity
 
 
 abstract class CoreMviActivity<State, Interactor : CoreMviInteractor<State>>(
-    @LayoutRes layoutId: Int
-) : CoreActivity(layoutId) {
+    @LayoutRes layoutId: Int,
+    @StyleRes themeLight: Int,
+    @StyleRes themeDark: Int
+) : CoreActivity(layoutId, themeLight, themeDark) {
     abstract val interactor: Interactor
 
     override fun onResume() {

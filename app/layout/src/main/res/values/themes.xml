@@ -11,7 +11,7 @@
     <attr name="bottomBarIconTintEnabled" format="reference|color" />
 
     <attr name="headerBackgroundDrawable" format="reference" />
-    <attr name="tabBackground" format="reference|color" />
+    <attr name="tabElementBackground" format="reference|color" />
     <attr name="tabContentBackground" format="reference|color" />
     <attr name="activeTabLineColor" format="reference|color" />
     <attr name="iconTint" format="reference|color" />
@@ -26,7 +26,7 @@
         <item name="appBarBackground">?attr/enabledBackground</item>
         <item name="bottomBarBackground">?attr/enabledBackground</item>
 
-        <item name="tabBackground">?attr/enabledBackground</item>
+        <item name="tabElementBackground">?attr/enabledBackground</item>
         <item name="tabContentBackground">?attr/enabledBackground</item>
     </style>
 

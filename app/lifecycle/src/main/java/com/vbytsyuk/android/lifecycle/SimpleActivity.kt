@@ -8,7 +8,11 @@ import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 import com.vbytsyuk.android.core.appbar.ToolBarConfigurator
 
 
-class SimpleActivity : CoreActivity(layoutId = R.layout.activity) {
+class SimpleActivity : CoreActivity(
+    layoutId = R.layout.activity,
+    themeLight = R.style.Theme_Sandbox_Light_NoActionBar,
+    themeDark = R.style.Theme_Sandbox_Dark_NoActionBar
+) {
     override val appBarConfigurator = ToolBarConfigurator(
         toolbarId = R.id.asToolbar,
         titleId = R.string.as_title,

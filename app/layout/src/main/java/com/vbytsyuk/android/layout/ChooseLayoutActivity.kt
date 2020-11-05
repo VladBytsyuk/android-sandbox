@@ -6,7 +6,11 @@ import com.vbytsyuk.android.core.activity.lazyFindViewById
 import com.vbytsyuk.android.core.activity.navigateTo
 
 //https://www.figma.com/file/EYV3UeSa7vnjWEr8txbol5YV/App-cart-templates-ecommerce/duplicate
-class ChooseLayoutActivity : CoreActivity(layoutId = R.layout.activity_choose_layout) {
+class ChooseLayoutActivity : CoreActivity(
+    layoutId = R.layout.activity_choose_layout,
+    themeLight = R.style.Theme_Sandbox_Light_NoActionBar,
+    themeDark = R.style.Theme_Sandbox_Dark_NoActionBar
+) {
     private val buttonClassicLayout: Button by lazyFindViewById(R.id.aclBtnClassicLayout)
     private val buttonConstraintLayout: Button by lazyFindViewById(R.id.aclBtnConstraintLayout)
     private val buttonComposeLayout: Button by lazyFindViewById(R.id.aclBtnComposeLayout)

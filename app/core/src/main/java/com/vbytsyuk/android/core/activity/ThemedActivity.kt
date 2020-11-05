@@ -2,6 +2,7 @@ package com.vbytsyuk.android.core.activity
 
 import android.content.res.Configuration
 import android.os.Bundle
+import androidx.annotation.StyleRes
 import androidx.appcompat.app.AppCompatActivity
 import com.vbytsyuk.android.core.R
 import com.vbytsyuk.android.core.Theme
@@ -9,7 +10,10 @@ import com.vbytsyuk.android.core.controllers.ThemeController
 import org.koin.android.ext.android.inject
 
 
-abstract class ThemedActivity : AppCompatActivity() {
+abstract class ThemedActivity(
+    @StyleRes private val themeLight: Int = R.style.Theme_Sandbox_Light_NoActionBar,
+    @StyleRes private val themeDark: Int = R.style.Theme_Sandbox_Dark_NoActionBar
+) : AppCompatActivity() {
     protected val themeController: ThemeController by inject()
 
     protected fun configureTheme(theme: Theme) {
@@ -36,8 +40,8 @@ abstract class ThemedActivity : AppCompatActivity() {
 
     private fun getConcreteThemeRes(theme: Theme): Int = when (theme) {
         Theme.BY_SYSTEM -> throw IllegalArgumentException("This method can not accept theme == ${Theme.BY_SYSTEM}")
-        Theme.LIGHT -> R.style.Theme_Sandbox_Light_NoActionBar
-        Theme.DARK -> R.style.Theme_Sandbox_Dark_NoActionBar
+        Theme.LIGHT -> themeLight
+        Theme.DARK -> themeDark
     }
 
 

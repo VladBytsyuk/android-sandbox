@@ -8,7 +8,11 @@ import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 import com.vbytsyuk.android.core.appbar.ToolBarConfigurator
 
 
-class ChooseLifecycleActivity : CoreActivity(layoutId = R.layout.activity_choose_lifecycle) {
+class ChooseLifecycleActivity : CoreActivity(
+    layoutId = R.layout.activity_choose_lifecycle,
+    themeLight = R.style.Theme_Sandbox_Light_NoActionBar,
+    themeDark = R.style.Theme_Sandbox_Dark_NoActionBar
+) {
     private val buttonSimpleActivity: Button by lazyFindViewById(R.id.aclBtnSimpleActivity)
     private val buttonJetpackActivity: Button by lazyFindViewById(R.id.aclBtnJetpackActivity)
 

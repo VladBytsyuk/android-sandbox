@@ -20,7 +20,9 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class PictureScreenActivity : CoreMviActivity<PictureScreenState, PictureScreenInteractor>(
-    layoutId = R.layout.activity_pictures_main
+    layoutId = R.layout.activity_pictures_main,
+    themeLight = R.style.Theme_Sandbox_Light_NoActionBar,
+    themeDark = R.style.Theme_Sandbox_Dark_NoActionBar
 ) {
     override val interactor: PictureScreenInteractor by viewModel()
     private val picturesLoaderChooser: PicturesLoaderChooser by inject()

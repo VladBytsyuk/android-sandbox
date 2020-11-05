@@ -10,7 +10,11 @@ import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 import com.vbytsyuk.android.core.appbar.ToolBarConfigurator
 
 
-class JetpackActivity : CoreActivity(layoutId = R.layout.activity), LifecycleObserver {
+class JetpackActivity : CoreActivity(
+    layoutId = R.layout.activity,
+    themeLight = R.style.Theme_Sandbox_Light_NoActionBar,
+    themeDark = R.style.Theme_Sandbox_Dark_NoActionBar
+), LifecycleObserver {
     override val appBarConfigurator = ToolBarConfigurator(
         toolbarId = R.id.asToolbar,
         titleId = R.string.aj_title,

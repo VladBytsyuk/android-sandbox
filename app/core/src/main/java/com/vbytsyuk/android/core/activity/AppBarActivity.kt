@@ -4,11 +4,16 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.annotation.LayoutRes
+import androidx.annotation.StyleRes
 import androidx.core.view.children
 import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 
 
-abstract class AppBarActivity(@LayoutRes layoutId: Int) : LayoutActivity(layoutId) {
+abstract class AppBarActivity(
+    @LayoutRes layoutId: Int,
+    @StyleRes themeLight: Int,
+    @StyleRes themeDark: Int
+) : LayoutActivity(layoutId, themeLight, themeDark) {
     open val appBarConfigurator: AppBarConfigurator? = null
 
 
