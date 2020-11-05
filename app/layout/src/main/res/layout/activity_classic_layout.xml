@@ -16,7 +16,7 @@
         <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clHeaderBkg"
             android:layout_width="match_parent"
             android:layout_height="256dp"
-            app:srcCompat="@drawable/img_header_bkg"
+            app:srcCompat="?attr/headerBackgroundDrawable"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             />
