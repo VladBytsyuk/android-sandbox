@@ -19,20 +19,24 @@
     <attr name="textColorSuccess" format="reference|color" />
     <attr name="textColorFailure" format="reference|color" />
 
-
-    <style name="Theme.Layout.Light.NoActionBar" parent="Theme.MaterialComponents.NoActionBar">
-        <item name="disabledBackground">@color/blue_grey_50</item>
-        <item name="enabledBackground">@color/white</item>
-
+    <style name="Theme.Layout.NoActionBar" parent="Theme.MaterialComponents.NoActionBar">
         <item name="screenBackground">?attr/disabledBackground</item>
 
         <item name="appBarBackground">?attr/enabledBackground</item>
         <item name="bottomBarBackground">?attr/enabledBackground</item>
-        <item name="bottomBarIconTintDisabled">@color/grey_600</item>
-        <item name="bottomBarIconTintEnabled">@color/black</item>
 
         <item name="tabBackground">?attr/enabledBackground</item>
         <item name="tabContentBackground">?attr/enabledBackground</item>
+    </style>
+
+
+    <style name="Theme.Layout.NoActionBar.Light" parent="Theme.Layout.NoActionBar">
+        <item name="disabledBackground">@color/blue_grey_50</item>
+        <item name="enabledBackground">@color/white</item>
+
+        <item name="bottomBarIconTintDisabled">@color/grey_600</item>
+        <item name="bottomBarIconTintEnabled">@color/black</item>
+
         <item name="activeTabLineColor">@color/a_green_400</item>
         <item name="iconTint">@color/grey_600</item>
 
@@ -42,19 +46,13 @@
     </style>
 
 
-    <style name="Theme.Layout.Dark.NoActionBar" parent="Theme.MaterialComponents.NoActionBar">
+    <style name="Theme.Layout.NoActionBar.Dark" parent="Theme.Layout.NoActionBar">
         <item name="disabledBackground">@color/blue_grey_900_dark</item>
         <item name="enabledBackground">@color/black</item>
 
-        <item name="screenBackground">?attr/disabledBackground</item>
-
-        <item name="appBarBackground">?attr/enabledBackground</item>
-        <item name="bottomBarBackground">?attr/enabledBackground</item>
         <item name="bottomBarIconTintDisabled">@color/grey_400</item>
         <item name="bottomBarIconTintEnabled">@color/white</item>
 
-        <item name="tabBackground">?attr/enabledBackground</item>
-        <item name="tabContentBackground">?attr/enabledBackground</item>
         <item name="iconTint">@color/grey_400</item>
         <item name="activeTabLineColor">@color/a_green_400</item>
 
