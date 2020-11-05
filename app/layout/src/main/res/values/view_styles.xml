@@ -15,6 +15,4 @@
         <item name="android:alpha">0.54</item>
         <item name="android:background">@color/white</item>
     </style>
-
-
 </resources>

@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="screenBackground" format="reference|color" />
+
+    <attr name="appBarBackground" format="reference|color" />
+    <attr name="bottomBarBackground" format="reference|color" />
+    <attr name="bottomBarIconTintDisabled" format="reference|color" />
+    <attr name="bottomBarIconTintEnabled" format="reference|color" />
+
+    <attr name="iconTint" format="reference|color" />
+
+    <attr name="textColorBase" format="reference|color" />
+    <attr name="textColorSuccess" format="reference|color" />
+    <attr name="textColorFailure" format="reference|color" />
+
+
     <style name="Theme.Layout.Light.NoActionBar" parent="Theme.MaterialComponents.NoActionBar">
         <item name="screenBackground">@color/blue_grey_50</item>
 
@@ -14,14 +28,4 @@
         <item name="textColorSuccess">@color/green_700</item>
         <item name="textColorFailure">@color/a_red_400</item>
     </style>
-
-    <attr name="screenBackground" format="reference|color" />
-    <attr name="appBarBackground" format="reference|color" />
-    <attr name="bottomBarBackground" format="reference|color" />
-    <attr name="bottomBarIconTintDisabled" format="reference|color" />
-    <attr name="bottomBarIconTintEnabled" format="reference|color" />
-    <attr name="iconTint" format="reference|color" />
-    <attr name="textColorBase" format="reference|color" />
-    <attr name="textColorSuccess" format="reference|color" />
-    <attr name="textColorFailure" format="reference|color" />
 </resources>
