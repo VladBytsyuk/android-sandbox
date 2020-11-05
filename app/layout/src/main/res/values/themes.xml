@@ -40,4 +40,26 @@
         <item name="textColorSuccess">@color/green_700</item>
         <item name="textColorFailure">@color/a_red_400</item>
     </style>
+
+
+    <style name="Theme.Layout.Dark.NoActionBar" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="disabledBackground">@color/blue_grey_900_dark</item>
+        <item name="enabledBackground">@color/black</item>
+
+        <item name="screenBackground">?attr/disabledBackground</item>
+
+        <item name="appBarBackground">?attr/enabledBackground</item>
+        <item name="bottomBarBackground">?attr/enabledBackground</item>
+        <item name="bottomBarIconTintDisabled">@color/grey_400</item>
+        <item name="bottomBarIconTintEnabled">@color/white</item>
+
+        <item name="tabBackground">?attr/enabledBackground</item>
+        <item name="tabContentBackground">?attr/enabledBackground</item>
+        <item name="iconTint">@color/grey_400</item>
+        <item name="activeTabLineColor">@color/a_green_400</item>
+
+        <item name="textColorBase">@color/white</item>
+        <item name="textColorSuccess">@color/green_700</item>
+        <item name="textColorFailure">@color/a_red_400</item>
+    </style>
 </resources>
