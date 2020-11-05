@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="disabledBackground" format="reference|color" />
+    <attr name="enabledBackground" format="reference|color" />
+
     <attr name="screenBackground" format="reference|color" />
 
     <attr name="appBarBackground" format="reference|color" />
@@ -15,10 +18,13 @@
 
 
     <style name="Theme.Layout.Light.NoActionBar" parent="Theme.MaterialComponents.NoActionBar">
-        <item name="screenBackground">@color/blue_grey_50</item>
+        <item name="disabledBackground">@color/blue_grey_50</item>
+        <item name="enabledBackground">@color/white</item>
 
-        <item name="appBarBackground">@color/white</item>
-        <item name="bottomBarBackground">@color/white</item>
+        <item name="screenBackground">?attr/disabledBackground</item>
+
+        <item name="appBarBackground">?attr/enabledBackground</item>
+        <item name="bottomBarBackground">?attr/enabledBackground</item>
         <item name="bottomBarIconTintDisabled">@color/grey_600</item>
         <item name="bottomBarIconTintEnabled">@color/black</item>
 
