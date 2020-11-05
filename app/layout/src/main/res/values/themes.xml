@@ -10,6 +10,7 @@
     <attr name="bottomBarIconTintDisabled" format="reference|color" />
     <attr name="bottomBarIconTintEnabled" format="reference|color" />
 
+    <attr name="tabContentBackground" format="reference|color" />
     <attr name="iconTint" format="reference|color" />
 
     <attr name="textColorBase" format="reference|color" />
@@ -28,6 +29,7 @@
         <item name="bottomBarIconTintDisabled">@color/grey_600</item>
         <item name="bottomBarIconTintEnabled">@color/black</item>
 
+        <item name="tabContentBackground">?attr/enabledBackground</item>
         <item name="iconTint">@color/grey_600</item>
 
         <item name="textColorBase">@color/black</item>

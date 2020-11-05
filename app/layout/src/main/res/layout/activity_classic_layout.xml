@@ -300,7 +300,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:elevation="4dp"
-                android:background="@color/white"
+                android:background="?attr/tabContentBackground"
                 >
 
                 <Space android:id="@+id/clTabContentOrdersHeaderSpace"
