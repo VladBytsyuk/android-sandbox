@@ -572,7 +572,7 @@
             android:layout_weight="1"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            app:srcCompat="@drawable/ic_bottombar_shopping"
+            app:srcCompat="@drawable/ic_bottom_bar_shopping"
             android:tint="?attr/bottomBarIconTintDisabled"
             />
 
@@ -582,7 +582,7 @@
             android:layout_weight="1"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            app:srcCompat="@drawable/ic_bottombar_catalog"
+            app:srcCompat="@drawable/ic_bottom_bar_catalog"
             android:tint="?attr/bottomBarIconTintDisabled"
             />
 
@@ -593,7 +593,7 @@
             android:layout_weight="1"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            app:srcCompat="@drawable/ic_bottombar_cart"
+            app:srcCompat="@drawable/ic_bottom_bar_cart"
             android:tint="?attr/bottomBarIconTintDisabled"
             />
 
@@ -603,7 +603,7 @@
             android:layout_weight="1"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            app:srcCompat="@drawable/ic_bottombar_likes"
+            app:srcCompat="@drawable/ic_bottom_bar_likes"
             android:tint="?attr/bottomBarIconTintDisabled"
             />
 
@@ -618,8 +618,8 @@
             <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarAccountIcon"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                app:srcCompat="@drawable/ic_bottombar_account"
-                android:tint="@color/black"
+                app:srcCompat="@drawable/ic_bottom_bar_account"
+                android:tint="?attr/bottomBarIconTintEnabled"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView android:id="@+id/clBottomBarAccountTitle"
