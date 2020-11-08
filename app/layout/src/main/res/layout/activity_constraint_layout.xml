@@ -19,10 +19,10 @@
         />
 
 
-    <androidx.constraintlayout.widget.Group
+    <androidx.constraintlayout.widget.Group android:id="@+id/consToolbarGroup"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:constraint_referenced_ids="consToolBarBackground,consToolbarHamburger"
+        app:constraint_referenced_ids="consToolBarBackground,consToolbarHamburger,consToolbarLogout"
         android:elevation="@dimen/tool_bar_elevation"
         />
 
@@ -43,6 +43,17 @@
         android:tint="?attr/iconTint"
         app:layout_constraintStart_toStartOf="@+id/consToolBarBackground"
         app:layout_constraintTop_toTopOf="@+id/consToolBarBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/consToolBarBackground"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consToolbarLogout"
+        android:layout_width="@dimen/tool_bar_icon_size"
+        android:layout_height="@dimen/tool_bar_icon_size"
+        android:layout_margin="@dimen/tool_bar_icon_margin"
+        app:srcCompat="@drawable/ic_toolbar_logout"
+        android:tint="?attr/iconTint"
+        app:layout_constraintTop_toTopOf="@+id/consToolBarBackground"
+        app:layout_constraintEnd_toEndOf="@+id/consToolBarBackground"
         app:layout_constraintBottom_toBottomOf="@+id/consToolBarBackground"
         />
 
