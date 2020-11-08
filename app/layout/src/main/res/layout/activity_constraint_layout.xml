@@ -7,6 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
+
     <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consHeaderBkg"
         android:layout_width="0dp"
         android:layout_height="256dp"
@@ -22,7 +23,7 @@
     <androidx.constraintlayout.widget.Group android:id="@+id/consToolbarGroup"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:constraint_referenced_ids="consToolBarBackground,consToolbarHamburger,consToolbarLogout"
+        app:constraint_referenced_ids="consToolBarBackground,consToolbarHamburger,consToolbarName,consToolbarLogout"
         android:elevation="@dimen/tool_bar_elevation"
         />
 
@@ -43,6 +44,18 @@
         android:tint="?attr/iconTint"
         app:layout_constraintStart_toStartOf="@+id/consToolBarBackground"
         app:layout_constraintTop_toTopOf="@+id/consToolBarBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/consToolBarBackground"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consToolbarName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/tool_bar_title_margin"
+        android:text="@string/toolbar_name"
+        style="@style/Text_AppBar_Title"
+        app:layout_constraintStart_toEndOf="@+id/consToolbarHamburger"
+        app:layout_constraintTop_toTopOf="@+id/consToolBarBackground"
+        app:layout_constraintEnd_toStartOf="@+id/consToolbarLogout"
         app:layout_constraintBottom_toBottomOf="@+id/consToolBarBackground"
         />
 
