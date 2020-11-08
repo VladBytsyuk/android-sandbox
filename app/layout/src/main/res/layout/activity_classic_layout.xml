@@ -30,10 +30,10 @@
 
             <LinearLayout android:id="@+id/clToolbar"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="@dimen/tool_bar_height"
                 android:orientation="horizontal"
                 android:background="?attr/appBarBackground"
-                android:elevation="4dp"
+                android:elevation="@dimen/tool_bar_elevation"
                 >
 
                 <androidx.appcompat.widget.AppCompatImageView

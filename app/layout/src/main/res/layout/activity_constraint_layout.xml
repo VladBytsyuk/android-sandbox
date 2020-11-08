@@ -20,12 +20,12 @@
 
     <View android:id="@+id/consToolBarBackground"
         android:layout_width="0dp"
-        android:layout_height="56dp"
+        android:layout_height="@dimen/tool_bar_height"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="?attr/appBarBackground"
-        android:elevation="4dp"
+        android:elevation="@dimen/tool_bar_elevation"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
