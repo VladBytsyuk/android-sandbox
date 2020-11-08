@@ -19,22 +19,26 @@
         />
 
 
-    <View android:id="@+id/consToolBarBackground"
+    <androidx.constraintlayout.widget.Group
         android:layout_width="0dp"
-        android:layout_height="@dimen/tool_bar_height"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="?attr/appBarBackground"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="consToolBarBackground,consToolbarHamburger"
         android:elevation="@dimen/tool_bar_elevation"
         />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/clToolbarHamburger"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_weight="1"
-        android:layout_margin="8dp"
+    <View android:id="@+id/consToolBarBackground"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="?attr/appBarBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consToolbarHamburger"
+        android:layout_width="@dimen/tool_bar_icon_size"
+        android:layout_height="@dimen/tool_bar_icon_size"
+        android:layout_margin="@dimen/tool_bar_icon_margin"
         app:srcCompat="@drawable/ic_toolbar_hamburger"
         android:tint="?attr/iconTint"
         app:layout_constraintStart_toStartOf="@+id/consToolBarBackground"
