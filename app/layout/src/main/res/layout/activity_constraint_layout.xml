@@ -70,4 +70,17 @@
         app:layout_constraintBottom_toBottomOf="@+id/consToolBarBackground"
         />
 
+
+    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consHeaderAvatar"
+        android:layout_width="@dimen/header_avatar_size"
+        android:layout_height="@dimen/header_avatar_size"
+        android:layout_marginTop="@dimen/header_avatar_margin"
+        app:srcCompat="@drawable/img_header_avatar"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consToolBarBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
