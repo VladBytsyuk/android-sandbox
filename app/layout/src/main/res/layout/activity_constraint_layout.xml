@@ -83,6 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
+
     <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consHeaderInfoOrdersRatingTitle"
         android:layout_width="@dimen/header_title_width"
         android:layout_height="wrap_content"
@@ -95,12 +96,36 @@
         />
 
     <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consHeaderInfoOrdersRatingValue"
-        android:layout_width="@dimen/header_title_width"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/header_rating_value"
         style="@style/Text_Header_Item_Value"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/consHeaderInfoOrdersRatingTitle"
         app:layout_constraintTop_toBottomOf="@+id/consHeaderInfoOrdersRatingTitle"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/consHeaderInfoOrdersRatingTitle"
         />
+
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consHeaderInfoOrdersTitle"
+        android:layout_width="@dimen/header_title_width"
+        android:layout_height="wrap_content"
+        android:text="@string/header_orders_title"
+        style="@style/Text_Header_Item_Title"
+        android:layout_marginEnd="@dimen/header_title_margin_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/consHeaderInfoOrdersRatingTitle"
+        app:layout_constraintEnd_toStartOf="@+id/consHeaderInfoOrdersRatingTitle"
+        app:layout_constraintHorizontal_bias="1"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consHeaderInfoOrdersValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/header_orders_value"
+        style="@style/Text_Header_Item_Value"
+        app:layout_constraintStart_toStartOf="@+id/consHeaderInfoOrdersTitle"
+        app:layout_constraintTop_toBottomOf="@+id/consHeaderInfoOrdersTitle"
+        app:layout_constraintEnd_toEndOf="@+id/consHeaderInfoOrdersTitle"
+        />
+
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
