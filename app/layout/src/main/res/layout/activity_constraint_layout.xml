@@ -127,5 +127,26 @@
         app:layout_constraintEnd_toEndOf="@+id/consHeaderInfoOrdersTitle"
         />
 
-    
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consHeaderInfoOrdersPurchasesTitle"
+        android:layout_width="@dimen/header_title_width"
+        android:layout_height="wrap_content"
+        android:text="@string/header_purchases_title"
+        style="@style/Text_Header_Item_Title"
+        android:layout_marginStart="@dimen/header_title_margin_horizontal"
+        app:layout_constraintStart_toEndOf="@+id/consHeaderInfoOrdersRatingTitle"
+        app:layout_constraintTop_toTopOf="@+id/consHeaderInfoOrdersRatingTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consHeaderInfoOrdersPurchasesValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/header_purchases_value"
+        style="@style/Text_Header_Item_Value"
+        app:layout_constraintStart_toStartOf="@+id/consHeaderInfoOrdersPurchasesTitle"
+        app:layout_constraintTop_toBottomOf="@+id/consHeaderInfoOrdersPurchasesTitle"
+        app:layout_constraintEnd_toEndOf="@+id/consHeaderInfoOrdersPurchasesTitle"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
