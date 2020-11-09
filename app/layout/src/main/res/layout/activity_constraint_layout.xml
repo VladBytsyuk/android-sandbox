@@ -83,4 +83,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consHeaderInfoOrdersRatingTitle"
+        android:layout_width="@dimen/header_title_width"
+        android:layout_height="wrap_content"
+        android:text="@string/header_rating_title"
+        style="@style/Text_Header_Item_Title"
+        android:layout_marginTop="@dimen/header_title_margin_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consHeaderAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consHeaderInfoOrdersRatingValue"
+        android:layout_width="@dimen/header_title_width"
+        android:layout_height="wrap_content"
+        android:text="@string/header_rating_value"
+        style="@style/Text_Header_Item_Value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consHeaderInfoOrdersRatingTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

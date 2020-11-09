@@ -5,7 +5,11 @@
     <dimen name="tool_bar_icon_size">40dp</dimen>
     <dimen name="tool_bar_icon_margin">8dp</dimen>
     <dimen name="tool_bar_title_margin">8dp</dimen>
+
     <dimen name="header_avatar_size">88dp</dimen>
     <dimen name="header_avatar_margin">32dp</dimen>
+    <dimen name="header_title_width">88dp</dimen>
+    <dimen name="header_title_margin_top">24dp</dimen>
+    <dimen name="header_title_margin_horizontal">16dp</dimen>
 
 </resources>
