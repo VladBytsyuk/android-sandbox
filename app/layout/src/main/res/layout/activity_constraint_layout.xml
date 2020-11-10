@@ -20,6 +20,7 @@
         />
 
 
+
     <androidx.constraintlayout.widget.Group android:id="@+id/consToolbarGroup"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -84,6 +85,20 @@
         />
 
 
+
+    <androidx.constraintlayout.widget.Group android:id="@+id/consHeaderInfoGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="consHeaderInfoRatingGroup,consHeaderInfoOrdersGroup,consHeaderInfoPurchasesGroup"
+        />
+
+
+    <androidx.constraintlayout.widget.Group android:id="@+id/consHeaderInfoRatingGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="consHeaderInfoRatingTitle,consHeaderInfoRatingValue"
+        />
+
     <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consHeaderInfoRatingTitle"
         android:layout_width="@dimen/header_title_width"
         android:layout_height="wrap_content"
@@ -103,6 +118,13 @@
         app:layout_constraintStart_toStartOf="@+id/consHeaderInfoRatingTitle"
         app:layout_constraintTop_toBottomOf="@+id/consHeaderInfoRatingTitle"
         app:layout_constraintEnd_toEndOf="@+id/consHeaderInfoRatingTitle"
+        />
+
+
+    <androidx.constraintlayout.widget.Group android:id="@+id/consHeaderInfoOrdersGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="consHeaderInfoOrdersTitle,consHeaderInfoOrdersValue"
         />
 
     <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consHeaderInfoOrdersTitle"
@@ -127,6 +149,13 @@
         app:layout_constraintEnd_toEndOf="@+id/consHeaderInfoOrdersTitle"
         />
 
+
+    <androidx.constraintlayout.widget.Group android:id="@+id/consHeaderInfoPurchasesGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="consHeaderInfoPurchasesTitle,consHeaderInfoPurchasesValue"
+        />
+
     <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consHeaderInfoPurchasesTitle"
         android:layout_width="@dimen/header_title_width"
         android:layout_height="wrap_content"
@@ -148,5 +177,9 @@
         app:layout_constraintTop_toBottomOf="@+id/consHeaderInfoPurchasesTitle"
         app:layout_constraintEnd_toEndOf="@+id/consHeaderInfoPurchasesTitle"
         />
+
+
+
+    
 
 </androidx.constraintlayout.widget.ConstraintLayout>
