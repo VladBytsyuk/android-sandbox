@@ -193,4 +193,17 @@
         />
 
 
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consTabAddressTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_address"
+        style="@style/Text_Tab"
+        android:alpha="0.54"
+        android:background="?attr/tabElementBackground"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/consHeaderBkg"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
