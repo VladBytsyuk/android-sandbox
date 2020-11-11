@@ -180,6 +180,17 @@
 
 
 
-    
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consTabAccountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_account"
+        style="@style/Text_Tab"
+        android:alpha="0.54"
+        android:background="?attr/tabElementBackground"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consHeaderBkg"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
