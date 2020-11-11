@@ -204,9 +204,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
-    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/cTabOrdersTitle"
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consTabOrdersTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:elevation="2dp"
         android:text="@string/tab_orders"
         style="@style/Text_Tab"
         android:background="?attr/tabElementBackground"
@@ -214,6 +215,16 @@
         app:layout_constraintStart_toEndOf="@+id/consTabAccountTitle"
         app:layout_constraintTop_toBottomOf="@+id/consHeaderBkg"
         app:layout_constraintEnd_toStartOf="@+id/consTabAddressTitle"
+        />
+
+    <View android:id="@+id/consTabOrdersLine"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:elevation="2dp"
+        android:background="?attr/activeTabLineColor"
+        app:layout_constraintStart_toStartOf="@+id/consTabOrdersTitle"
+        app:layout_constraintEnd_toEndOf="@+id/consTabOrdersTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/consTabOrdersTitle"
         />
 
 
