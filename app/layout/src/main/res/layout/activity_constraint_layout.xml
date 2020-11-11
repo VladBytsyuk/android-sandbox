@@ -234,4 +234,19 @@
         />
 
 
+    
+
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consTabContentPickerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_orders_header_picker"
+        style="@style/Text_Orders_Filter"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consTabAccountTitle"
+        />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
