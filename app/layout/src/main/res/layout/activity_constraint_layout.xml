@@ -272,4 +272,15 @@
         app:layout_constraintBaseline_toBaselineOf="@id/consTabContentPickerText"
         />
 
+
+
+    <View android:id="@+id/consTabContentOrders"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:background="?attr/tabContentBackground"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/consTabContentPickerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
 </androidx.constraintlayout.widget.ConstraintLayout>
