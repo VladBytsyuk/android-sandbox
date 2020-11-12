@@ -320,8 +320,8 @@
                         >
 
                         <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentOrdersTop1Icon"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="@dimen/order_icon_size"
+                            android:layout_height="@dimen/order_icon_size"
                             android:layout_weight="1"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="8dp"
@@ -379,8 +379,8 @@
                         >
 
                         <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentOrdersTop2Icon"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="@dimen/order_icon_size"
+                            android:layout_height="@dimen/order_icon_size"
                             android:layout_weight="1"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="8dp"
@@ -438,8 +438,8 @@
                         >
 
                         <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentOrdersTop3Icon"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="@dimen/order_icon_size"
+                            android:layout_height="@dimen/order_icon_size"
                             android:layout_weight="1"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="8dp"
@@ -497,8 +497,8 @@
                         >
 
                         <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentOrdersTop4Icon"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="@dimen/order_icon_size"
+                            android:layout_height="@dimen/order_icon_size"
                             android:layout_weight="1"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="8dp"

@@ -13,5 +13,5 @@
     <dimen name="header_title_margin_horizontal">16dp</dimen>
 
     <dimen name="content_filter_triangle_size">24dp</dimen>
-
+    <dimen name="order_icon_size">40dp</dimen>
 </resources>
