@@ -247,6 +247,15 @@
         app:layout_constraintTop_toBottomOf="@+id/consTabAccountTitle"
         />
 
+    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentPicker"
+        android:layout_width="@dimen/content_filter_triangle_size"
+        android:layout_height="@dimen/content_filter_triangle_size"
+        app:srcCompat="@drawable/ic_collapse_arrow"
+        android:tint="?attr/iconTint"
+        app:layout_constraintStart_toEndOf="@+id/consTabContentPickerText"
+        app:layout_constraintTop_toTopOf="@id/consTabContentPickerText"
+        app:layout_constraintBottom_toBottomOf="@id/consTabContentPickerText"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

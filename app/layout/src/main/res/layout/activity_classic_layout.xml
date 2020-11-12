@@ -275,8 +275,8 @@
                     >
 
                     <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentPicker"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="@dimen/content_filter_triangle_size"
+                        android:layout_height="@dimen/content_filter_triangle_size"
                         app:srcCompat="@drawable/ic_collapse_arrow"
                         android:tint="?attr/iconTint"
                         />
