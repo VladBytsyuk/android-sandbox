@@ -7,6 +7,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
+    <androidx.constraintlayout.widget.Guideline android:id="@+id/consVerticalStart8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="8dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline android:id="@+id/consVerticalStart16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline android:id="@+id/consVerticalEnd16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline android:id="@+id/consVerticalStartEnd8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="8dp"
+        />
+
+
+
 
     <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consHeaderBkg"
         android:layout_width="0dp"
@@ -40,10 +70,9 @@
     <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consToolbarHamburger"
         android:layout_width="@dimen/tool_bar_icon_size"
         android:layout_height="@dimen/tool_bar_icon_size"
-        android:layout_margin="@dimen/tool_bar_icon_margin"
         app:srcCompat="@drawable/ic_toolbar_hamburger"
         android:tint="?attr/iconTint"
-        app:layout_constraintStart_toStartOf="@+id/consToolBarBackground"
+        app:layout_constraintStart_toStartOf="@+id/consVerticalStart8"
         app:layout_constraintTop_toTopOf="@+id/consToolBarBackground"
         app:layout_constraintBottom_toBottomOf="@+id/consToolBarBackground"
         />
@@ -63,11 +92,10 @@
     <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consToolbarLogout"
         android:layout_width="@dimen/tool_bar_icon_size"
         android:layout_height="@dimen/tool_bar_icon_size"
-        android:layout_margin="@dimen/tool_bar_icon_margin"
         app:srcCompat="@drawable/ic_toolbar_logout"
         android:tint="?attr/iconTint"
         app:layout_constraintTop_toTopOf="@+id/consToolBarBackground"
-        app:layout_constraintEnd_toEndOf="@+id/consToolBarBackground"
+        app:layout_constraintEnd_toEndOf="@+id/consVerticalStartEnd8"
         app:layout_constraintBottom_toBottomOf="@+id/consToolBarBackground"
         />
 
@@ -246,9 +274,8 @@
         android:layout_height="wrap_content"
         android:text="@string/tab_orders_header_picker"
         style="@style/Text_Orders_Filter"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/consVerticalStart16"
         app:layout_constraintTop_toBottomOf="@+id/consTabAccountTitle"
         />
 
@@ -267,8 +294,7 @@
         android:layout_height="wrap_content"
         android:text="@string/tab_orders_header_clear"
         style="@style/Text_Orders_Filter_Clear"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/consVerticalEnd16"
         app:layout_constraintBaseline_toBaselineOf="@id/consTabContentPickerText"
         />
 
@@ -282,5 +308,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/consTabContentPickerText"
         app:layout_constraintEnd_toEndOf="parent"
-        >
+        />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
