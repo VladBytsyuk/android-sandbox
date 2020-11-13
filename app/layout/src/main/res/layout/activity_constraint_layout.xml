@@ -310,7 +310,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
-    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clTabContentOrdersTop1Icon"
+    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consTabContentOrdersTop1Icon"
         android:layout_width="@dimen/order_icon_size"
         android:layout_height="@dimen/order_icon_size"
         android:layout_marginTop="24dp"
@@ -319,6 +319,16 @@
         app:srcCompat="@drawable/ic_list_item_cart"
         app:layout_constraintStart_toStartOf="@id/consVerticalStart16"
         app:layout_constraintTop_toTopOf="@+id/consTabContentOrders"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consTabContentOrdersTop1OrderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_title_regular"
+        style="@style/Text_Orders_Name"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/consTabContentOrdersTop1Icon"
+        app:layout_constraintTop_toTopOf="@+id/consTabContentOrdersTop1Icon"
         />
 
 
