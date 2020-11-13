@@ -302,6 +302,7 @@
     <androidx.constraintlayout.widget.Group android:id="@+id/consTabContentOrdersContent"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:elevation="4dp"
         app:constraint_referenced_ids="consTabContentOrdersBkg,consTabContentOrdersTop1,consTabContentOrdersTop2,consTabContentOrdersTop3,consTabContentOrdersTop4"
         />
 
@@ -319,6 +320,7 @@
     <androidx.constraintlayout.widget.Group android:id="@+id/consTabContentOrdersTop1"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:elevation="4dp"
         app:constraint_referenced_ids="consTabContentOrdersTop1Icon,consTabContentOrdersTop1OrderName,consTabContentOrdersTop1OrderStatus,consTabContentOrdersTop1Details"
         />
 
@@ -368,6 +370,7 @@
     <androidx.constraintlayout.widget.Group android:id="@+id/consTabContentOrdersTop2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:elevation="4dp"
         app:constraint_referenced_ids="consTabContentOrdersTop2Icon,consTabContentOrdersTop2OrderName,consTabContentOrdersTop2OrderStatus,consTabContentOrdersTop2Details"
         />
 
@@ -417,6 +420,7 @@
     <androidx.constraintlayout.widget.Group android:id="@+id/consTabContentOrdersTop3"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:elevation="4dp"
         app:constraint_referenced_ids="consTabContentOrdersTop3Icon,consTabContentOrdersTop3OrderName,consTabContentOrdersTop3OrderStatus,consTabContentOrdersTop3Details"
         />
 
@@ -466,6 +470,7 @@
     <androidx.constraintlayout.widget.Group android:id="@+id/consTabContentOrdersTop4"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:elevation="4dp"
         app:constraint_referenced_ids="consTabContentOrdersTop4Icon,consTabContentOrdersTop4OrderName,consTabContentOrdersTop4OrderStatus,consTabContentOrdersTop4Details"
         />
 
