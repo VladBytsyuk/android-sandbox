@@ -299,8 +299,13 @@
         />
 
 
+    <androidx.constraintlayout.widget.Group android:id="@+id/consTabContentOrdersContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="consTabContentOrdersBkg,consTabContentOrdersTop1,consTabContentOrdersTop2,consTabContentOrdersTop3,consTabContentOrdersTop4"
+        />
 
-    <View android:id="@+id/consTabContentOrders"
+    <View android:id="@+id/consTabContentOrdersBkg"
         android:layout_width="0dp"
         android:layout_height="280dp"
         android:background="?attr/tabContentBackground"
@@ -325,7 +330,7 @@
         android:layout_marginBottom="8dp"
         app:srcCompat="@drawable/ic_list_item_cart"
         app:layout_constraintStart_toStartOf="@id/consVerticalStart16"
-        app:layout_constraintTop_toTopOf="@+id/consTabContentOrders"
+        app:layout_constraintTop_toTopOf="@+id/consTabContentOrdersBkg"
         />
 
     <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consTabContentOrdersTop1OrderName"
@@ -505,4 +510,7 @@
         app:layout_constraintEnd_toStartOf="@+id/consVerticalStartEnd8"
         app:layout_constraintBottom_toBottomOf="@+id/consTabContentOrdersTop4Icon"
         />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
