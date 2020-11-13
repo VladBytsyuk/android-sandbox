@@ -310,6 +310,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
+    
+    <androidx.constraintlayout.widget.Group android:id="@+id/consTabContentOrdersTop1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="consTabContentOrdersTop1Icon,consTabContentOrdersTop1OrderName,consTabContentOrdersTop1OrderStatus,consTabContentOrdersTop1Details"
+        />
+
     <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consTabContentOrdersTop1Icon"
         android:layout_width="@dimen/order_icon_size"
         android:layout_height="@dimen/order_icon_size"
