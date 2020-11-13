@@ -456,4 +456,53 @@
         app:layout_constraintEnd_toStartOf="@+id/consVerticalStartEnd8"
         app:layout_constraintBottom_toBottomOf="@+id/consTabContentOrdersTop3Icon"
         />
+
+
+    <androidx.constraintlayout.widget.Group android:id="@+id/consTabContentOrdersTop4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="consTabContentOrdersTop4Icon,consTabContentOrdersTop4OrderName,consTabContentOrdersTop4OrderStatus,consTabContentOrdersTop4Details"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consTabContentOrdersTop4Icon"
+        android:layout_width="@dimen/order_icon_size"
+        android:layout_height="@dimen/order_icon_size"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:srcCompat="@drawable/ic_list_item_return"
+        app:layout_constraintStart_toStartOf="@id/consVerticalStart16"
+        app:layout_constraintTop_toBottomOf="@+id/consTabContentOrdersTop3Icon"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consTabContentOrdersTop4OrderName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/order_title_return"
+        style="@style/Text_Orders_Name_Failure"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toEndOf="@+id/consTabContentOrdersTop4Icon"
+        app:layout_constraintTop_toTopOf="@+id/consTabContentOrdersTop4Icon"
+        app:layout_constraintEnd_toStartOf="@+id/consTabContentOrdersTop4Details"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consTabContentOrdersTop4OrderStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/order_status_unsuccessful"
+        style="@style/Text_Orders_Status"
+        app:layout_constraintStart_toStartOf="@+id/consTabContentOrdersTop4OrderName"
+        app:layout_constraintBottom_toBottomOf="@+id/consTabContentOrdersTop4Icon"
+        app:layout_constraintEnd_toEndOf="@+id/consTabContentOrdersTop4OrderName"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consTabContentOrdersTop4Details"
+        android:layout_width="@dimen/order_icon_size"
+        android:layout_height="@dimen/order_icon_size"
+        app:srcCompat="@drawable/ic_details_arrow"
+        app:layout_constraintTop_toTopOf="@+id/consTabContentOrdersTop4Icon"
+        app:layout_constraintEnd_toStartOf="@+id/consVerticalStartEnd8"
+        app:layout_constraintBottom_toBottomOf="@+id/consTabContentOrdersTop4Icon"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
