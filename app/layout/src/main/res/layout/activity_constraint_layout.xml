@@ -535,6 +535,7 @@
         app:layout_constraintTop_toTopOf="@+id/consBottomBarBkg"
         app:layout_constraintEnd_toStartOf="@+id/consBottomBarCatalog"
         app:layout_constraintBottom_toBottomOf="@+id/consBottomBarBkg"
+        app:layout_constraintHorizontal_chainStyle="spread"
         />
 
     <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consBottomBarCatalog"
@@ -566,8 +567,19 @@
         android:tint="?attr/bottomBarIconTintDisabled"
         app:layout_constraintStart_toEndOf="@+id/consBottomBarCart"
         app:layout_constraintTop_toTopOf="@+id/consBottomBarCart"
-        app:layout_constraintEnd_toStartOf="@+id/consBottomBarLikes"
+        app:layout_constraintEnd_toStartOf="@+id/consBottomBarAccountIcon"
         app:layout_constraintBottom_toBottomOf="@+id/consBottomBarCart"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consBottomBarAccountIcon"
+        android:layout_width="@dimen/bottom_bar_icon_size"
+        android:layout_height="@dimen/bottom_bar_icon_size"
+        app:srcCompat="@drawable/ic_bottom_bar_account"
+        android:tint="?attr/bottomBarIconTintEnabled"
+        app:layout_constraintStart_toEndOf="@+id/consBottomBarLikes"
+        app:layout_constraintTop_toTopOf="@+id/consBottomBarLikes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/consBottomBarLikes"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
