@@ -533,7 +533,18 @@
         android:tint="?attr/bottomBarIconTintDisabled"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/consBottomBarBkg"
+        app:layout_constraintEnd_toStartOf="@+id/consBottomBarCatalog"
         app:layout_constraintBottom_toBottomOf="@+id/consBottomBarBkg"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consBottomBarCatalog"
+        android:layout_width="@dimen/bottom_bar_icon_size"
+        android:layout_height="@dimen/bottom_bar_icon_size"
+        app:srcCompat="@drawable/ic_bottom_bar_catalog"
+        android:tint="?attr/bottomBarIconTintDisabled"
+        app:layout_constraintStart_toEndOf="@+id/consBottomBarShopping"
+        app:layout_constraintTop_toTopOf="@+id/consBottomBarShopping"
+        app:layout_constraintBottom_toBottomOf="@+id/consBottomBarShopping"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
