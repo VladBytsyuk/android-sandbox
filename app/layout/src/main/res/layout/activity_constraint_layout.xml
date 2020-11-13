@@ -577,9 +577,22 @@
         app:srcCompat="@drawable/ic_bottom_bar_account"
         android:tint="?attr/bottomBarIconTintEnabled"
         app:layout_constraintStart_toEndOf="@+id/consBottomBarLikes"
-        app:layout_constraintTop_toTopOf="@+id/consBottomBarLikes"
+        app:layout_constraintTop_toTopOf="@+id/consBottomBarBkg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/consBottomBarLikes"
+        app:layout_constraintBottom_toTopOf="@+id/consBottomBarAccountTitle"
+        app:layout_constraintVertical_chainStyle="packed"
         />
+
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/consBottomBarAccountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bottom_bar_tab_title_account"
+        style="@style/Text_BottomBar_Item_Selected_Title"
+        app:layout_constraintStart_toStartOf="@+id/consBottomBarAccountIcon"
+        app:layout_constraintEnd_toEndOf="@+id/consBottomBarAccountIcon"
+        app:layout_constraintTop_toBottomOf="@+id/consBottomBarAccountIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/consBottomBarBkg"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
