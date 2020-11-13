@@ -14,4 +14,7 @@
 
     <dimen name="content_filter_triangle_size">24dp</dimen>
     <dimen name="order_icon_size">40dp</dimen>
+
+    <dimen name="bottom_bar_height">56dp</dimen>
+    <dimen name="bottom_bar_icon_size">24dp</dimen>
 </resources>

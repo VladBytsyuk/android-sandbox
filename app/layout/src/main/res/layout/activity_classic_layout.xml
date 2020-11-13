@@ -559,15 +559,15 @@
 
     <LinearLayout android:id="@+id/clBottomBar"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="@dimen/bottom_bar_height"
         android:orientation="horizontal"
         android:background="?attr/bottomBarBackground"
         android:elevation="4dp"
         >
 
         <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarShopping"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/bottom_bar_icon_size"
+            android:layout_height="@dimen/bottom_bar_icon_size"
             android:layout_weight="1"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
@@ -576,8 +576,8 @@
             />
 
         <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarCatalog"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/bottom_bar_icon_size"
+            android:layout_height="@dimen/bottom_bar_icon_size"
             android:layout_weight="1"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
@@ -587,8 +587,8 @@
 
 
         <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarCart"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/bottom_bar_icon_size"
+            android:layout_height="@dimen/bottom_bar_icon_size"
             android:layout_weight="1"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
@@ -597,8 +597,8 @@
             />
 
         <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarLikes"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/bottom_bar_icon_size"
+            android:layout_height="@dimen/bottom_bar_icon_size"
             android:layout_weight="1"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
@@ -615,8 +615,8 @@
             >
 
             <androidx.appcompat.widget.AppCompatImageView android:id="@+id/clBottomBarAccountIcon"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="@dimen/bottom_bar_icon_size"
+                android:layout_height="@dimen/bottom_bar_icon_size"
                 app:srcCompat="@drawable/ic_bottom_bar_account"
                 android:tint="?attr/bottomBarIconTintEnabled"
                 />
