@@ -517,5 +517,12 @@
         />
 
 
-
+    <View android:id="@+id/consBottomBarBkg"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="?attr/bottomBarBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
