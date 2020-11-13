@@ -544,7 +544,19 @@
         android:tint="?attr/bottomBarIconTintDisabled"
         app:layout_constraintStart_toEndOf="@+id/consBottomBarShopping"
         app:layout_constraintTop_toTopOf="@+id/consBottomBarShopping"
+        app:layout_constraintEnd_toStartOf="@+id/consBottomBarCart"
         app:layout_constraintBottom_toBottomOf="@+id/consBottomBarShopping"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consBottomBarCart"
+        android:layout_width="@dimen/bottom_bar_icon_size"
+        android:layout_height="@dimen/bottom_bar_icon_size"
+        app:srcCompat="@drawable/ic_bottom_bar_cart"
+        android:tint="?attr/bottomBarIconTintDisabled"
+        app:layout_constraintStart_toEndOf="@+id/consBottomBarCatalog"
+        app:layout_constraintTop_toTopOf="@+id/consBottomBarCatalog"
+        app:layout_constraintEnd_toStartOf="@+id/consBottomBarCart"
+        app:layout_constraintBottom_toBottomOf="@+id/consBottomBarCatalog"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
