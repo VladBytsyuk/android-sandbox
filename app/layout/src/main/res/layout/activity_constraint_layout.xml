@@ -37,7 +37,6 @@
 
 
 
-
     <androidx.appcompat.widget.AppCompatImageView android:id="@+id/consHeaderBkg"
         android:layout_width="0dp"
         android:layout_height="256dp"
@@ -517,6 +516,14 @@
         />
 
 
+
+    <androidx.constraintlayout.widget.Group android:id="@+id/consBottomBarGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="4dp"
+        app:constraint_referenced_ids="consBottomBarBkg,consBottomBarShopping,consBottomBarCatalog,consBottomBarCart,consBottomBarLikes,consBottomBarAccountIcon,consBottomBarAccountTitle"
+        />
+
     <View android:id="@+id/consBottomBarBkg"
         android:layout_width="0dp"
         android:layout_height="@dimen/bottom_bar_height"
@@ -593,6 +600,4 @@
         app:layout_constraintTop_toBottomOf="@+id/consBottomBarAccountIcon"
         app:layout_constraintBottom_toBottomOf="@+id/consBottomBarBkg"
         />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
