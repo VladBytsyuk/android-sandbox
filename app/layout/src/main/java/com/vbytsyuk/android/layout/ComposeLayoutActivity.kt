@@ -3,16 +3,18 @@ package com.vbytsyuk.android.layout
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.ConstraintLayout
 import androidx.compose.foundation.layout.preferredHeight
 import androidx.compose.foundation.layout.preferredSize
+import androidx.compose.foundation.layout.preferredWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.setContent
-import androidx.compose.ui.res.dimensionResource
-import androidx.compose.ui.res.imageResource
-import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.res.*
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.zIndex
 import androidx.ui.tooling.preview.Preview
 
 
@@ -40,11 +42,14 @@ class ComposeLayoutActivity : AppCompatActivity() {
     )
     ToolBar(
         modifier = Modifier
+            .preferredWidth(0.dp)
+            .zIndex(4f)
+            .background(colorResource(id = R.color.white))
             .preferredHeight(dimensionResource(id = R.dimen.tool_bar_height))
             .constrainAs(toolbar) {
-                start.linkTo(parent.start)
-                top.linkTo(parent.top)
-                end.linkTo(parent.end)
+                start.linkTo(bkg.start)
+                top.linkTo(bkg.top)
+                end.linkTo(bkg.end)
             }
     )
 }
@@ -59,6 +64,16 @@ class ComposeLayoutActivity : AppCompatActivity() {
             .constrainAs(hamburger) {
                 start.linkTo(parent.start)
                 top.linkTo(parent.top)
+            }
+    )
+    Text(
+        text = stringResource(id = R.string.toolbar_name),
+        modifier = Modifier
+            .constrainAs(title) {
+                start.linkTo(hamburger.end)
+                top.linkTo(parent.top)
+                end.linkTo(logout.start)
+                bottom.linkTo(parent.bottom)
             }
     )
     Image(
