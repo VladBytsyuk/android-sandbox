@@ -16,6 +16,7 @@ import androidx.compose.ui.res.*
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import androidx.ui.tooling.preview.Preview
+import com.vbytsyuk.android.layout.compose.ToolBar
 
 
 class ComposeLayoutActivity : AppCompatActivity() {
@@ -50,39 +51,6 @@ class ComposeLayoutActivity : AppCompatActivity() {
                 start.linkTo(bkg.start)
                 top.linkTo(bkg.top)
                 end.linkTo(bkg.end)
-            }
-    )
-}
-
-
-@Composable fun ToolBar(modifier: Modifier) = ConstraintLayout(modifier) {
-    val (hamburger, title, logout) = createRefs()
-    Image(
-        asset = vectorResource(id = R.drawable.ic_toolbar_hamburger),
-        modifier = Modifier
-            .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
-            .constrainAs(hamburger) {
-                start.linkTo(parent.start)
-                top.linkTo(parent.top)
-            }
-    )
-    Text(
-        text = stringResource(id = R.string.toolbar_name),
-        modifier = Modifier
-            .constrainAs(title) {
-                start.linkTo(hamburger.end)
-                top.linkTo(parent.top)
-                end.linkTo(logout.start)
-                bottom.linkTo(parent.bottom)
-            }
-    )
-    Image(
-        asset = vectorResource(id = R.drawable.ic_toolbar_logout),
-        modifier = Modifier
-            .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
-            .constrainAs(logout) {
-                top.linkTo(parent.top)
-                end.linkTo(parent.end)
             }
     )
 }
