@@ -51,8 +51,15 @@ class ComposeLayoutActivity : AppCompatActivity() {
 
 
 @Composable fun ToolBar(modifier: Modifier) = ConstraintLayout(modifier) {
+    val (hamburger, title, logout) = createRefs()
     Image(
         asset = vectorResource(id = R.drawable.ic_toolbar_hamburger),
-        modifier = Modifier.preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
+        modifier = Modifier
+            .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
+            .constrainAs(hamburger) {
+                start.linkTo(parent.start)
+                top.linkTo(parent.top)
+                end.linkTo(parent.end)
+            }
     )
 }
