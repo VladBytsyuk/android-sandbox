@@ -32,6 +32,7 @@ object Deps {
         object Android {
             const val Junit = "androidx.test.ext:junit:1.1.2"
             const val Espresso = "androidx.test.espresso:espresso-core:3.3.0"
+            const val Compose = "androidx.ui:ui-test:${Libs.Compose.Version}"
         }
     }
 
@@ -74,6 +75,24 @@ object Deps {
             object WebP {
                 const val Core = "com.facebook.fresco:webpsupport:$Version"
                 const val Animations = "com.facebook.fresco:animated-webp:$Version"
+            }
+        }
+
+        object Compose {
+            const val Version = "1.0.0-alpha05"
+            const val Ui = "androidx.compose.ui:ui:$Version"
+            const val UiTooling = "androidx.ui:ui-tooling:$Version"
+            const val Foundation = "androidx.compose.foundation:foundation:$Version"
+            object Material {
+                const val Core = "androidx.compose.material:material:$Version"
+                object Icons {
+                    const val Core = "androidx.compose.material:material-icons-core:$Version"
+                    const val Extended = "androidx.compose.material:material-icons-extended:$Version"
+                }
+            }
+            object Observable {
+                const val LiveData = "androidx.compose.runtime:runtime-livedata:$Version"
+                const val RxJava = "androidx.compose.runtime:runtime-rxjava2:$Version"
             }
         }
     }
