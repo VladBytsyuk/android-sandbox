@@ -59,6 +59,14 @@ class ComposeLayoutActivity : AppCompatActivity() {
             .constrainAs(hamburger) {
                 start.linkTo(parent.start)
                 top.linkTo(parent.top)
+            }
+    )
+    Image(
+        asset = vectorResource(id = R.drawable.ic_toolbar_logout),
+        modifier = Modifier
+            .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
+            .constrainAs(logout) {
+                top.linkTo(parent.top)
                 end.linkTo(parent.end)
             }
     )
