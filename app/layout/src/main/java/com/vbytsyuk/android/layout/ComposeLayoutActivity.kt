@@ -44,9 +44,6 @@ class ComposeLayoutActivity : AppCompatActivity() {
     ToolBar(
         modifier = Modifier
             .preferredWidth(0.dp)
-            .zIndex(4f)
-            .background(colorResource(id = R.color.white))
-            .preferredHeight(dimensionResource(id = R.dimen.tool_bar_height))
             .constrainAs(toolbar) {
                 start.linkTo(bkg.start)
                 top.linkTo(bkg.top)
