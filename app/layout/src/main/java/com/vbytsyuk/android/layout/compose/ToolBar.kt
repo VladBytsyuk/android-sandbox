@@ -5,6 +5,7 @@ import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
@@ -25,17 +26,23 @@ fun ToolBar(
     modifier = modifier
         .zIndex(4f)
         .background(colorResource(id = R.color.white))
-        .preferredHeight(dimensionResource(id = R.dimen.tool_bar_height))
 ) {
     Image(
         asset = vectorResource(id = R.drawable.ic_toolbar_hamburger),
         modifier = Modifier
             .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
+            .padding(8.dp)
     )
-    Text(text = stringResource(id = R.string.toolbar_name))
+    Text(
+        text = stringResource(id = R.string.toolbar_name),
+        modifier = Modifier
+            .align(Alignment.CenterVertically)
+            .weight(1f)
+    )
     Image(
         asset = vectorResource(id = R.drawable.ic_toolbar_logout),
         modifier = Modifier
             .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
+            .padding(8.dp)
     )
 }
