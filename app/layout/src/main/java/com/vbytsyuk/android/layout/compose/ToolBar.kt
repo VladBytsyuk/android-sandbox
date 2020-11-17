@@ -35,6 +35,7 @@ fun ToolBar(
     )
     Text(
         text = stringResource(id = R.string.toolbar_name),
+        style = Text.AppBar.Title,
         modifier = Modifier
             .align(Alignment.CenterVertically)
             .weight(1f)
