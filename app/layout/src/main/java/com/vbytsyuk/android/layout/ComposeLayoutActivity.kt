@@ -3,18 +3,13 @@ package com.vbytsyuk.android.layout
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.Text
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.ConstraintLayout
-import androidx.compose.foundation.layout.preferredHeight
-import androidx.compose.foundation.layout.preferredSize
-import androidx.compose.foundation.layout.preferredWidth
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.res.*
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.zIndex
 import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.compose.ToolBar
 
@@ -29,25 +24,27 @@ class ComposeLayoutActivity : AppCompatActivity() {
 @Preview @Composable fun Preview() = Root()
 
 
-@Composable fun Root() = ConstraintLayout {
+@Composable fun Root() = ConstraintLayout() {
     val (bkg, toolbar) = createRefs()
     Image(
         asset = imageResource(id = R.drawable.img_header_bkg_light),
+        contentScale = ContentScale.FillWidth,
         modifier = Modifier
-            .preferredHeight(256.dp)
+            .height(256.dp)
             .constrainAs(bkg) {
+                start.linkTo(toolbar.start)
+                top.linkTo(toolbar.top)
+                end.linkTo(toolbar.end)
+            }
+            .fillMaxWidth()
+    )
+    ToolBar(
+        modifier = Modifier
+            .constrainAs(toolbar) {
                 start.linkTo(parent.start)
                 top.linkTo(parent.top)
                 end.linkTo(parent.end)
             }
     )
-    ToolBar(
-        modifier = Modifier
-            .preferredWidth(0.dp)
-            .constrainAs(toolbar) {
-                start.linkTo(bkg.start)
-                top.linkTo(bkg.top)
-                end.linkTo(bkg.end)
-            }
-    )
+
 }
