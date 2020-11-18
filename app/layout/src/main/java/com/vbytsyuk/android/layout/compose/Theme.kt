@@ -3,6 +3,7 @@ package com.vbytsyuk.android.layout.compose
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import com.vbytsyuk.android.layout.R
 
 
 @Composable
@@ -50,16 +51,16 @@ interface ThemeAttributes {
 }
 
 object LightThemeAttributes : ThemeAttributes {
-    override val disabledBackground = Color(0x000000)
-    override val enabledBackground = Color(0x000000)
-    override val bottomBarIconTintDisabled = Color(0x000000)
+    override val disabledBackground = Color(0xeceff1)
+    override val enabledBackground = Color(0xffffff)
+    override val bottomBarIconTintDisabled = Color(0x757575)
     override val bottomBarIconTintEnabled = Color(0x000000)
-    override val activeTabLineColor = Color(0x000000)
-    override val headerBackgroundDrawableId = 0
-    override val iconTint = Color(0x000000)
+    override val activeTabLineColor = Color(0x00e676)
+    override val headerBackgroundDrawableId = R.drawable.img_header_bkg_light
+    override val iconTint = Color(0x757575)
     override val textColorBase = Color(0x000000)
-    override val textColorSuccess = Color(0x000000)
-    override val textColorFailure = Color(0x000000)
+    override val textColorSuccess = Color(0x388e3c)
+    override val textColorFailure = Color(0xff1744)
 }
 
 object DarkThemeAttributes : ThemeAttributes {
