@@ -1,18 +1,22 @@
 package com.vbytsyuk.android.layout.compose
 
-import android.graphics.drawable.Drawable
-import androidx.annotation.DrawableRes
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 
 @Composable
-fun Theme(content: @Composable () -> Unit) = MaterialTheme(
+fun Theme(mode: ThemeMode, content: @Composable (ThemeAttributes) -> Unit) = MaterialTheme(
     colors = MaterialTheme.colors,
     typography = Theme.typography(),
     shapes = Theme.shapes(),
-    content = content
+    content = {
+        val attributes = when (mode) {
+            ThemeMode.LIGHT -> LightThemeAttributes
+            ThemeMode.DARK -> DarkThemeAttributes
+        }
+        content(attributes)
+    }
 )
 
 private object Theme {
