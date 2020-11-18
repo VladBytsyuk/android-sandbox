@@ -65,13 +65,13 @@ object LightThemeAttributes : ThemeAttributes {
 
 object DarkThemeAttributes : ThemeAttributes {
     override val disabledBackground = Color(0x000000)
-    override val enabledBackground = Color(0x000000)
-    override val bottomBarIconTintDisabled = Color(0x000000)
-    override val bottomBarIconTintEnabled = Color(0x000000)
-    override val activeTabLineColor = Color(0x000000)
-    override val headerBackgroundDrawableId = 0
-    override val iconTint = Color(0x000000)
-    override val textColorBase = Color(0x000000)
-    override val textColorSuccess = Color(0x000000)
-    override val textColorFailure = Color(0x000000)
+    override val enabledBackground = Color(0x000a12)
+    override val bottomBarIconTintDisabled = Color(0xbdbdbd)
+    override val bottomBarIconTintEnabled = Color(0xffffff)
+    override val activeTabLineColor = Color(0x00b248)
+    override val headerBackgroundDrawableId = R.drawable.img_header_bkg_dark
+    override val iconTint = Color(0xbdbdbd)
+    override val textColorBase = Color(0xffffff)
+    override val textColorSuccess = Color(0x6abf69)
+    override val textColorFailure = Color(0xff616f)
 }
