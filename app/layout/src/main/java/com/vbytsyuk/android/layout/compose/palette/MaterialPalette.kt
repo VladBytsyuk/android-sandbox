@@ -1,9 +1,12 @@
 package com.vbytsyuk.android.layout.compose.palette
 
+import androidx.compose.ui.graphics.Color
 import com.vbytsyuk.android.layout.compose.palette.color.*
 
 
 object MaterialPalette {
+    val White = Color(0xffffff)
+    val Black = Color(0x000000)
     val Amber: MaterialColor = MaterialAmber
     val Blue: MaterialColor = MaterialBlue
     val BlueGrey: MaterialColor = MaterialBlueGrey

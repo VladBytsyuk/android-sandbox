@@ -4,6 +4,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import com.vbytsyuk.android.layout.R
+import com.vbytsyuk.android.layout.compose.palette.MaterialPalette
 
 
 @Composable
@@ -51,27 +52,27 @@ interface ThemeAttributes {
 }
 
 object LightThemeAttributes : ThemeAttributes {
-    override val disabledBackground = Color(0xeceff1)
-    override val enabledBackground = Color(0xffffff)
-    override val bottomBarIconTintDisabled = Color(0x757575)
-    override val bottomBarIconTintEnabled = Color(0x000000)
-    override val activeTabLineColor = Color(0x00e676)
+    override val disabledBackground = MaterialPalette.BlueGrey._50.normal
+    override val enabledBackground = MaterialPalette.White
+    override val bottomBarIconTintDisabled = MaterialPalette.Grey._600.normal
+    override val bottomBarIconTintEnabled = MaterialPalette.Black
+    override val activeTabLineColor = MaterialPalette.Green._a400.normal
     override val headerBackgroundDrawableId = R.drawable.img_header_bkg_light
-    override val iconTint = Color(0x757575)
-    override val textColorBase = Color(0x000000)
-    override val textColorSuccess = Color(0x388e3c)
-    override val textColorFailure = Color(0xff1744)
+    override val iconTint = MaterialPalette.Grey._600.normal
+    override val textColorBase = MaterialPalette.Black
+    override val textColorSuccess = MaterialPalette.Green._700.normal
+    override val textColorFailure = MaterialPalette.Red._a400.normal
 }
 
 object DarkThemeAttributes : ThemeAttributes {
-    override val disabledBackground = Color(0x000000)
-    override val enabledBackground = Color(0x000a12)
-    override val bottomBarIconTintDisabled = Color(0xbdbdbd)
-    override val bottomBarIconTintEnabled = Color(0xffffff)
-    override val activeTabLineColor = Color(0x00b248)
-    override val headerBackgroundDrawableId = R.drawable.img_header_bkg_dark
-    override val iconTint = Color(0xbdbdbd)
-    override val textColorBase = Color(0xffffff)
-    override val textColorSuccess = Color(0x6abf69)
-    override val textColorFailure = Color(0xff616f)
+    override val disabledBackground = MaterialPalette.Black
+    override val enabledBackground = MaterialPalette.BlueGrey._900.dark
+    override val bottomBarIconTintDisabled = MaterialPalette.Grey._400.normal
+    override val bottomBarIconTintEnabled = MaterialPalette.White
+    override val activeTabLineColor = MaterialPalette.Green._a400.dark
+    override val headerBackgroundDrawableId = R.drawable.img_header_bkg_light
+    override val iconTint = MaterialPalette.Grey._400.normal
+    override val textColorBase = MaterialPalette.White
+    override val textColorSuccess = MaterialPalette.Green._700.light
+    override val textColorFailure = MaterialPalette.Red._a400.light
 }
