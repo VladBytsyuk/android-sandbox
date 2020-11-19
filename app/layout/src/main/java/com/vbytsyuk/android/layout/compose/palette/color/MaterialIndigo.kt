@@ -1,4 +1,4 @@
-package com.vbytsyuk.android.layout.compose.palette
+package com.vbytsyuk.android.layout.compose.palette.color
 
 
 object MaterialIndigo : MaterialPalette {
