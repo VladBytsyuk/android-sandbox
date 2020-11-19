@@ -1,4 +1,4 @@
-package com.vbytsyuk.android.layout.compose.colors
+package com.vbytsyuk.android.layout.compose.palette
 
 import androidx.annotation.ColorInt
 import androidx.compose.ui.graphics.Color

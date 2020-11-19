@@ -1,4 +1,4 @@
-package com.vbytsyuk.android.layout.compose.colors
+package com.vbytsyuk.android.layout.compose.palette
 
 
 object MaterialGreen : MaterialPalette {
