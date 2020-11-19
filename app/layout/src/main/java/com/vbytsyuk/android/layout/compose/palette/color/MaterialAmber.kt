@@ -1,7 +1,7 @@
 package com.vbytsyuk.android.layout.compose.palette.color
 
 
-internal object MaterialAmber : MaterialPalette {
+ object MaterialAmber : MaterialPalette {
     override val _50 = MaterialColor(light = 0xffffff, normal = 0xfff8e1, dark = 0xccc5af)
     override val _100 = MaterialColor(light = 0xffffe5, normal = 0xffecb3, dark = 0xcbba83)
     override val _200 = MaterialColor(light = 0xffffb3, normal = 0xffe082, dark = 0xcaae53)
