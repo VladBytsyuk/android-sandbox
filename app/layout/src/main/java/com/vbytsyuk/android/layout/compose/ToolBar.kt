@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
@@ -17,18 +17,21 @@ import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
 
 
-@Preview @Composable private fun Preview() = ToolBar()
+@Preview @Composable private fun LightToolBarPreview() = ToolBar(LightThemeAttributes)
+@Preview @Composable private fun DarkToolBarPreview() = ToolBar(DarkThemeAttributes)
 
 @Composable
 fun ToolBar(
+    attr: ThemeAttributes,
     modifier: Modifier = Modifier
 ) = Row(
     modifier = modifier
         .zIndex(4f)
-        .background(colorResource(id = R.color.white))
+        .background(attr.appBarBackground)
 ) {
     Image(
         asset = vectorResource(id = R.drawable.ic_toolbar_hamburger),
+        colorFilter = ColorFilter.tint(attr.iconTint),
         modifier = Modifier
             .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
             .padding(8.dp)
@@ -36,12 +39,14 @@ fun ToolBar(
     Text(
         text = stringResource(id = R.string.toolbar_name),
         style = Text.AppBar.Title,
+        color = attr.textColorBase,
         modifier = Modifier
             .align(Alignment.CenterVertically)
             .weight(1f)
     )
     Image(
         asset = vectorResource(id = R.drawable.ic_toolbar_logout),
+        colorFilter = ColorFilter.tint(attr.iconTint),
         modifier = Modifier
             .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
             .padding(8.dp)
