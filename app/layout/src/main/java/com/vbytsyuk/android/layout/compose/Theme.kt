@@ -70,7 +70,7 @@ object DarkThemeAttributes : ThemeAttributes {
     override val bottomBarIconTintDisabled = MaterialPalette.Grey._400.normal
     override val bottomBarIconTintEnabled = MaterialPalette.White
     override val activeTabLineColor = MaterialPalette.Green._a400.dark
-    override val headerBackgroundDrawableId = R.drawable.img_header_bkg_light
+    override val headerBackgroundDrawableId = R.drawable.img_header_bkg_dark
     override val iconTint = MaterialPalette.Grey._400.normal
     override val textColorBase = MaterialPalette.White
     override val textColorSuccess = MaterialPalette.Green._700.light
