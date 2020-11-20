@@ -13,7 +13,6 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.zIndex
 import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
 
@@ -25,14 +24,21 @@ import com.vbytsyuk.android.layout.R
 fun ToolBar(
     attr: ThemeAttributes,
     modifier: Modifier = Modifier
-) = Surface(elevation = 4.dp) {
-    Row(modifier = modifier.background(attr.appBarBackground)) {
+) = Surface(
+    elevation = 4.dp,
+    modifier = modifier.height(dimensionResource(id = R.dimen.tool_bar_height))
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxHeight()
+            .background(attr.appBarBackground)
+    ) {
         Image(
             asset = vectorResource(id = R.drawable.ic_toolbar_hamburger),
             colorFilter = ColorFilter.tint(attr.iconTint),
             modifier = Modifier
-                .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
                 .padding(8.dp)
+                .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
         )
         Text(
             text = stringResource(id = R.string.toolbar_name),
@@ -46,8 +52,8 @@ fun ToolBar(
             asset = vectorResource(id = R.drawable.ic_toolbar_logout),
             colorFilter = ColorFilter.tint(attr.iconTint),
             modifier = Modifier
-                .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
                 .padding(8.dp)
+                .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
         )
     }
 }
