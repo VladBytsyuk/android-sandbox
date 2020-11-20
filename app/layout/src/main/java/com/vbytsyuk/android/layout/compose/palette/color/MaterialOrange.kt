@@ -2,19 +2,19 @@ package com.vbytsyuk.android.layout.compose.palette.color
 
 
 object MaterialOrange : MaterialColor {
-    override val _50 = ColorShades(light = 0xffffff, normal = 0xfff3e0, dark = 0xccc0ae)
-    override val _100 = ColorShades(light = 0xffffe4, normal = 0xffe0b2, dark = 0xcbae82)
-    override val _200 = ColorShades(light = 0xffffb0, normal = 0xffcc80, dark = 0xca9b52)
-    override val _300 = ColorShades(light = 0xffe97d, normal = 0xffb74d, dark = 0xc88719)
-    override val _400 = ColorShades(light = 0xffd95b, normal = 0xffa726, dark = 0xc77800)
-    override val _500 = ColorShades(light = 0xffc947, normal = 0xff9800, dark = 0xc66900)
-    override val _600 = ColorShades(light = 0xffbd45, normal = 0xfb8c00, dark = 0xc25e00)
-    override val _700 = ColorShades(light = 0xffad42, normal = 0xf57c00, dark = 0xbb4d00)
-    override val _800 = ColorShades(light = 0xff9d3f, normal = 0xef6c00, dark = 0xb53d00)
-    override val _900 = ColorShades(light = 0xff833a, normal = 0xe65100, dark = 0xac1900)
+    override val _50 = ColorShades(light = 0xffffffff, normal = 0xfffff3e0, dark = 0xffccc0ae)
+    override val _100 = ColorShades(light = 0xffffffe4, normal = 0xffffe0b2, dark = 0xffcbae82)
+    override val _200 = ColorShades(light = 0xffffffb0, normal = 0xffffcc80, dark = 0xffca9b52)
+    override val _300 = ColorShades(light = 0xffffe97d, normal = 0xffffb74d, dark = 0xffc88719)
+    override val _400 = ColorShades(light = 0xffffd95b, normal = 0xffffa726, dark = 0xffc77800)
+    override val _500 = ColorShades(light = 0xffffc947, normal = 0xffff9800, dark = 0xffc66900)
+    override val _600 = ColorShades(light = 0xffffbd45, normal = 0xfffb8c00, dark = 0xffc25e00)
+    override val _700 = ColorShades(light = 0xffffad42, normal = 0xfff57c00, dark = 0xffbb4d00)
+    override val _800 = ColorShades(light = 0xffff9d3f, normal = 0xffef6c00, dark = 0xffb53d00)
+    override val _900 = ColorShades(light = 0xffff833a, normal = 0xffe65100, dark = 0xffac1900)
 
-    override val _a100 = ColorShades(light = 0xffffb1, normal = 0xffd180, dark = 0xcaa052)
-    override val _a200 = ColorShades(light = 0xffdd71, normal = 0xffab40, dark = 0xc77c02)
-    override val _a400 = ColorShades(light = 0xffc246, normal = 0xff9100, dark = 0xc56200)
-    override val _a700 = ColorShades(light = 0xff9e40, normal = 0xff6d00, dark = 0xc43c00)
+    override val _a100 = ColorShades(light = 0xffffffb1, normal = 0xffffd180, dark = 0xffcaa052)
+    override val _a200 = ColorShades(light = 0xffffdd71, normal = 0xffffab40, dark = 0xffc77c02)
+    override val _a400 = ColorShades(light = 0xffffc246, normal = 0xffff9100, dark = 0xffc56200)
+    override val _a700 = ColorShades(light = 0xffff9e40, normal = 0xffff6d00, dark = 0xffc43c00)
 }

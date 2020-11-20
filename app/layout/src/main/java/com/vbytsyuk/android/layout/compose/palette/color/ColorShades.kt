@@ -5,9 +5,9 @@ import androidx.compose.ui.graphics.Color
 
 
 class ColorShades(
-    @ColorInt light: Int,
-    @ColorInt normal: Int,
-    @ColorInt dark: Int
+    @ColorInt light: Long,
+    @ColorInt normal: Long,
+    @ColorInt dark: Long
 ) {
     val light = Color(light)
     val normal = Color(normal)
