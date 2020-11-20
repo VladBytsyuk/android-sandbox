@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -24,31 +25,29 @@ import com.vbytsyuk.android.layout.R
 fun ToolBar(
     attr: ThemeAttributes,
     modifier: Modifier = Modifier
-) = Row(
-    modifier = modifier
-        .zIndex(4f)
-        .background(attr.appBarBackground)
-) {
-    Image(
-        asset = vectorResource(id = R.drawable.ic_toolbar_hamburger),
-        colorFilter = ColorFilter.tint(attr.iconTint),
-        modifier = Modifier
-            .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
-            .padding(8.dp)
-    )
-    Text(
-        text = stringResource(id = R.string.toolbar_name),
-        style = Text.AppBar.Title,
-        color = attr.textColorBase,
-        modifier = Modifier
-            .align(Alignment.CenterVertically)
-            .weight(1f)
-    )
-    Image(
-        asset = vectorResource(id = R.drawable.ic_toolbar_logout),
-        colorFilter = ColorFilter.tint(attr.iconTint),
-        modifier = Modifier
-            .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
-            .padding(8.dp)
-    )
+) = Surface(elevation = 4.dp) {
+    Row(modifier = modifier.background(attr.appBarBackground)) {
+        Image(
+            asset = vectorResource(id = R.drawable.ic_toolbar_hamburger),
+            colorFilter = ColorFilter.tint(attr.iconTint),
+            modifier = Modifier
+                .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
+                .padding(8.dp)
+        )
+        Text(
+            text = stringResource(id = R.string.toolbar_name),
+            style = Text.AppBar.Title,
+            color = attr.textColorBase,
+            modifier = Modifier
+                .align(Alignment.CenterVertically)
+                .weight(1f)
+        )
+        Image(
+            asset = vectorResource(id = R.drawable.ic_toolbar_logout),
+            colorFilter = ColorFilter.tint(attr.iconTint),
+            modifier = Modifier
+                .preferredSize(dimensionResource(id = R.dimen.tool_bar_icon_size))
+                .padding(8.dp)
+        )
+    }
 }
