@@ -16,4 +16,18 @@ object Text {
             color = Color.Black
         )
     }
+    object HeaderInfoBlock {
+        val Title  = TextStyle(
+            fontFamily = FontFamily.SansSerif,
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Normal,
+            color = Color.Black
+        )
+        val Value  = TextStyle(
+            fontFamily = FontFamily.SansSerif,
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Normal,
+            color = Color.Black
+        )
+    }
 }
