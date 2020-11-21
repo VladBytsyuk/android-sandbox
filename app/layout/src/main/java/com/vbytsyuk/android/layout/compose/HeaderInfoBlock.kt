@@ -33,7 +33,6 @@ fun HeaderInfoBlock(
         color = attr.textColorBase,
         modifier = Modifier
             .align(Alignment.CenterHorizontally)
-            .weight(1f)
             .drawOpacity(0.54f)
     )
     Text(
@@ -42,7 +41,6 @@ fun HeaderInfoBlock(
         color = attr.textColorBase,
         modifier = Modifier
             .align(Alignment.CenterHorizontally)
-            .weight(1f)
             .drawOpacity(0.87f)
     )
 }
