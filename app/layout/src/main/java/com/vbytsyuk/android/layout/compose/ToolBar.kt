@@ -8,6 +8,7 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawOpacity
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
@@ -47,6 +48,7 @@ fun ToolBar(
             modifier = Modifier
                 .align(Alignment.CenterVertically)
                 .weight(1f)
+                .drawOpacity(0.87f)
         )
         Image(
             asset = vectorResource(id = R.drawable.ic_toolbar_logout),
