@@ -3,6 +3,7 @@ package com.vbytsyuk.android.layout.compose
 import androidx.annotation.StringRes
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Providers
 import androidx.compose.ui.Alignment
@@ -23,14 +24,25 @@ fun HeaderInfoBlock(
     attr: ThemeAttributes,
     @StringRes titleId: Int, @StringRes valueId: Int,
     modifier: Modifier = Modifier
-) = Column() {
+) = Column(
+    modifier = modifier.wrapContentHeight()
+) {
     Text(
         text = stringResource(id = titleId),
-        style = Text.AppBar.Title,
+        style = Text.HeaderInfoBlock.Title,
         color = attr.textColorBase,
         modifier = Modifier
             .align(Alignment.CenterHorizontally)
             .weight(1f)
             .drawOpacity(0.54f)
+    )
+    Text(
+        text = stringResource(id = valueId),
+        style = Text.HeaderInfoBlock.Value,
+        color = attr.textColorBase,
+        modifier = Modifier
+            .align(Alignment.CenterHorizontally)
+            .weight(1f)
+            .drawOpacity(0.87f)
     )
 }
