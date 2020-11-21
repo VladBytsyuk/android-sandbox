@@ -1,5 +1,6 @@
 package com.vbytsyuk.android.layout.compose
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
@@ -12,16 +13,19 @@ import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
 
 
-@Preview @Composable private fun LightHeaderInfoBlockPreview() = HeaderInfoBlock(LightThemeAttributes)
-@Preview @Composable private fun DarkHeaderInfoBlockPreview() = HeaderInfoBlock(DarkThemeAttributes)
+@Preview @Composable private fun LightHeaderInfoBlockPreview() =
+    HeaderInfoBlock(LightThemeAttributes, R.string.header_orders_title, R.string.header_orders_value)
+@Preview @Composable private fun DarkHeaderInfoBlockPreview() =
+    HeaderInfoBlock(DarkThemeAttributes, R.string.header_orders_title, R.string.header_orders_value)
 
 @Composable
 fun HeaderInfoBlock(
     attr: ThemeAttributes,
+    @StringRes titleId: Int, @StringRes valueId: Int,
     modifier: Modifier = Modifier
 ) = Column() {
     Text(
-        text = stringResource(id = R.string.header_orders_title),
+        text = stringResource(id = titleId),
         style = Text.AppBar.Title,
         color = attr.textColorBase,
         modifier = Modifier
