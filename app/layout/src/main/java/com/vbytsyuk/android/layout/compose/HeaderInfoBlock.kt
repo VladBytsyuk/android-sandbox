@@ -10,6 +10,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawOpacity
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
 
@@ -22,14 +26,19 @@ import com.vbytsyuk.android.layout.R
 @Composable
 fun HeaderInfoBlock(
     attr: ThemeAttributes,
-    @StringRes titleId: Int, @StringRes valueId: Int,
+    @StringRes titleId: Int,
+    @StringRes valueId: Int,
     modifier: Modifier = Modifier
 ) = Column(
     modifier = modifier.wrapContentHeight()
 ) {
     Text(
         text = stringResource(id = titleId),
-        style = Text.HeaderInfoBlock.Title,
+        style = TextStyle(
+            fontFamily = FontFamily.SansSerif,
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Normal
+        ),
         color = attr.textColorBase,
         modifier = Modifier
             .align(Alignment.CenterHorizontally)
@@ -37,7 +46,11 @@ fun HeaderInfoBlock(
     )
     Text(
         text = stringResource(id = valueId),
-        style = Text.HeaderInfoBlock.Value,
+        style = TextStyle(
+            fontFamily = FontFamily.SansSerif,
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Normal
+        ),
         color = attr.textColorBase,
         modifier = Modifier
             .align(Alignment.CenterHorizontally)
