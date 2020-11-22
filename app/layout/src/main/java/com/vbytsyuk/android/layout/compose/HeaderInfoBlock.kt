@@ -3,12 +3,14 @@ package com.vbytsyuk.android.layout.compose
 import androidx.annotation.StringRes
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Providers
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawOpacity
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
@@ -30,7 +32,9 @@ fun HeaderInfoBlock(
     @StringRes valueId: Int,
     modifier: Modifier = Modifier
 ) = Column(
-    modifier = modifier.wrapContentHeight()
+    modifier = modifier
+        .width(dimensionResource(id = R.dimen.header_title_width))
+        .wrapContentHeight()
 ) {
     Text(
         text = stringResource(id = titleId),
