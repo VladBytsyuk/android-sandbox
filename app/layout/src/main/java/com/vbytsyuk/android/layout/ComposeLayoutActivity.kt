@@ -12,6 +12,7 @@ import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.res.*
 import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
+import com.vbytsyuk.android.layout.compose.HeaderInfo
 import com.vbytsyuk.android.layout.compose.Theme
 import com.vbytsyuk.android.layout.compose.ThemeMode
 import com.vbytsyuk.android.layout.compose.ToolBar
@@ -32,7 +33,7 @@ class ComposeLayoutActivity : AppCompatActivity() {
     ConstraintLayout(
         modifier = Modifier.background(attr.screenBackground)
     ) {
-        val (bkg, toolbar, avatar) = createRefs()
+        val (bkg, toolbar, avatar, headerInfo) = createRefs()
         Image(
             asset = imageResource(id = attr.headerBackgroundDrawableId),
             contentScale = ContentScale.FillWidth,
@@ -64,7 +65,19 @@ class ComposeLayoutActivity : AppCompatActivity() {
                     top.linkTo(toolbar.bottom)
                     end.linkTo(parent.end)
                 }
-
+        )
+        HeaderInfo(
+            attr = attr,
+            ordersTitleId = R.string.header_orders_title, ordersValueId = R.string.header_orders_value,
+            ratingTitleId = R.string.header_rating_title, ratingValueId = R.string.header_rating_value,
+            purchasesTitleId = R.string.header_purchases_title, purchasesValueId = R.string.header_purchases_value,
+            modifier = Modifier
+                .padding(dimensionResource(id = R.dimen.header_title_margin_top))
+                .constrainAs(headerInfo) {
+                    start.linkTo(parent.start)
+                    top.linkTo(avatar.bottom)
+                    end.linkTo(parent.end)
+                }
         )
     }
 }
