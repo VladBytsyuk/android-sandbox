@@ -12,7 +12,7 @@ import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.res.*
 import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
-import com.vbytsyuk.android.layout.compose.HeaderInfo
+import com.vbytsyuk.android.layout.compose.header.HeaderInfo
 import com.vbytsyuk.android.layout.compose.Theme
 import com.vbytsyuk.android.layout.compose.ThemeMode
 import com.vbytsyuk.android.layout.compose.ToolBar

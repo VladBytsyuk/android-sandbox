@@ -1,4 +1,4 @@
-package com.vbytsyuk.android.layout.compose
+package com.vbytsyuk.android.layout.compose.header
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.Text
@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Providers
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawOpacity
@@ -18,6 +17,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
+import com.vbytsyuk.android.layout.compose.DarkThemeAttributes
+import com.vbytsyuk.android.layout.compose.LightThemeAttributes
+import com.vbytsyuk.android.layout.compose.ThemeAttributes
 
 
 @Preview @Composable private fun LightHeaderInfoBlockPreview() =

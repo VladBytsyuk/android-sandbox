@@ -1,4 +1,4 @@
-package com.vbytsyuk.android.layout.compose
+package com.vbytsyuk.android.layout.compose.header
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Row
@@ -7,16 +7,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
+import com.vbytsyuk.android.layout.compose.DarkThemeAttributes
+import com.vbytsyuk.android.layout.compose.LightThemeAttributes
+import com.vbytsyuk.android.layout.compose.ThemeAttributes
 
 
 @Preview @Composable private fun LightHeaderInfoBlockPreview() =
-    HeaderInfo(LightThemeAttributes,
+    HeaderInfo(
+        LightThemeAttributes,
         ordersTitleId = R.string.header_orders_title, ordersValueId = R.string.header_orders_value,
         ratingTitleId = R.string.header_rating_title, ratingValueId = R.string.header_rating_value,
         purchasesTitleId = R.string.header_purchases_title, purchasesValueId = R.string.header_purchases_value,
     )
 @Preview @Composable private fun DarkHeaderInfoBlockPreview() =
-    HeaderInfo(DarkThemeAttributes,
+    HeaderInfo(
+        DarkThemeAttributes,
         ordersTitleId = R.string.header_orders_title, ordersValueId = R.string.header_orders_value,
         ratingTitleId = R.string.header_rating_title, ratingValueId = R.string.header_rating_value,
         purchasesTitleId = R.string.header_purchases_title, purchasesValueId = R.string.header_purchases_value,
