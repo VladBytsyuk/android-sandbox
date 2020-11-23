@@ -29,42 +29,44 @@ fun Tab(
     @StringRes titleId: Int,
     isActive: Boolean,
     modifier: Modifier = Modifier
-) = ConstraintLayout(
-    modifier = modifier
-        .apply { if (isActive) fillMaxWidth() else width(108.dp) }
-        .height(48.dp)
-        .background(color = attr.tabElementBackground)
-) {
-    val (title, line) = createRefs()
-
-    Text(
-        text = stringResource(id = titleId).toUpperCase(),
-        style = TextStyle(
-            fontFamily = FontFamily.SansSerif,
-            fontWeight = FontWeight.Medium,
-            fontSize = 14.sp,
-            color = attr.textColorBase
-        ),
+) = Box(modifier = modifier) {
+    Box(
         modifier = Modifier
-            .constrainAs(title) {
-                start.linkTo(parent.start)
-                top.linkTo(parent.top)
-                end.linkTo(parent.end)
-                bottom.linkTo(parent.bottom)
-            }
-            .padding(16.dp)
-            .drawOpacity(0.87f)
+            .background(color = attr.tabElementBackground)
+            .apply { if (isActive) fillMaxWidth() else width(108.dp) }
+            .height(48.dp)
+            .drawOpacity(if (isActive) 0.87f else 0.1f)
     )
-    if (isActive) Divider(
-        color = attr.activeTabLineColor,
-        thickness = 4.dp,
-        modifier = Modifier
-            .constrainAs(line) {
-                start.linkTo(parent.start)
-                end.linkTo(parent.end)
-                bottom.linkTo(parent.bottom)
-            }
-    )
+    ConstraintLayout {
+        val (title, line) = createRefs()
+        Text(
+            text = stringResource(id = titleId).toUpperCase(),
+            style = TextStyle(
+                fontFamily = FontFamily.SansSerif,
+                fontWeight = FontWeight.Medium,
+                fontSize = 14.sp,
+                color = attr.textColorBase
+            ),
+            modifier = Modifier
+                .padding(16.dp)
+                .constrainAs(title) {
+                    start.linkTo(parent.start)
+                    top.linkTo(parent.top)
+                    end.linkTo(parent.end)
+                    bottom.linkTo(parent.bottom)
+                }
+        )
+        if (isActive) Divider(
+            color = attr.activeTabLineColor,
+            thickness = 4.dp,
+            modifier = Modifier
+                .constrainAs(line) {
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    bottom.linkTo(parent.bottom)
+                }
+        )
+    }
 }
 
 
