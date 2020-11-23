@@ -6,6 +6,10 @@ import androidx.compose.foundation.layout.ConstraintLayout
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
 import com.vbytsyuk.android.layout.compose.DarkThemeAttributes
@@ -24,6 +28,12 @@ fun Tab(
 ) = ConstraintLayout {
     val (title, line) = createRefs()
     Text(
-        text = stringResource(id = titleId)
+        text = stringResource(id = titleId).toUpperCase(),
+        style = TextStyle(
+            fontFamily = FontFamily.SansSerif,
+            fontWeight = FontWeight.Medium,
+            fontSize = 14.sp,
+            color = attr.textColorBase
+        )
     )
 }
