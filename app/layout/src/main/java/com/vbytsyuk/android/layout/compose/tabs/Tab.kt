@@ -8,8 +8,8 @@ import com.vbytsyuk.android.layout.compose.LightThemeAttributes
 import com.vbytsyuk.android.layout.compose.ThemeAttributes
 
 
-@Preview @Composable fun LightTab() = Tab(LightThemeAttributes)
-@Preview @Composable fun DarkTab() = Tab(DarkThemeAttributes)
+@Preview @Composable private fun LightTab() = Tab(LightThemeAttributes)
+@Preview @Composable private fun DarkTab() = Tab(DarkThemeAttributes)
 
 @Composable
 fun Tab(
