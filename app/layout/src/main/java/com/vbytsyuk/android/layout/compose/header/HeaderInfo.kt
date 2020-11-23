@@ -12,21 +12,6 @@ import com.vbytsyuk.android.layout.compose.LightThemeAttributes
 import com.vbytsyuk.android.layout.compose.ThemeAttributes
 
 
-@Preview @Composable private fun LightHeaderInfoBlockPreview() =
-    HeaderInfo(
-        LightThemeAttributes,
-        ordersTitleId = R.string.header_orders_title, ordersValueId = R.string.header_orders_value,
-        ratingTitleId = R.string.header_rating_title, ratingValueId = R.string.header_rating_value,
-        purchasesTitleId = R.string.header_purchases_title, purchasesValueId = R.string.header_purchases_value,
-    )
-@Preview @Composable private fun DarkHeaderInfoBlockPreview() =
-    HeaderInfo(
-        DarkThemeAttributes,
-        ordersTitleId = R.string.header_orders_title, ordersValueId = R.string.header_orders_value,
-        ratingTitleId = R.string.header_rating_title, ratingValueId = R.string.header_rating_value,
-        purchasesTitleId = R.string.header_purchases_title, purchasesValueId = R.string.header_purchases_value,
-    )
-
 @Composable
 fun HeaderInfo(
     attr: ThemeAttributes,
@@ -41,3 +26,19 @@ fun HeaderInfo(
     HeaderInfoBlock(attr, titleId = ratingTitleId, valueId = ratingValueId)
     HeaderInfoBlock(attr, titleId = purchasesTitleId, valueId = purchasesValueId)
 }
+
+
+@Preview @Composable private fun LightHeaderInfoBlockPreview() =
+    HeaderInfo(
+        LightThemeAttributes,
+        ordersTitleId = R.string.header_orders_title, ordersValueId = R.string.header_orders_value,
+        ratingTitleId = R.string.header_rating_title, ratingValueId = R.string.header_rating_value,
+        purchasesTitleId = R.string.header_purchases_title, purchasesValueId = R.string.header_purchases_value,
+    )
+@Preview @Composable private fun DarkHeaderInfoBlockPreview() =
+    HeaderInfo(
+        DarkThemeAttributes,
+        ordersTitleId = R.string.header_orders_title, ordersValueId = R.string.header_orders_value,
+        ratingTitleId = R.string.header_rating_title, ratingValueId = R.string.header_rating_value,
+        purchasesTitleId = R.string.header_purchases_title, purchasesValueId = R.string.header_purchases_value,
+    )

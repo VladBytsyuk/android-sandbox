@@ -22,11 +22,6 @@ import com.vbytsyuk.android.layout.compose.LightThemeAttributes
 import com.vbytsyuk.android.layout.compose.ThemeAttributes
 
 
-@Preview @Composable private fun LightHeaderInfoBlockPreview() =
-    HeaderInfoBlock(LightThemeAttributes, R.string.header_orders_title, R.string.header_orders_value)
-@Preview @Composable private fun DarkHeaderInfoBlockPreview() =
-    HeaderInfoBlock(DarkThemeAttributes, R.string.header_orders_title, R.string.header_orders_value)
-
 @Composable
 fun HeaderInfoBlock(
     attr: ThemeAttributes,
@@ -63,3 +58,9 @@ fun HeaderInfoBlock(
             .drawOpacity(0.87f)
     )
 }
+
+
+@Preview @Composable private fun LightHeaderInfoBlockPreview() =
+    HeaderInfoBlock(LightThemeAttributes, R.string.header_orders_title, R.string.header_orders_value)
+@Preview @Composable private fun DarkHeaderInfoBlockPreview() =
+    HeaderInfoBlock(DarkThemeAttributes, R.string.header_orders_title, R.string.header_orders_value)

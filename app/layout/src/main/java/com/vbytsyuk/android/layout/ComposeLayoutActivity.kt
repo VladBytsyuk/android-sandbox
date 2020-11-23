@@ -25,9 +25,6 @@ class ComposeLayoutActivity : AppCompatActivity() {
     }
 }
 
-@Preview @Composable fun LightActivityPreview() = Root(ThemeMode.LIGHT)
-@Preview @Composable fun DarkActivityPreview() = Root(ThemeMode.DARK)
-
 
 @Composable fun Root(mode: ThemeMode) = Theme(mode) { attr ->
     ConstraintLayout(
@@ -81,3 +78,7 @@ class ComposeLayoutActivity : AppCompatActivity() {
         )
     }
 }
+
+
+@Preview @Composable fun LightActivityPreview() = Root(ThemeMode.LIGHT)
+@Preview @Composable fun DarkActivityPreview() = Root(ThemeMode.DARK)

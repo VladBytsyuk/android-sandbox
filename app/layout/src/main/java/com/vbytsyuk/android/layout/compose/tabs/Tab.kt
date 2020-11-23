@@ -23,11 +23,6 @@ import com.vbytsyuk.android.layout.compose.LightThemeAttributes
 import com.vbytsyuk.android.layout.compose.ThemeAttributes
 
 
-@Preview @Composable private fun LightActiveTab() = Tab(LightThemeAttributes, R.string.tab_account, isActive = true)
-@Preview @Composable private fun DarkActiveTab() = Tab(DarkThemeAttributes, R.string.tab_account, isActive = true)
-@Preview @Composable private fun LightInactiveTab() = Tab(LightThemeAttributes, R.string.tab_account, isActive = false)
-@Preview @Composable private fun DarkInactiveTab() = Tab(DarkThemeAttributes, R.string.tab_account, isActive = false)
-
 @Composable
 fun Tab(
     attr: ThemeAttributes,
@@ -71,3 +66,9 @@ fun Tab(
             }
     )
 }
+
+
+@Preview @Composable private fun LightActiveTab() = Tab(LightThemeAttributes, R.string.tab_account, isActive = true)
+@Preview @Composable private fun DarkActiveTab() = Tab(DarkThemeAttributes, R.string.tab_account, isActive = true)
+@Preview @Composable private fun LightInactiveTab() = Tab(LightThemeAttributes, R.string.tab_account, isActive = false)
+@Preview @Composable private fun DarkInactiveTab() = Tab(DarkThemeAttributes, R.string.tab_account, isActive = false)

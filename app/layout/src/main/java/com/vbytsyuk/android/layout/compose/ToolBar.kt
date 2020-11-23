@@ -22,9 +22,6 @@ import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
 
 
-@Preview @Composable private fun LightToolBarPreview() = ToolBar(LightThemeAttributes)
-@Preview @Composable private fun DarkToolBarPreview() = ToolBar(DarkThemeAttributes)
-
 @Composable
 fun ToolBar(
     attr: ThemeAttributes,
@@ -67,3 +64,7 @@ fun ToolBar(
         )
     }
 }
+
+
+@Preview @Composable private fun LightToolBarPreview() = ToolBar(LightThemeAttributes)
+@Preview @Composable private fun DarkToolBarPreview() = ToolBar(DarkThemeAttributes)
