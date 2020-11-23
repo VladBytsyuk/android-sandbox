@@ -2,8 +2,8 @@ package com.vbytsyuk.android.layout.compose.tabs
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.Text
-import androidx.compose.foundation.layout.ConstraintLayout
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -23,8 +23,10 @@ import com.vbytsyuk.android.layout.compose.LightThemeAttributes
 import com.vbytsyuk.android.layout.compose.ThemeAttributes
 
 
-@Preview @Composable private fun LightTab() = Tab(LightThemeAttributes, R.string.tab_account, isActive = true)
-@Preview @Composable private fun DarkTab() = Tab(DarkThemeAttributes, R.string.tab_account, isActive = true)
+@Preview @Composable private fun LightActiveTab() = Tab(LightThemeAttributes, R.string.tab_account, isActive = true)
+@Preview @Composable private fun DarkActiveTab() = Tab(DarkThemeAttributes, R.string.tab_account, isActive = true)
+@Preview @Composable private fun LightInactiveTab() = Tab(LightThemeAttributes, R.string.tab_account, isActive = false)
+@Preview @Composable private fun DarkInactiveTab() = Tab(DarkThemeAttributes, R.string.tab_account, isActive = false)
 
 @Composable
 fun Tab(
@@ -32,8 +34,14 @@ fun Tab(
     @StringRes titleId: Int,
     isActive: Boolean,
     modifier: Modifier = Modifier
-) = ConstraintLayout {
+) = ConstraintLayout(
+    modifier = modifier
+        .apply { if (isActive) fillMaxWidth() else width(108.dp) }
+        .height(48.dp)
+        .background(color = attr.tabElementBackground)
+) {
     val (title, line) = createRefs()
+
     Text(
         text = stringResource(id = titleId).toUpperCase(),
         style = TextStyle(
