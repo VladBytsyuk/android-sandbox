@@ -4,9 +4,12 @@ import androidx.annotation.StringRes
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.ConstraintLayout
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawOpacity
+import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
@@ -20,13 +23,14 @@ import com.vbytsyuk.android.layout.compose.LightThemeAttributes
 import com.vbytsyuk.android.layout.compose.ThemeAttributes
 
 
-@Preview @Composable private fun LightTab() = Tab(LightThemeAttributes, R.string.tab_account)
-@Preview @Composable private fun DarkTab() = Tab(DarkThemeAttributes, R.string.tab_account)
+@Preview @Composable private fun LightTab() = Tab(LightThemeAttributes, R.string.tab_account, isActive = true)
+@Preview @Composable private fun DarkTab() = Tab(DarkThemeAttributes, R.string.tab_account, isActive = true)
 
 @Composable
 fun Tab(
     attr: ThemeAttributes,
     @StringRes titleId: Int,
+    isActive: Boolean,
     modifier: Modifier = Modifier
 ) = ConstraintLayout {
     val (title, line) = createRefs()
@@ -47,5 +51,15 @@ fun Tab(
             }
             .padding(16.dp)
             .drawOpacity(0.87f)
+    )
+    if (isActive) Divider(
+        color = attr.activeTabLineColor,
+        thickness = 4.dp,
+        modifier = Modifier
+            .constrainAs(line) {
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+                bottom.linkTo(parent.bottom)
+            }
     )
 }
