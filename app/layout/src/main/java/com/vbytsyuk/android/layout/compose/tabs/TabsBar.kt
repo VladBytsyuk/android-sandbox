@@ -14,6 +14,7 @@ fun TabsBar(
     attr: ThemeAttributes,
     modifier: Modifier = Modifier
 ) = Row {
+    Tab(attr, titleId = R.string.tab_account, isActive = false, modifier = Modifier.width(108.dp))
 }
 
 
