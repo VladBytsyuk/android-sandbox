@@ -13,7 +13,7 @@ import com.vbytsyuk.android.layout.compose.ThemeAttributes
 fun TabsBar(
     attr: ThemeAttributes,
     modifier: Modifier = Modifier
-) = Row {
+) = Row(modifier = modifier.fillMaxWidth()) {
     Tab(attr, titleId = R.string.tab_account, isActive = false, modifier = Modifier.width(108.dp))
     Tab(attr, titleId = R.string.tab_orders, isActive = true, modifier = Modifier.weight(1f))
     Tab(attr, titleId = R.string.tab_address, isActive = false, modifier = Modifier.width(108.dp))
