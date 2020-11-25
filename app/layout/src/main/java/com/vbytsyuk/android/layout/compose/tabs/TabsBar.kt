@@ -16,6 +16,7 @@ fun TabsBar(
 ) = Row {
     Tab(attr, titleId = R.string.tab_account, isActive = false, modifier = Modifier.width(108.dp))
     Tab(attr, titleId = R.string.tab_orders, isActive = true, modifier = Modifier.weight(1f))
+    Tab(attr, titleId = R.string.tab_address, isActive = false, modifier = Modifier.width(108.dp))
 }
 
 
