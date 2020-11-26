@@ -16,6 +16,7 @@ import com.vbytsyuk.android.layout.compose.header.HeaderInfo
 import com.vbytsyuk.android.layout.compose.Theme
 import com.vbytsyuk.android.layout.compose.ThemeMode
 import com.vbytsyuk.android.layout.compose.ToolBar
+import com.vbytsyuk.android.layout.compose.tabs.TabsBar
 
 
 class ComposeLayoutActivity : AppCompatActivity() {
@@ -30,7 +31,7 @@ class ComposeLayoutActivity : AppCompatActivity() {
     ConstraintLayout(
         modifier = Modifier.background(attr.screenBackground)
     ) {
-        val (bkg, toolbar, avatar, headerInfo) = createRefs()
+        val (bkg, toolbar, avatar, headerInfo, tabs) = createRefs()
         Image(
             asset = imageResource(id = attr.headerBackgroundDrawableId),
             contentScale = ContentScale.FillWidth,
@@ -73,6 +74,15 @@ class ComposeLayoutActivity : AppCompatActivity() {
                 .constrainAs(headerInfo) {
                     start.linkTo(parent.start)
                     top.linkTo(avatar.bottom)
+                    end.linkTo(parent.end)
+                }
+        )
+        TabsBar(
+            attr = attr,
+            modifier = Modifier
+                .constrainAs(tabs) {
+                    start.linkTo(parent.start)
+                    top.linkTo(bkg.bottom)
                     end.linkTo(parent.end)
                 }
         )
