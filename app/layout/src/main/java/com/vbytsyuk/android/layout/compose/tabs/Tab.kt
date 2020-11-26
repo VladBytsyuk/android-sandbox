@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawOpacity
 import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
@@ -32,45 +33,52 @@ fun Tab(
     modifier: Modifier = Modifier
 ) = Surface(
     elevation = if (isActive) 4.dp else 0.dp,
-    modifier = modifier.height(48.dp)
+    modifier = modifier
+        .background(attr.screenBackground)
+        .height(48.dp)
 ) {
-    Box {
-        Divider(
-            color = attr.tabElementBackground,
-            thickness = 48.dp,
-            modifier = Modifier.drawOpacity(if (isActive) 0.87f else 0.54f)
+    ConstraintLayout(modifier = Modifier.fillMaxWidth()) {
+        val (bkg, title, line) = createRefs()
+        Box(
+            modifier = Modifier
+                .drawOpacity(if (isActive) 1f else 0.87f)
+                .background(attr.tabElementBackground)
+                .fillMaxSize()
+                .constrainAs(bkg) {
+                    start.linkTo(parent.start)
+                    top.linkTo(parent.top)
+                    end.linkTo(parent.end)
+                    bottom.linkTo(parent.bottom)
+                }
         )
-        ConstraintLayout(modifier = Modifier.fillMaxWidth()) {
-            val (title, line) = createRefs()
-            Text(
-                text = stringResource(id = titleId).toUpperCase(),
-                style = TextStyle(
-                    fontFamily = FontFamily.SansSerif,
-                    fontWeight = FontWeight.Medium,
-                    fontSize = 14.sp,
-                    color = attr.textColorBase
-                ),
-                modifier = Modifier
-                    .drawOpacity(0.87f)
-                    .padding(16.dp)
-                    .constrainAs(title) {
-                        start.linkTo(parent.start)
-                        top.linkTo(parent.top)
-                        end.linkTo(parent.end)
-                        bottom.linkTo(parent.bottom)
-                    }
-            )
-            Divider(
-                color = attr.activeTabLineColor,
-                thickness = if (isActive) 4.dp else 0.dp,
-                modifier = Modifier
-                    .constrainAs(line) {
-                        start.linkTo(parent.start)
-                        end.linkTo(parent.end)
-                        bottom.linkTo(parent.bottom)
-                    }
-            )
-        }
+        Text(
+            text = stringResource(id = titleId).toUpperCase(),
+            style = TextStyle(
+                fontFamily = FontFamily.SansSerif,
+                fontWeight = FontWeight.Medium,
+                fontSize = 14.sp,
+                color = attr.textColorBase
+            ),
+            modifier = Modifier
+                .drawOpacity(0.87f)
+                .padding(16.dp)
+                .constrainAs(title) {
+                    start.linkTo(parent.start)
+                    top.linkTo(parent.top)
+                    end.linkTo(parent.end)
+                    bottom.linkTo(parent.bottom)
+                }
+        )
+        Divider(
+            color = attr.activeTabLineColor,
+            thickness = if (isActive) 4.dp else 0.dp,
+            modifier = Modifier
+                .constrainAs(line) {
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    bottom.linkTo(parent.bottom)
+                }
+        )
     }
 }
 
