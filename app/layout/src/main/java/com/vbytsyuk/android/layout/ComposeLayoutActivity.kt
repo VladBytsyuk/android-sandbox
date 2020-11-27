@@ -12,6 +12,7 @@ import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.res.*
 import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
+import com.vbytsyuk.android.layout.compose.OrdersHeader
 import com.vbytsyuk.android.layout.compose.header.HeaderInfo
 import com.vbytsyuk.android.layout.compose.Theme
 import com.vbytsyuk.android.layout.compose.ThemeMode
@@ -31,7 +32,7 @@ class ComposeLayoutActivity : AppCompatActivity() {
     ConstraintLayout(
         modifier = Modifier.background(attr.screenBackground)
     ) {
-        val (bkg, toolbar, avatar, headerInfo, tabs, spacer) = createRefs()
+        val (bkg, toolbar, avatar, headerInfo, tabs, spacer, ordersHeader) = createRefs()
         Image(
             asset = imageResource(id = attr.headerBackgroundDrawableId),
             contentScale = ContentScale.FillWidth,
@@ -92,6 +93,15 @@ class ComposeLayoutActivity : AppCompatActivity() {
                 .constrainAs(spacer) {
                     start.linkTo(parent.start)
                     top.linkTo(tabs.bottom)
+                    end.linkTo(parent.end)
+                }
+        )
+        OrdersHeader(
+            attr = attr,
+            modifier = Modifier
+                .constrainAs(ordersHeader) {
+                    start.linkTo(parent.start)
+                    top.linkTo(spacer.bottom)
                     end.linkTo(parent.end)
                 }
         )
