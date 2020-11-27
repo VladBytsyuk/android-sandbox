@@ -13,6 +13,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.ui.tooling.preview.Preview
@@ -51,6 +52,22 @@ fun OrdersHeader(
                 start.linkTo(filter.end)
                 top.linkTo(filter.top)
                 bottom.linkTo(filter.bottom)
+            }
+    )
+    Text(
+        text = stringResource(id = R.string.tab_orders_header_clear).toUpperCase(),
+        style = TextStyle(
+            fontFamily = FontFamily.SansSerif,
+            fontWeight = FontWeight.Medium,
+            fontSize = 14.sp,
+            color = attr.textColorBase
+        ),
+        modifier = Modifier
+            .drawOpacity(0.54f)
+            .padding(16.dp)
+            .constrainAs(clear) {
+                end.linkTo(parent.end)
+                baseline.linkTo(filter.baseline)
             }
     )
 }
