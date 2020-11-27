@@ -6,8 +6,12 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawOpacity
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
 
@@ -20,7 +24,13 @@ fun OrdersHeader(
     val (filter, icon, clear) = createRefs()
     Text(
         text = stringResource(id = R.string.tab_orders_header_picker),
+        style = TextStyle(
+            fontFamily = FontFamily.SansSerif,
+            fontSize = 14.sp,
+            color = attr.textColorBase
+        ),
         modifier = Modifier
+            .drawOpacity(0.54f)
             .padding(16.dp)
             .constrainAs(filter) {
                 start.linkTo(parent.start)
