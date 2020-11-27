@@ -31,7 +31,7 @@ class ComposeLayoutActivity : AppCompatActivity() {
     ConstraintLayout(
         modifier = Modifier.background(attr.screenBackground)
     ) {
-        val (bkg, toolbar, avatar, headerInfo, tabs) = createRefs()
+        val (bkg, toolbar, avatar, headerInfo, tabs, spacer) = createRefs()
         Image(
             asset = imageResource(id = attr.headerBackgroundDrawableId),
             contentScale = ContentScale.FillWidth,
@@ -83,6 +83,15 @@ class ComposeLayoutActivity : AppCompatActivity() {
                 .constrainAs(tabs) {
                     start.linkTo(parent.start)
                     top.linkTo(bkg.bottom)
+                    end.linkTo(parent.end)
+                }
+        )
+        Spacer(
+            modifier = Modifier
+                .height(16.dp)
+                .constrainAs(spacer) {
+                    start.linkTo(parent.start)
+                    top.linkTo(tabs.bottom)
                     end.linkTo(parent.end)
                 }
         )
