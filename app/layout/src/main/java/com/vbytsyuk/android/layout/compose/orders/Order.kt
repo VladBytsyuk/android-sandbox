@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawOpacity
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
@@ -31,7 +32,7 @@ fun Order(
         .fillMaxWidth()
         .wrapContentHeight()
 ) {
-    val (image, title, message, details) = createRefs()
+    val (image, title, status, details) = createRefs()
     Image(
         asset = when (orderData) {
             is OrderData.Successful -> vectorResource(id = R.drawable.ic_list_item_cart)
@@ -49,20 +50,20 @@ fun Order(
     )
     Text(
         text = when (orderData) {
-            is OrderData.Successful -> stringResource(id = R.string.order_title_regular_template).format(orderData.number)
-            OrderData.Returned -> stringResource(id = R.string.order_title_discount)
-            OrderData.Discount -> stringResource(id = R.string.order_title_return)
+            is OrderData.Successful -> stringResource(id = R.string.order_title_regular)//.format(orderData.number)
+            OrderData.Returned -> stringResource(id = R.string.order_title_return)
+            OrderData.Discount -> stringResource(id = R.string.order_title_discount)
         },
         style = TextStyle(
             fontFamily = FontFamily.SansSerif,
             fontSize = 16.sp,
+            color = if (orderData is OrderData.Returned) attr.textColorFailure else attr.textColorBase,
         ),
-        color = attr.textColorBase,
         modifier = Modifier
-            .fillMaxWidth()
+            .padding(top = 8.dp)
             .drawOpacity(0.87f)
             .constrainAs(title) {
-                start.linkTo(image.end)
+                linkTo(title.start, image.end, bias = 0f)
                 top.linkTo(image.top)
                 end.linkTo(details.start)
             }
@@ -75,12 +76,12 @@ fun Order(
         style = TextStyle(
             fontFamily = FontFamily.SansSerif,
             fontSize = 14.sp,
+            color = if (orderData is OrderData.Successful) attr.textColorSuccess else attr.textColorBase,
         ),
-        color = attr.textColorBase,
         modifier = Modifier
             .fillMaxWidth()
             .drawOpacity(0.54f)
-            .constrainAs(message) {
+            .constrainAs(status) {
                 start.linkTo(title.end)
                 top.linkTo(title.bottom)
                 end.linkTo(title.start)
@@ -88,6 +89,7 @@ fun Order(
     )
     Image(
         asset = vectorResource(id = R.drawable.ic_details_arrow),
+        colorFilter = ColorFilter.tint(attr.iconTint),
         modifier = Modifier
             .padding(all = 8.dp)
             .size(40.dp)
