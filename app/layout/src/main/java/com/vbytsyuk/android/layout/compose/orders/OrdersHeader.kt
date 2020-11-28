@@ -1,9 +1,8 @@
-package com.vbytsyuk.android.layout.compose
+package com.vbytsyuk.android.layout.compose.orders
 
 import androidx.compose.foundation.Icon
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.ConstraintLayout
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
@@ -18,6 +17,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
+import com.vbytsyuk.android.layout.compose.DarkThemeAttributes
+import com.vbytsyuk.android.layout.compose.LightThemeAttributes
+import com.vbytsyuk.android.layout.compose.ThemeAttributes
 
 
 @Composable
