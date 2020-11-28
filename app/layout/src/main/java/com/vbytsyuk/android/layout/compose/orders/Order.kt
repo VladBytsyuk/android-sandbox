@@ -1,11 +1,18 @@
 package com.vbytsyuk.android.layout.compose.orders
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawOpacity
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
 import com.vbytsyuk.android.layout.compose.DarkThemeAttributes
@@ -18,7 +25,12 @@ fun Order(
     attr: ThemeAttributes,
     orderData: OrderData,
     modifier: Modifier = Modifier
-) = ConstraintLayout(modifier = modifier.fillMaxWidth().wrapContentSize()) {
+) = ConstraintLayout(
+    modifier = modifier
+        .background(attr.enabledBackground)
+        .fillMaxWidth()
+        .wrapContentHeight()
+) {
     val (image, title, message, details) = createRefs()
     Image(
         asset = when (orderData) {
@@ -33,6 +45,26 @@ fun Order(
                 start.linkTo(parent.start)
                 top.linkTo(parent.top)
                 bottom.linkTo(parent.bottom)
+            }
+    )
+    Text(
+        text = when (orderData) {
+            is OrderData.Successful -> stringResource(id = R.string.order_title_regular_template).format(orderData.number)
+            OrderData.Returned -> stringResource(id = R.string.order_title_discount)
+            OrderData.Discount -> stringResource(id = R.string.order_title_return)
+        },
+        style = TextStyle(
+            fontFamily = FontFamily.SansSerif,
+            fontSize = 16.sp,
+        ),
+        color = attr.textColorBase,
+        modifier = Modifier
+            .fillMaxWidth()
+            .drawOpacity(0.87f)
+            .constrainAs(title) {
+                start.linkTo(image.end)
+                top.linkTo(image.top)
+                end.linkTo(details.start)
             }
     )
     Image(

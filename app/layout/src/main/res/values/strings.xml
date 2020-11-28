@@ -21,6 +21,7 @@
     <string name="tab_orders_header_picker">Newest first</string>
     <string name="tab_orders_header_clear">Clear</string>
 
+    <string name="order_title_regular_template">Your order %d</string>
     <string name="order_title_regular">Your order 34567</string>
     <string name="order_status_successful">Delivered successful!</string>
     <string name="order_status_unsuccessful">Unsuccessful delivery</string>
