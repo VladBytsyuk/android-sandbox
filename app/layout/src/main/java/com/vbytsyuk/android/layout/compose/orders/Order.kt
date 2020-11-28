@@ -35,6 +35,17 @@ fun Order(
                 bottom.linkTo(parent.bottom)
             }
     )
+    Image(
+        asset = vectorResource(id = R.drawable.ic_details_arrow),
+        modifier = Modifier
+            .padding(all = 8.dp)
+            .size(40.dp)
+            .constrainAs(details) {
+                end.linkTo(parent.end)
+                top.linkTo(parent.top)
+                bottom.linkTo(parent.bottom)
+            }
+    )
 }
 
 
