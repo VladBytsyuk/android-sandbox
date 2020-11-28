@@ -1,9 +1,13 @@
 package com.vbytsyuk.android.layout.compose.orders
 
-import androidx.compose.foundation.layout.ConstraintLayout
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
+import com.vbytsyuk.android.layout.R
 import com.vbytsyuk.android.layout.compose.DarkThemeAttributes
 import com.vbytsyuk.android.layout.compose.LightThemeAttributes
 import com.vbytsyuk.android.layout.compose.ThemeAttributes
@@ -14,8 +18,23 @@ fun Order(
     attr: ThemeAttributes,
     orderData: OrderData,
     modifier: Modifier = Modifier
-) = ConstraintLayout(modifier = modifier) {
-
+) = ConstraintLayout(modifier = modifier.fillMaxWidth().wrapContentSize()) {
+    val (image, title, message, details) = createRefs()
+    Image(
+        asset = when (orderData) {
+            is OrderData.Successful -> vectorResource(id = R.drawable.ic_list_item_cart)
+            OrderData.Returned -> vectorResource(id = R.drawable.ic_list_item_return)
+            OrderData.Discount -> vectorResource(id = R.drawable.ic_list_item_discount)
+        },
+        modifier = Modifier
+            .padding(horizontal = 16.dp, vertical = 8.dp)
+            .size(40.dp)
+            .constrainAs(image) {
+                start.linkTo(parent.start)
+                top.linkTo(parent.top)
+                bottom.linkTo(parent.bottom)
+            }
+    )
 }
 
 
