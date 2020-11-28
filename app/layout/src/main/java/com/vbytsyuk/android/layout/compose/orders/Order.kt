@@ -67,6 +67,25 @@ fun Order(
                 end.linkTo(details.start)
             }
     )
+    Text(
+        text = when (orderData) {
+            OrderData.Returned -> stringResource(id = R.string.order_status_unsuccessful)
+            else -> stringResource(id = R.string.order_status_successful)
+        },
+        style = TextStyle(
+            fontFamily = FontFamily.SansSerif,
+            fontSize = 14.sp,
+        ),
+        color = attr.textColorBase,
+        modifier = Modifier
+            .fillMaxWidth()
+            .drawOpacity(0.54f)
+            .constrainAs(message) {
+                start.linkTo(title.end)
+                top.linkTo(title.bottom)
+                end.linkTo(title.start)
+            }
+    )
     Image(
         asset = vectorResource(id = R.drawable.ic_details_arrow),
         modifier = Modifier
