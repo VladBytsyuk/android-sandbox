@@ -19,7 +19,12 @@ fun OrdersList(
     orderDataList: List<OrderData>,
     modifier: Modifier = Modifier
 ) = Column(modifier = modifier.background(attr.enabledBackground)) {
-   
+    Spacer(modifier = Modifier.height(16.dp))
+    orderDataList.forEach { data ->
+        Order(attr, data)
+        Spacer(modifier = Modifier.height(8.dp))
+    }
+    Spacer(modifier = Modifier.height(8.dp))
 }
 
 
