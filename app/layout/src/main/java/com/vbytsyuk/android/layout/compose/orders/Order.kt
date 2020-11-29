@@ -50,7 +50,7 @@ fun Order(
     )
     Text(
         text = when (orderData) {
-            is OrderData.Successful -> stringResource(id = R.string.order_title_regular)//.format(orderData.number)
+            is OrderData.Successful -> stringResource(id = R.string.order_title_regular_template).format(orderData.number)
             OrderData.Returned -> stringResource(id = R.string.order_title_return)
             OrderData.Discount -> stringResource(id = R.string.order_title_discount)
         },
