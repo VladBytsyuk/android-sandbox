@@ -17,6 +17,8 @@ import com.vbytsyuk.android.layout.compose.header.HeaderInfo
 import com.vbytsyuk.android.layout.compose.Theme
 import com.vbytsyuk.android.layout.compose.ThemeMode
 import com.vbytsyuk.android.layout.compose.ToolBar
+import com.vbytsyuk.android.layout.compose.orders.OrderData
+import com.vbytsyuk.android.layout.compose.orders.OrdersList
 import com.vbytsyuk.android.layout.compose.tabs.TabsBar
 
 
@@ -32,7 +34,7 @@ class ComposeLayoutActivity : AppCompatActivity() {
     ConstraintLayout(
         modifier = Modifier.background(attr.screenBackground)
     ) {
-        val (bkg, toolbar, avatar, headerInfo, tabs, spacer, ordersHeader) = createRefs()
+        val (bkg, toolbar, avatar, headerInfo, tabs, spacer, ordersHeader, ordersList) = createRefs()
         Image(
             asset = imageResource(id = attr.headerBackgroundDrawableId),
             contentScale = ContentScale.FillWidth,
@@ -102,6 +104,21 @@ class ComposeLayoutActivity : AppCompatActivity() {
                 .constrainAs(ordersHeader) {
                     start.linkTo(parent.start)
                     top.linkTo(spacer.bottom)
+                    end.linkTo(parent.end)
+                }
+        )
+        OrdersList(
+            attr = attr,
+            orderDataList = listOf(
+                OrderData.Successful(34567),
+                OrderData.Successful(34567),
+                OrderData.Discount,
+                OrderData.Returned
+            ),
+            modifier = Modifier
+                .constrainAs(ordersList) {
+                    start.linkTo(parent.start)
+                    top.linkTo(ordersHeader.bottom)
                     end.linkTo(parent.end)
                 }
         )
