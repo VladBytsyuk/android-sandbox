@@ -63,9 +63,8 @@ fun Order(
             .padding(top = 8.dp)
             .drawOpacity(0.87f)
             .constrainAs(title) {
-                linkTo(title.start, image.end, bias = 0f)
+                start.linkTo(image.end)
                 top.linkTo(image.top)
-                end.linkTo(details.start)
             }
     )
     Text(
@@ -79,12 +78,10 @@ fun Order(
             color = if (orderData is OrderData.Successful) attr.textColorSuccess else attr.textColorBase,
         ),
         modifier = Modifier
-            .fillMaxWidth()
             .drawOpacity(0.54f)
             .constrainAs(status) {
-                start.linkTo(title.end)
+                start.linkTo(title.start)
                 top.linkTo(title.bottom)
-                end.linkTo(title.start)
             }
     )
     Image(
