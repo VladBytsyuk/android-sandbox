@@ -3,13 +3,18 @@ package com.vbytsyuk.android.layout.compose.bottombar
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.Icon
+import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawOpacity
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
 import com.vbytsyuk.android.layout.compose.DarkThemeAttributes
@@ -29,6 +34,14 @@ fun BottomBarItem(
         asset = vectorResource(id = iconId),
         tint = if (isSelected) attr.bottomBarIconTintEnabled else attr.bottomBarIconTintDisabled,
         modifier = Modifier.size(24.dp)
+    )
+    if (isSelected) Text(
+        text = stringResource(id = titleId),
+        style = TextStyle(
+            fontSize = 14.sp,
+            color = attr.textColorBase
+        ),
+        modifier = Modifier.drawOpacity(0.87f)
     )
 }
 
