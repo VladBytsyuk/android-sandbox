@@ -2,9 +2,14 @@ package com.vbytsyuk.android.layout.compose.bottombar
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import androidx.compose.foundation.Icon
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
 import com.vbytsyuk.android.layout.compose.DarkThemeAttributes
@@ -20,7 +25,11 @@ fun BottomBarItem(
     isSelected: Boolean,
     modifier: Modifier = Modifier
 ) = Column(modifier = modifier) {
-
+    Icon(
+        asset = vectorResource(id = iconId),
+        tint = if (isSelected) attr.bottomBarIconTintEnabled else attr.bottomBarIconTintDisabled,
+        modifier = Modifier.size(24.dp)
+    )
 }
 
 @Preview @Composable fun LightActiveBottomBarItem() = BottomBarItem(
