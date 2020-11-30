@@ -8,6 +8,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawOpacity
 import androidx.compose.ui.res.stringResource
@@ -33,7 +34,9 @@ fun BottomBarItem(
     Icon(
         asset = vectorResource(id = iconId),
         tint = if (isSelected) attr.bottomBarIconTintEnabled else attr.bottomBarIconTintDisabled,
-        modifier = Modifier.size(24.dp)
+        modifier = Modifier
+            .size(24.dp)
+            .align(Alignment.CenterHorizontally)
     )
     if (isSelected) Text(
         text = stringResource(id = titleId),
@@ -41,7 +44,9 @@ fun BottomBarItem(
             fontSize = 14.sp,
             color = attr.textColorBase
         ),
-        modifier = Modifier.drawOpacity(0.87f)
+        modifier = Modifier
+            .drawOpacity(0.87f)
+            .align(Alignment.CenterHorizontally)
     )
 }
 
