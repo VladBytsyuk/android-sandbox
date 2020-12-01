@@ -28,5 +28,9 @@
     <string name="order_title_discount">Claimed Super Discount</string>
     <string name="order_title_return">Order returned</string>
 
+    <string name="bottom_bar_tab_title_shopping">Shopping</string>
+    <string name="bottom_bar_tab_title_catalog">Catalog</string>
+    <string name="bottom_bar_tab_title_cart">Cart</string>
+    <string name="bottom_bar_tab_title_likes">Likes</string>
     <string name="bottom_bar_tab_title_account">Account</string>
 </resources>
