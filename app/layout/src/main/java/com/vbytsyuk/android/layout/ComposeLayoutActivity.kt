@@ -17,6 +17,7 @@ import com.vbytsyuk.android.layout.compose.header.HeaderInfo
 import com.vbytsyuk.android.layout.compose.Theme
 import com.vbytsyuk.android.layout.compose.ThemeMode
 import com.vbytsyuk.android.layout.compose.ToolBar
+import com.vbytsyuk.android.layout.compose.bottombar.BottomBar
 import com.vbytsyuk.android.layout.compose.orders.OrderData
 import com.vbytsyuk.android.layout.compose.orders.OrdersList
 import com.vbytsyuk.android.layout.compose.tabs.TabsBar
@@ -32,9 +33,11 @@ class ComposeLayoutActivity : AppCompatActivity() {
 
 @Composable fun Root(mode: ThemeMode) = Theme(mode) { attr ->
     ConstraintLayout(
-        modifier = Modifier.background(attr.screenBackground)
+        modifier = Modifier
+            .fillMaxSize()
+            .background(attr.screenBackground)
     ) {
-        val (bkg, toolbar, avatar, headerInfo, tabs, spacer, ordersHeader, ordersList) = createRefs()
+        val (bkg, toolbar, avatar, headerInfo, tabs, spacer, ordersHeader, ordersList, bottomBar) = createRefs()
         Image(
             asset = imageResource(id = attr.headerBackgroundDrawableId),
             contentScale = ContentScale.FillWidth,
@@ -119,6 +122,23 @@ class ComposeLayoutActivity : AppCompatActivity() {
                 .constrainAs(ordersList) {
                     start.linkTo(parent.start)
                     top.linkTo(ordersHeader.bottom)
+                    end.linkTo(parent.end)
+                }
+        )
+        BottomBar(
+            attr = attr,
+            items = mapOf(
+                R.drawable.ic_bottom_bar_shopping to R.string.bottom_bar_tab_title_shopping,
+                R.drawable.ic_bottom_bar_catalog to R.string.bottom_bar_tab_title_catalog,
+                R.drawable.ic_bottom_bar_cart to R.string.bottom_bar_tab_title_cart,
+                R.drawable.ic_bottom_bar_likes to R.string.bottom_bar_tab_title_likes,
+                R.drawable.ic_bottom_bar_account to R.string.bottom_bar_tab_title_account,
+            ),
+            selectedIndex = 4,
+            modifier = Modifier
+                .constrainAs(bottomBar) {
+                    start.linkTo(parent.start)
+                    bottom.linkTo(parent.bottom)
                     end.linkTo(parent.end)
                 }
         )
