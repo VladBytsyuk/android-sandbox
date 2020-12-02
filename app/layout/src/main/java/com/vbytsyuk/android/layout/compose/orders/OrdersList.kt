@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -18,15 +19,19 @@ fun OrdersList(
     attr: ThemeAttributes,
     orderDataList: List<OrderData>,
     modifier: Modifier = Modifier
-) = Column(modifier = modifier.background(attr.enabledBackground)) {
-    Spacer(modifier = Modifier.height(16.dp))
-    orderDataList.forEach { data ->
-        Order(attr, data)
+) = Surface(
+    elevation = 4.dp,
+    modifier = modifier
+) {
+    Column(modifier = Modifier.background(attr.enabledBackground)) {
+        Spacer(modifier = Modifier.height(16.dp))
+        orderDataList.forEach { data ->
+            Order(attr, data)
+            Spacer(modifier = Modifier.height(8.dp))
+        }
         Spacer(modifier = Modifier.height(8.dp))
     }
-    Spacer(modifier = Modifier.height(8.dp))
 }
-
 
 @Preview @Composable fun LightOrdersList() = OrdersList(
     LightThemeAttributes,
