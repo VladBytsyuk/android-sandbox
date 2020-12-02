@@ -50,22 +50,22 @@ fun BottomBarItem(
     )
 }
 
-@Preview @Composable fun LightActiveBottomBarItem() = BottomBarItem(
+@Preview @Composable private fun LightActiveBottomBarItem() = BottomBarItem(
     attr = LightThemeAttributes,
     iconId = R.drawable.ic_bottom_bar_account, titleId = R.string.bottom_bar_tab_title_account,
     isSelected = true
 )
-@Preview @Composable fun DarkActiveBottomBarItem() = BottomBarItem(
+@Preview @Composable private fun DarkActiveBottomBarItem() = BottomBarItem(
     attr = DarkThemeAttributes,
     iconId = R.drawable.ic_bottom_bar_account, titleId = R.string.bottom_bar_tab_title_account,
     isSelected = true
 )
-@Preview @Composable fun LightInactiveBottomBarItem() = BottomBarItem(
+@Preview @Composable private fun LightInactiveBottomBarItem() = BottomBarItem(
     attr = LightThemeAttributes,
     iconId = R.drawable.ic_bottom_bar_account, titleId = R.string.bottom_bar_tab_title_account,
     isSelected = false
 )
-@Preview @Composable fun DarkInactiveBottomBarItem() = BottomBarItem(
+@Preview @Composable private fun DarkInactiveBottomBarItem() = BottomBarItem(
     attr = DarkThemeAttributes,
     iconId = R.drawable.ic_bottom_bar_account, titleId = R.string.bottom_bar_tab_title_account,
     isSelected = false

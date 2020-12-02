@@ -1,12 +1,11 @@
 package com.vbytsyuk.android.layout.compose.bottombar
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
 import com.vbytsyuk.android.layout.R
@@ -24,20 +23,22 @@ fun BottomBar(
 ) = Row(
     modifier = modifier
         .fillMaxWidth()
-        .wrapContentHeight()
+        .height(dimensionResource(id = R.dimen.bottom_bar_height))
         .background(attr.bottomBarBackground)
 ) {
     items.entries.forEachIndexed { index, (icon, text) ->
         BottomBarItem(
             attr, iconId = icon, titleId = text, isSelected = index == selectedIndex,
-            modifier = Modifier.width(108.dp)
+            modifier = Modifier
+                .align(Alignment.CenterVertically)
+                .weight(1f)
         )
     }
 }
 
 
-@Preview @Composable fun LightBottomBar() = BottomBar(LightThemeAttributes, items, selectedIndex = 4)
-@Preview @Composable fun DarkBottomBar() = BottomBar(DarkThemeAttributes, items, selectedIndex = 4)
+@Preview @Composable private fun LightBottomBar() = BottomBar(LightThemeAttributes, items, selectedIndex = 4)
+@Preview @Composable private fun DarkBottomBar() = BottomBar(DarkThemeAttributes, items, selectedIndex = 4)
 
 private val items = mapOf(
     R.drawable.ic_bottom_bar_shopping to R.string.bottom_bar_tab_title_shopping,
