@@ -12,6 +12,8 @@ import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.res.*
 import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
+import com.vbytsyuk.android.core.Theme.*
+import com.vbytsyuk.android.core.controllers.ThemeController
 import com.vbytsyuk.android.layout.compose.orders.OrdersHeader
 import com.vbytsyuk.android.layout.compose.header.HeaderInfo
 import com.vbytsyuk.android.layout.compose.Theme
@@ -21,12 +23,20 @@ import com.vbytsyuk.android.layout.compose.bottombar.BottomBar
 import com.vbytsyuk.android.layout.compose.orders.OrderData
 import com.vbytsyuk.android.layout.compose.orders.OrdersList
 import com.vbytsyuk.android.layout.compose.tabs.TabsBar
+import org.koin.android.ext.android.inject
 
 
 class ComposeLayoutActivity : AppCompatActivity() {
+    private val themeController: ThemeController by inject()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { Root(ThemeMode.LIGHT) }
+        val themeMode = when (themeController.currentTheme) {
+            BY_SYSTEM -> ThemeMode.LIGHT
+            LIGHT -> ThemeMode.LIGHT
+            DARK -> ThemeMode.DARK
+        }
+        setContent { Root(themeMode) }
     }
 }
 
