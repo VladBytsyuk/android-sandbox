@@ -37,6 +37,14 @@
         app:layout_constraintStart_toStartOf="@+id/amTvLibraries"
         app:layout_constraintTop_toBottomOf="@+id/amTvLibraries" />
 
+    <Button android:id="@+id/amBtnReactive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/am_btn_reactive"
+        app:layout_constraintStart_toStartOf="@+id/amTvLibraries"
+        app:layout_constraintTop_toBottomOf="@+id/amBtnPictureLoaders" />
+
     <TextView android:id="@+id/amTvAndroid"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -46,7 +54,7 @@
         android:layout_margin="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amBtnPictureLoaders"/>
+        app:layout_constraintTop_toBottomOf="@+id/amBtnReactive"/>
 
     <Button android:id="@+id/amBtnLifeCycle"
         android:layout_width="wrap_content"

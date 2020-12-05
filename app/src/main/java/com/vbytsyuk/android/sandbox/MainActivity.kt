@@ -18,6 +18,7 @@ class MainActivity : CoreActivity(
     themeDark = R.style.Theme_Sandbox_Dark_NoActionBar
 ) {
     private val buttonImageLoaders: Button by lazyFindViewById(R.id.amBtnPictureLoaders)
+    private val buttonReactive: Button by lazyFindViewById(R.id.amBtnReactive)
     private val buttonLifecycle: Button by lazyFindViewById(R.id.amBtnLifeCycle)
     private val buttonLayout: Button by lazyFindViewById(R.id.amBtnLayout)
 
