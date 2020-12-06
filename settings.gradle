@@ -6,3 +6,4 @@ include ':app:core'
 include ':app:pictures'
 include ':app'
 rootProject.name = "android-sandbox"
+include ':app:reactive'
