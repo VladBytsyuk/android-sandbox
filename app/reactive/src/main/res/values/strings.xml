@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="acl_rx_java">Rx Java</string>
+    <string name="acl_flow">Kotlin Flow</string>
 </resources>

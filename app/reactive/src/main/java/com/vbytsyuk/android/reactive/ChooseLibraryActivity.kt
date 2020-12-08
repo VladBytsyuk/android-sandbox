@@ -10,7 +10,8 @@ class ChooseLibraryActivity : CoreActivity(
     themeLight = R.style.Theme_Sandbox_Light_NoActionBar,
     themeDark = R.style.Theme_Sandbox_Dark_NoActionBar
 ) {
-    private val buttonClassicLayout: Button by lazyFindViewById(R.id.aclBtnRxJava)
+    private val buttonRxJava: Button by lazyFindViewById(R.id.aclBtnRxJava)
+    private val buttonKotlinFlow: Button by lazyFindViewById(R.id.aclBtnFlow)
 
     override fun setClickListeners() {
         TODO("Not yet implemented")
