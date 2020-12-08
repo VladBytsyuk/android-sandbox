@@ -2,4 +2,5 @@
 <resources>
     <string name="acl_rx_java">Rx Java</string>
     <string name="acl_flow">Kotlin Flow</string>
+    <string name="aclib_title">Choose reactive library</string>
 </resources>
