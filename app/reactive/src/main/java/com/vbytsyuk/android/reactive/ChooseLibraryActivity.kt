@@ -22,6 +22,7 @@ class ChooseLibraryActivity : CoreActivity(
     )
 
     override fun setClickListeners() {
-        TODO("Not yet implemented")
+        buttonRxJava.setOnClickListener {  }
+        buttonKotlinFlow.setOnClickListener {  }
     }
 }
