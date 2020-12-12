@@ -17,6 +17,5 @@ class RxJavaActivity : CoreActivity(
     )
 
     override fun setClickListeners() {
-        TODO("Not yet implemented")
     }
 }
