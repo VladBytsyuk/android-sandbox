@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="android-sandbox.app" target="11" />
+      <module name="android-sandbox.app.core" target="11" />
+      <module name="android-sandbox.app.core.colors" target="11" />
+      <module name="android-sandbox.app.core.storage" target="11" />
+      <module name="android-sandbox.app.layout" target="11" />
+      <module name="android-sandbox.app.lifecycle" target="11" />
+      <module name="android-sandbox.app.pictures" target="11" />
+      <module name="android-sandbox.app.reactive" target="11" />
+      <module name="android-sandbox.app.reactive.rxjava" target="11" />
+      <module name="android-sandbox.buildSrc" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

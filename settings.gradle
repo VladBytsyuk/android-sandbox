@@ -8,3 +8,4 @@ include ':app'
 rootProject.name = "android-sandbox"
 include ':app:reactive'
 include ':app:reactive:rxjava'
+include ':app:network'
