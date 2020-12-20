@@ -96,5 +96,7 @@ object Deps {
                 const val RxJava = "androidx.compose.runtime:runtime-rxjava2:$Version"
             }
         }
+
+        const val Retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
     }
 }

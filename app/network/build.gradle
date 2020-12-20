@@ -12,6 +12,7 @@ java {
 
 dependencies {
     implementation Deps.Kotlin.StdLibJdk8
+    implementation Deps.Libs.Retrofit
 
     testImplementation Deps.Kotlin.Test
 }
