@@ -6,6 +6,7 @@ object Deps {
         const val Version = "1.4.10"
         const val StdLib = "org.jetbrains.kotlin:kotlin-stdlib:$Version"
         const val StdLibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$Version"
+        const val Coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2"
         const val Test = "org.jetbrains.kotlin:kotlin-test:1.1.51"
     }
 
