@@ -6,5 +6,5 @@ sealed class ApiResult<out T : Any> {
         data class Content<out T : Any>(val content: T) : Received<T>()
         data class Error(val code: Int, val description: String, val message: String?) : Received<Nothing>()
     }
-    data class Failure(val throwable: Throwable) : ApiResult<Nothing>()
+    data class Failure(val throwable: Throwable, val message: String? = throwable.message) : ApiResult<Nothing>()
 }
