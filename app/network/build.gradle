@@ -13,8 +13,9 @@ java {
 dependencies {
     implementation Deps.Kotlin.StdLibJdk8
     implementation Deps.Kotlin.Coroutines
-    implementation Deps.Libs.Retrofit
     implementation Deps.Libs.Google.Gson
+    implementation Deps.Libs.Retrofit.Core
+    implementation Deps.Libs.Retrofit.GsonConverter
 
     testImplementation Deps.Kotlin.Test
 }
