@@ -99,5 +99,9 @@ object Deps {
         }
 
         const val Retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
+
+        object Google {
+            const val Gson = "com.google.code.gson:gson:2.8.6"
+        }
     }
 }
