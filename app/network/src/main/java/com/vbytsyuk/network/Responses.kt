@@ -3,7 +3,7 @@ package com.vbytsyuk.network
 import com.google.gson.annotations.SerializedName
 
 
-data class CatBreedResponse(
+internal data class CatBreedResponse(
     @SerializedName("id") val id: String,
     @SerializedName("name") val name: String,
     @SerializedName("temperament") val temperament: String,

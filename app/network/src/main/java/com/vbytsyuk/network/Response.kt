@@ -1,6 +1,6 @@
 package com.vbytsyuk.network
 
 
-interface Response<Model> {
+internal interface Response<Model> {
     fun toModel(): Model
 }

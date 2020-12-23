@@ -5,7 +5,7 @@ import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 
 
-suspend fun <M : Any, R : Response<M>> requestJsonObject(
+internal suspend fun <M : Any, R : Response<M>> requestJsonObject(
     block: suspend () -> R
 ): ApiResult<M> =
     try {
@@ -21,7 +21,7 @@ suspend fun <M : Any, R : Response<M>> requestJsonObject(
         ApiResult.Failure(throwable)
     }
 
-suspend fun <M : Any, R : Response<M>> requestJsonArray(
+internal suspend fun <M : Any, R : Response<M>> requestJsonArray(
     block: suspend () -> List<R>
 ): ApiResult<List<M>> =
     try {
