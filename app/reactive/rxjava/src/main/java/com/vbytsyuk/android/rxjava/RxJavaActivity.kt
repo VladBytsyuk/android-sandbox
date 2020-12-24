@@ -1,6 +1,8 @@
 package com.vbytsyuk.android.rxjava
 
+import androidx.recyclerview.widget.RecyclerView
 import com.vbytsyuk.android.core.activity.CoreActivity
+import com.vbytsyuk.android.core.activity.lazyFindViewById
 import com.vbytsyuk.android.core.appbar.AppBarConfigurator
 import com.vbytsyuk.android.core.appbar.ToolBarConfigurator
 
@@ -15,6 +17,8 @@ class RxJavaActivity : CoreActivity(
         titleId = R.string.arj_title,
         leftButton = AppBarConfigurator.LeftButton(R.drawable.ic_arrow_back) { finish() }
     )
+
+    private val recyclerView: RecyclerView by lazyFindViewById(R.id.arjRecyclerView)
 
     override fun setClickListeners() {
     }
