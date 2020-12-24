@@ -35,6 +35,7 @@ android {
 
 dependencies {
     implementation project(path: ':app:core')
+    implementation project(path: ':app:network')
     implementation Deps.Kotlin.StdLib
     implementation Deps.Android.Material
     implementation Deps.Android.X.AppCompat
