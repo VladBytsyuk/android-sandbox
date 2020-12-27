@@ -42,6 +42,19 @@
         android:layout_marginTop="@dimen/aicb_title_margin_vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/aicbDescription"
+        app:layout_constraintEnd_toStartOf="@+id/aicbLifeSpan"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView android:id="@+id/aicbLifeSpan"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        tools:text="14 - 15"
+        style="@style/TextCommon_Light"
+        android:layout_marginStart="@dimen/aicb_title_margin_horizontal"
+        android:layout_marginEnd="@dimen/aicb_title_margin_horizontal"
+        android:layout_marginTop="@dimen/aicb_title_margin_vertical"
+        app:layout_constraintStart_toEndOf="@+id/aicbNames"
+        app:layout_constraintTop_toBottomOf="@+id/aicbDescription"
         app:layout_constraintEnd_toEndOf="parent"
         />
 
