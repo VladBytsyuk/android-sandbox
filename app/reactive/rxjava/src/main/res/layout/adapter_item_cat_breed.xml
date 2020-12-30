@@ -65,7 +65,7 @@
         android:layout_height="1dp"
         android:background="@color/grey_600"
         android:alpha="0.25"
-        app:layout_constraintStart_toEndOf="@+id/aicbNames"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
